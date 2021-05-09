@@ -1,5 +1,50 @@
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+h1 {
+    font-size: 15rem;
+    font-weight: 500;
+    font-style: italic;
+    width: 35%;
+    color: #F0A66C;
+    border-top: 2px black solid;
+    border-right: 2px black solid;
+}
+
+span {
+    font-size: calc(5rem + 2vw);
+    font-weight: 800;
+    transform: rotate(270deg);
+    position: relative;
+    color: #7486E7;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;   
+    margin: 0;
+}
+
+h3 {
+    border-left: 2px black solid;
+    font-weight: 300;
+    height: 8rem;
+    margin-left: -1rem;
+    width: 15rem;
+    transform: translateX(7px);
+}
+
+.mainNav {
+    top: 5vw;
+    left: 90%;
+    position: fixed;
+    padding: 2vw;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.homeTitle {
+    // display: flex;
+    // flex-wrap: wrap;
+
+    // :last-child {
+    //     width: 100%;
+    // }
+
 }

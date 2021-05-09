@@ -241,8 +241,9 @@ html {
 }
 
 body {
-  font-family: "";
   font-size: calc(1rem + 0.75vw);
+  background-color: #7486E7;
+  font-family: 'Rubik';
 }
 
 ul {
@@ -264,18 +265,48 @@ a {
 .wrapper {
   margin: 0 auto;
   max-width: 1680px;
-  width: 85%;
+  width: 80%;
+  border-right: 2px solid black;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+h1 {
+  font-size: 15rem;
+  font-weight: 500;
+  font-style: italic;
+  width: 35%;
+  color: #F0A66C;
+  border-top: 2px black solid;
+  border-right: 2px black solid;
+}
+
+span {
+  font-size: calc(5rem + 2vw);
+  font-weight: 800;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  position: relative;
+  color: #7486E7;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  margin: 0;
+}
+
+h3 {
+  border-left: 2px black solid;
+  font-weight: 300;
+  height: 8rem;
+  margin-left: -1rem;
+  width: 15rem;
+  -webkit-transform: translateX(7px);
+          transform: translateX(7px);
+}
+
+.mainNav {
+  top: 5vw;
+  left: 90%;
+  position: fixed;
+  padding: 2vw;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
 }
