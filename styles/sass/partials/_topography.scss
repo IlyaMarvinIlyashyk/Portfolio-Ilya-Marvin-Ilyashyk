@@ -6,13 +6,14 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    // font-family: "font-family: 'Rubik', sans-serif";
-    // @include colors ();
-    font-size: calc(1rem + 0.75vw);
-    background-color: #7486E7;
-    font-family: 'Rubik';
-}
+// body {
+//     // font-family: "font-family: 'Rubik', sans-serif";
+//     // @include colors ();
+//     font-size: calc(1rem + 0.75vw);
+//     background-color: #7486E7;
+//     font-family: 'Rubik';
+// }
+
 
 ul {
     padding: 0;
@@ -28,12 +29,4 @@ img {
 
 a {
     text-decoration: none;
-    // @include fontStyles ();
-}
-  
-.wrapper {
-    margin: 0 auto;
-    max-width: 1680px;
-    width: 80%;
-    border-right: 2px solid black;
 }
