@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,800;1,500&display=swap|outline" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
     
     <title>👨‍💻Ilya Marvin Ilyashyk</title>
 </head>
@@ -14,48 +16,76 @@
 <body>
     
     <header id="home" class="wrapper">
-
-        <div class="headerContainer">
     
-            <nav class="mainNav">
-        
-                <!-- <input type="checkbox" class="hamburgerMenu" />
-                <label for="hamburgerMenu" tabindex="0" class="toggleLabel">&#x2630</label> -->
-        
-                <ul>
-                    <li><a href="#about">about</a><div class="underline"></div></li>
-                    <li><a href="#projects">projects</a><div class="underline"></div></li>
-                    <li><a href="#contact">contact</a><div class="underline"></div></li>
-                </ul>
-        
-            </nav>
-
-            <div class="ilyaAnchor">
-                <a href="#home">I.M.I</a>
-                <!-- <span>github</span>
-                <span>linkedIn</span> -->
+            <div class="navContainer wrapper">
+                <nav class="mainNav">
+                    <h2>Ilya Marvin Ilyashyk</h2>
+                    <!-- <input type="checkbox" class="hamburgerMenu" />
+                    <label for="hamburgerMenu" tabindex="0" class="toggleLabel">&#x2630</label> -->
+                    <ul>
+                        <li><a href="#about">about</a><div class="underline"></div></li>
+                        <li><a href="#projects">projects</a><div class="underline"></div></li>
+                        <li><a href="#contact">contact</a><div class="underline"></div></li>
+                    </ul>
+                </nav>
+                <div class="navUnderline"></div>
             </div>
             
-            <h2>Ilya Marvin Ilyashyk</h2>
-
-            <div class="headerTitleContainer">
-                <h1><span>Web-</span>Developer</h1>
-            </div>
+            <h1>
+                <span>Web-</span>
+                Developer
+            </h1>
             
-            <h3 id="scrambleText"></h3>
+            <div class="arrowAndScrambleContainer">
+                <a href="#about"><img class="arrow" src="./assets/arrow.svg" alt=""></a>
+                <h3 id="scrambleText"></h3>
+            </div>
 
-        </div>
+            <!-- <img class="image" src="./assets/Headshot 2-2.jpg" alt=""> -->
+
+            <img class="circle" src="./assets/circle.svg" alt="">
 
         </header>
 
     <main>
 
         <section class="about wrapper" id="about">
-        <h4>About</h4>
-        <div class="aboutContainer">
-            <img src="./assets/Headshot 2-2.jpg" alt="">
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis vel quod vero itaque tenetur praesentium perferendis voluptatibus, nisi soluta debitis eius quaerat excepturi reiciendis, iste eveniet totam necessitatibus laborum nam ad vitae nostrum libero. Enim id ad excepturi mollitia ratione aspernatur tempora placeat voluptatum ullam at! Animi ex corporis, iusto totam odit incidunt voluptas! Quos earum delectus numquam ipsa, dolorem et eaque optio! Excepturi enim unde eius exercitationem vel earum qui, aliquid non dolores facilis consequuntur.</p>
-        </div>
+
+            <div class="aboutContainer">
+                <div class="aboutSocial">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter fa-fw" alt="Twitter Icon"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in fa-fw" alt="LinkedIn Icon"></i></a></li>
+                    </ul>
+                </div>
+                <div class="aboutText">
+                    <p>I'm Ilya, a stage/ screen Actor turned  Web-Developer from Toronto, Canada.<p>
+                    <p>I use my endless passion for coding and design to build and develop web content that is user-friendly, intuitive and most importantly, accessible to all.</p>
+                    <p>My current obsession is React. I’m polishing my Hooks and States skills by working on a simple Netflix-like movie app using the Movie DB API.</p>
+                    <p>Also, I'm a sucker for animations. GSAP absolutely blows my mind. Therefore, I am trying to teach myself the power of GSAP, one tween at a time! You can check out my code and anything else I’m working on this GitHub <a href="">link</a>.</p>
+                    <p>Feel free to reach out anytime!</p>
+                </div>
+                <img class="headshot" src="./assets/Headshot 2-2.jpg" alt="Ilya's Headshot"> 
+            </div>
+            
+            <div class="skillsContainer">
+                <h3>Skills/</h3>
+                <ul>
+                    <li><i class="fab fa-html5 fa-fw"></i></li>
+                    <li><i class="fab fa-css3-alt fa-fw"></i></li>
+                    <li><i class="fab fa-sass fa-fw"></i></li>
+                    <li><i class="fab fa-js fa-fw"></i></li>
+                    <li><i class="devicon-jquery-plain"></i></li>
+                    <li><i class="fab fa-react fa-fw"></i></li>
+                    <li><i class="fas fa-code-branch fa-fw"></i></li>
+                    <li><i class="devicon-firebase-plain"></i></li>
+                    <li><i class="fas fa-universal-access fa-fw"></i></li>
+                    <li><i class="fas fa-mobile-alt fa-fw"></i></li>
+                </ul>
+            </div>
+         
         </section>
 
         <section id="projects" class="projects wrapper">
