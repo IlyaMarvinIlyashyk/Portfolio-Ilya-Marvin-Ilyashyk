@@ -268,11 +268,13 @@ p {
 }
 
 .projects {
+  scroll-snap-align: start;
   min-height: 100vh;
   padding: 50px;
 }
 
 .contact {
+  scroll-snap-align: start;
   height: 100vh;
 }
 

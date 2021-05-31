@@ -25,6 +25,7 @@
 body {
     font-size: calc(1rem + 0.75vw);
     background-color: $white;
+
     // font-family: 'Rubik';
     // scroll-snap-type: y proximity;
     font-family: 'DM Sans', sans-serif;
@@ -318,6 +319,7 @@ h1 {
         opacity: 1;
      }
 }
+
 
 @keyframes slideDown {
     0% {
