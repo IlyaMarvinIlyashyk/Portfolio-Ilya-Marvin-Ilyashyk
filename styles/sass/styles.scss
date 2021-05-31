@@ -24,7 +24,8 @@
 
 body {
     font-size: calc(1rem + 0.75vw);
-    background-color: $darkGrey;
+    background-color: $white;
+
     // font-family: 'Rubik';
     // scroll-snap-type: y proximity;
     font-family: 'DM Sans', sans-serif;
@@ -32,190 +33,246 @@ body {
     // font-family: 'Gentium Book Basic', serif;
 }
 
+p {
+    color: $primaryBlue;
+    line-height: calc(2rem + 0.75vw);
+    font-size: calc(1.5rem + 0.5vw);
+    font-weight: 100;
+}
+
+// line-height ration is 1.4:1
+
 
 .projects {
-    scroll-snap-align: start;
+    // scroll-snap-align: start;
     min-height: 100vh;
     // background-color: coral;
     padding: 50px;
 }
 
 .contact {
-    scroll-snap-align: start;
+    // scroll-snap-align: start;
     height:100vh;
 }
 
 .wrapper {
     margin: 0 auto;
     max-width: 1680px;
-    width: 80%;    
+    width: 90%;    
 } 
 
 // HEADER
 
 header {
-    height: 100vh;
-    // background: #bdc3c7;
-    // background: #1b1b1b;
-    background: $darkGrey;
-    scroll-snap-align: start;
+    // height: 101vh;
+    border-bottom: 0.2rem solid $primaryBlue;
 }
 
-.headerContainer {
-  animation: headerVerticalLine 0.3s linear forwards;
-
-    .headerTitleContainer {
-        animation: headerHorizontalLine 0.3s 0.5s linear forwards;
-        width: 100%;
-
-        h1 {
-            // font-size: calc(5rem + 7vw);
-            font-size: calc(1.5rem + 6vw);
-            // width: 80%;
-            // color: #1a1919;
-            // color: #bdc3c7;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            color: $orange;
-            margin: 0;
-            text-transform: uppercase;
-            line-height: 85%;
-            font-family: 'Dela Gothic One', cursive;
-            // font-family: 'Dela Gothic One', cursive;
-            // font-family: 'Ibarra Real Nova', serif;
-            // font-family: 'Nanum Pen Script', cursive;
-            // font-family: 'Gentium Book Basic', serif;
-            padding: 40vh 1.5rem 1.5rem 0;
-            opacity: 0;
-            animation: fadeInH1 ease-in 1s 1s 1 forwards;     
-        }
+h1 {
+    font-size: calc(1.5rem + 8vw);
+    font-weight: lighter;
+    color: $primaryBlue;
+    position: relative;
+    right: 0.25%;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 90%;
+    font-family: 'Dela Gothic One', cursive;
+    padding: 37vh 1.5rem 1.5rem 0;
+    opacity: 1;
+    // animation: fadeInH1 ease-in 1s 1s 1 forwards; 
     }
 
+// NAV
+
+.navContainer {
+    position: fixed;
+    z-index: 2;
+    background-color: $white;
+    transition: all 0.3s;
+
+    .navUnderline {
+        border-bottom: 0.2rem solid $primaryBlue;
+        // animation: navUnderline 0.3s 0.5s linear forwards;
+    }
+}
+
+.mainNav {
+    display: flex;
+    opacity: 1;
+    justify-content: space-between;
+    align-items: center;
+    // animation: slideDown ease 1s 1s 1 forwards;
 
     h2 {
         font-size: calc(2rem + 1vw);
         font-weight: normal;
-        color: $lightBrown;
+        color: $primaryBlue;
         margin: 0; 
-        position: absolute;
-        top: 3%;
-        animation: slideInH2 ease 1s 1s 1 forwards;
-        opacity: 0;
+        padding: 1vw 0;
         font-family: 'Gentium Book Basic', serif;
     }
+    
+    ul {
 
-    h3 {
-        opacity: 0;
-        font-size: calc(1.5rem + 1vw);
-        // font-style: italic;
-        color: #bdc3c7;
-        color: $whiteShade;
-        -webkit-text-stroke-width: 0.2rem;
-        -webkit-text-stroke-color: black;   
-        position: absolute;
-        bottom: 3%;
-        margin: 0;
-        animation: slideInH3 ease 1s 1s 1 forwards;
-    }
-}
-
-// NAV
-
-.mainNav {
-    opacity: 0;
-    top: 77%;
-    left: 90%;
-    position: fixed;
-    padding-left: 1vw;
-    animation: slideInNav ease 1s 1s 1 forwards;
-
-    > * > * {
-        padding: 0.5rem 0;
-        display: inline-block;
-        
-        a {
-            text-transform: uppercase;
-            color: $lightBrown;
+        li {
+            padding: 2rem;
+            display: inline-block;
             
-            &:hover ~ .underline,
-            .linkActive ~ .underline {
-                animation: navHorizontalLine 0.5s linear forwards;
+            a {
+                text-transform: uppercase;
+                color: $primaryBlue;
+                font-size: calc(1rem + 0.75vw);
+                border: 0.1rem solid transparent;
+                
+                .underline {
+                // border: 0.1rem solid transparent;
+                }  
+                
+                &:hover ~ .underline,
+                .linkActive ~ .underline {
+                    // animation: navUnderline 0.3s linear forwards;
+                } 
             }
         }
-        
-        .underline {
-            border: 0.1rem solid transparent;
-        }  
-    }
-}  
 
-.ilyaAnchor {
-    display: none;
-    position: fixed;
-    top: 10%;
-    left: 3%;
-    font-family: 'Gentium Book Basic', serif;
-    
-    a {
-        font-size: calc(1.25rem + 1vw);
-        font-weight: normal;
-        color: $lightBrown;
-    }      
+        li:last-of-type {
+            padding-right: 0;
+        }
+    }
 }
 
-/* Arrow */
+.arrowAndScrambleContainer {
 
-// .underline {
-//     border: 0.1rem solid transparent;
-// }
+    display: flex;
+    // justify-content: space-between;
+    margin: 10% 0 5% 0;
+    align-items: center;
+    
+    h3 {
+        // opacity: 0;
+        font-size: calc(1.5rem + 1.5vw);
+        font-weight: 100;
+        color: $primaryBlue;
+        margin: 0;
+        // animation: slideInH3 ease 1s 1s 1 forwards;
+        padding-left: 40%;
+    }
 
-// :hover ~ .underline {
-//     animation: navHorizontalLine 0.5s linear forwards;
-// }
+    .arrow {
+        width: calc(2rem + 2.5vw);
+        border: 0.2rem solid transparent;
+
+        &:hover {
+            border-radius: 50%;
+            border: 0.2rem solid $primaryBlue;
+        }
+    }
+    
+}
+
+.circle {
+    position: absolute;
+    right: 10%;
+    width: 80%;
+    top: 20%;
+    z-index: -1;
+}
 
 // ABOUT
 
 .about {
-    height: 100vh;
+    min-height: 100vh;
     scroll-snap-align: start;
-    border-right: 0.1rem solid $lightBrown;
-
-    h4 {
-        font-size: calc(1.5rem + 3vw);
-        // width: 80%;
-        // color: #1a1919;
-        // color: #bdc3c7;
-        color: $orange;
-        margin: 0;
-        text-transform: uppercase;
-        line-height: 85%;
-        font-family: 'Dela Gothic One', cursive;
-        // font-family: 'Dela Gothic One', cursive;
-        // font-family: 'Ibarra Real Nova', serif;
-        // font-family: 'Nanum Pen Script', cursive;
-        // font-family: 'Gentium Book Basic', serif; 
-        text-align: right;  
-        
-    }
 }
 
 .aboutContainer {
-    img {
-        width: 50rem;
+    padding-top: 5vw;
+    display: flex;
+    justify-content: space-evenly;
+
+    .aboutText {
+        width: 55%;
+        padding: 0 5%;
+
+        p:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            padding: 0 10%;
+        }
     }
 
-    p {
-        color: white;
+    img {
+        width: 35%;
+        align-self: flex-start;
     }
 }
+
+.aboutSocial {
+    width: 10%;
+
+    h4 {
+        font-size: calc(2rem + 1vw);
+        color: $primaryBlue;
+        margin: 0;
+        font-weight: 100;
+        text-transform: uppercase;
+        line-height: 90%;
+        font-family: 'Dela Gothic One', cursive;
+    }
+
+    ul {   
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80%;
+        
+        > li{
+
+            padding: 15% 0;
+
+           > * {
+       font-size: calc(2rem + 1vw);
+       color: $primaryBlue;
+    }
+  
+        }
+    }
+    
+}
+
+.skillsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    h3 {
+        color: $primaryBlue;
+        font-size: calc(2rem + 1vw);
+        font-weight: 100;
+    }
+
+    ul {
+        display: flex;
+        color: $primaryBlue;
+    }
+}
+
+
+
+
+
+
 
 
 // ANIMATIONS
 
 // HEADER
 
-@keyframes navHorizontalLine {
+@keyframes navUnderline {
     0%{
         width: 0%;
 
@@ -223,32 +280,32 @@ header {
     }
     100% {
         width: 100%;
-        border: 0.1rem solid $orange;
+        border: 0.1rem solid $primaryBlue;
 
     }
 }
 
 
-@keyframes headerVerticalLine {
+// @keyframes headerVerticalLine {
 
- 0% {
-    height: 0%;
-  }
+//  0% {
+//     height: 0%;
+//   }
 
- 100% {
-    border-right: 0.1rem solid $lightBrown;
-    height: 100%;
-  }
-}
+//  100% {
+//     border-right: 0.1rem solid $lightBrown;
+//     height: 100%;
+//   }
+// }
 
-@keyframes headerHorizontalLine {
+@keyframes navUnderline {
 
  0% {
     width:0%;
   }
 
  100% {
-    border-bottom: 0.1rem solid $lightBrown;
+    border-bottom: 0.2rem solid $primaryBlue;
     width:100%;
   }
 } 
@@ -263,14 +320,15 @@ header {
      }
 }
 
-@keyframes slideInNav {
+
+@keyframes slideDown {
     0% {
-        transform: translateX(15rem);
+        transform: translateY(-10rem);
     }
 
     100% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
