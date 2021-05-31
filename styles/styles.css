@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Gentium+Book+Basic:wght@700&family=Ibarra+Real+Nova:wght@500&family=Nanum+Pen+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -248,28 +249,26 @@ a {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: monumentExtended;
+  src: format("opentype") url(/../MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf);
+}
+
 body {
   font-size: calc(1rem + 0.75vw);
-  background-color: #121212;
-  font-family: 'Rubik';
+  background-color: #C4D5D9;
+  font-family: 'DM Sans', sans-serif;
 }
 
-header {
-  height: 100vh;
-  background: #121212;
-  position: relative;
-}
-
-.about {
-  min-height: 100vh;
-  background-color: black;
-  color: wheat;
-  padding: 20px;
+p {
+  color: #4933BC;
+  line-height: calc(2rem + 0.75vw);
+  font-size: calc(1.5rem + 0.5vw);
+  font-weight: 100;
 }
 
 .projects {
   min-height: 100vh;
-  background-color: coral;
   padding: 50px;
 }
 
@@ -280,17 +279,162 @@ header {
 .wrapper {
   margin: 0 auto;
   max-width: 1680px;
-  width: 80%;
+  width: 90%;
+}
+
+header {
+  border-bottom: 0.2rem solid #4933BC;
 }
 
 h1 {
-  font-size: calc(2rem + 6vw);
-  font-weight: 400;
-  width: 100%;
-  color: #E9401E;
+  font-size: calc(1.5rem + 8vw);
+  font-weight: lighter;
+  color: #4933BC;
+  position: relative;
+  right: 0.25%;
   margin: 0;
   text-transform: uppercase;
-  line-height: 80%;
+  line-height: 90%;
+  font-family: 'Dela Gothic One', cursive;
+  padding: 37vh 1.5rem 1.5rem 0;
+  opacity: 1;
+}
+
+.navContainer {
+  position: fixed;
+  z-index: 2;
+  background-color: #C4D5D9;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.navContainer .navUnderline {
+  border-bottom: 0.2rem solid #4933BC;
+}
+
+.mainNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainNav h2 {
+  font-size: calc(2rem + 1vw);
+  font-weight: normal;
+  color: #4933BC;
+  margin: 0;
+  padding: 1vw 0;
+  font-family: 'Gentium Book Basic', serif;
+}
+
+.mainNav ul li {
+  padding: 2rem;
+  display: inline-block;
+}
+
+.mainNav ul li a {
+  text-transform: uppercase;
+  color: #4933BC;
+  font-size: calc(1rem + 0.75vw);
+  border: 0.1rem solid transparent;
+}
+
+.mainNav ul li:last-of-type {
+  padding-right: 0;
+}
+
+.arrowAndScrambleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10% 0 5% 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.arrowAndScrambleContainer h3 {
+  font-size: calc(1.5rem + 1.5vw);
+  font-weight: 100;
+  color: #4933BC;
+  margin: 0;
+  padding-left: 40%;
+}
+
+.arrowAndScrambleContainer .arrow {
+  width: calc(2rem + 2.5vw);
+  border: 0.2rem solid transparent;
+}
+
+.arrowAndScrambleContainer .arrow:hover {
+  border-radius: 50%;
+  border: 0.2rem solid #4933BC;
+}
+
+.circle {
+  position: absolute;
+  right: 10%;
+  width: 80%;
+  top: 20%;
+  z-index: -1;
+}
+
+.about {
+  min-height: 100vh;
+  scroll-snap-align: start;
+}
+
+.aboutContainer {
+  padding-top: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.aboutContainer .aboutText {
+  width: 55%;
+  padding: 0 5%;
+}
+
+.aboutContainer .aboutText p:first-of-type {
+  margin-top: 0;
+}
+
+.aboutContainer .aboutText p {
+  padding: 0 10%;
+}
+
+.aboutContainer img {
+  width: 35%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.aboutSocial {
+  width: 10%;
+}
+
+.aboutSocial h4 {
+  font-size: calc(2rem + 1vw);
+  color: #4933BC;
+  margin: 0;
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 90%;
+  font-family: 'Dela Gothic One', cursive;
+}
+
+.aboutSocial ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,122 +442,77 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  padding-top: 20%;
-  font-family: 'Dela Gothic One', cursive;
-  padding: 35vh 1rem 2rem 0;
-  opacity: 0;
-  -webkit-animation: fadeInAnimation ease 1s;
-          animation: fadeInAnimation ease 1s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 80%;
 }
 
-.headerLine {
-  border-right: 0.1rem solid #FFF6E6;
-  -webkit-animation: fadeInHeaderLine 0.2s linear forwards;
-          animation: fadeInHeaderLine 0.2s linear forwards;
+.aboutSocial ul > li {
+  padding: 15% 0;
 }
 
-.h1Line {
-  -webkit-animation: fadeInH1Line 0.2s linear forwards;
-          animation: fadeInH1Line 0.2s linear forwards;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-
-header h2 {
-  font-size: calc(1.25rem + 1vw);
-  font-weight: normal;
-  color: #FFF6E6;
-  margin: 0;
-  position: absolute;
-  top: 3%;
-  -webkit-animation: slideInH2 ease 1s;
-          animation: slideInH2 ease 1s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 0;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-h3 {
-  opacity: 0;
+.aboutSocial ul > li > * {
   font-size: calc(2rem + 1vw);
-  font-style: italic;
-  color: #bdc3c7;
-  color: #f6f6f6;
-  -webkit-text-stroke-width: 0.2rem;
-  -webkit-text-stroke-color: black;
-  position: absolute;
-  bottom: 3%;
-  margin: 0;
-  -webkit-animation: slideInH3 ease 1s;
-          animation: slideInH3 ease 1s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  color: #4933BC;
 }
 
-.mainNav {
-  opacity: 0;
-  top: 73%;
-  left: 90%;
-  position: fixed;
-  padding-left: 1vw;
-  -webkit-animation: slideInNav ease 1s;
-          animation: slideInNav ease 1s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+.skillsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.mainNav > * > * {
-  padding: 0.5rem 0;
+.skillsContainer h3 {
+  color: #4933BC;
+  font-size: calc(2rem + 1vw);
+  font-weight: 100;
 }
 
-.mainNav a {
-  text-transform: uppercase;
-  color: #ffffff;
+.skillsContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #4933BC;
 }
 
-a.linkActive {
-  color: wheat;
-  font-size: 3rem;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+@-webkit-keyframes navUnderline {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+    border: 0.1rem solid #4933BC;
+  }
 }
 
-.ilyaAnchor {
-  display: none;
-  position: fixed;
-  top: 10%;
-  left: 3%;
+@keyframes navUnderline {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+    border: 0.1rem solid #4933BC;
+  }
 }
 
-.ilyaAnchor a {
-  font-size: calc(1.25rem + 1vw);
-  font-weight: normal;
-  color: #f6f6f6;
-  text-transform: uppercase;
+@keyframes navUnderline {
+  0% {
+    width: 0%;
+  }
+  100% {
+    border-bottom: 0.2rem solid #4933BC;
+    width: 100%;
+  }
 }
 
-@-webkit-keyframes fadeInAnimation {
+@-webkit-keyframes fadeInH1 {
   0% {
     opacity: 0;
   }
@@ -422,7 +521,7 @@ a.linkActive {
   }
 }
 
-@keyframes fadeInAnimation {
+@keyframes fadeInH1 {
   0% {
     opacity: 0;
   }
@@ -431,67 +530,27 @@ a.linkActive {
   }
 }
 
-@-webkit-keyframes fadeInHeaderLine {
+@-webkit-keyframes slideDown {
   0% {
-    height: 0%;
-  }
-  100% {
-    height: 100%;
-  }
-}
-
-@keyframes fadeInHeaderLine {
-  0% {
-    height: 0%;
-  }
-  100% {
-    height: 100%;
-  }
-}
-
-@-webkit-keyframes fadeInH1Line {
-  0% {
-    border-bottom: 0.1rem solid #FFF6E6;
-    width: 0%;
-  }
-  100% {
-    border-bottom: 0.1rem solid #FFF6E6;
-    width: 100%;
-  }
-}
-
-@keyframes fadeInH1Line {
-  0% {
-    border-bottom: 0.1rem solid #FFF6E6;
-    width: 0%;
-  }
-  100% {
-    border-bottom: 0.1rem solid #FFF6E6;
-    width: 100%;
-  }
-}
-
-@-webkit-keyframes slideInNav {
-  0% {
-    -webkit-transform: translateX(15rem);
-            transform: translateX(15rem);
+    -webkit-transform: translateY(-10rem);
+            transform: translateY(-10rem);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
-@keyframes slideInNav {
+@keyframes slideDown {
   0% {
-    -webkit-transform: translateX(15rem);
-            transform: translateX(15rem);
+    -webkit-transform: translateY(-10rem);
+            transform: translateY(-10rem);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
