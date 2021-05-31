@@ -1,0 +1,33 @@
+
+// GENERAL
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    // scroll-snap-type: y proximity;
+}
+
+// body {
+//     // font-family: "font-family: 'Rubik', sans-serif";
+//     // @include colors ();
+//     font-size: calc(1rem + 0.75vw);
+//     background-color: #7486E7;
+//     font-family: 'Rubik';
+// }
+
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}

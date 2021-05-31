@@ -1,0 +1,299 @@
+@import "./partials/setup";
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/topography";
+@import "../sass/partials/indexStyles";
+@import "./partials/mediaQueries";
+
+// cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Gentium+Book+Basic:wght@700&family=Ibarra+Real+Nova:wght@500&family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@font-face {
+    font-family: monumentExtended; 
+    src: 
+    format('opentype')
+    url(/../MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf);
+}
+// font-family: 'Dela Gothic One', cursive;
+
+    // font-family: 'Ibarra Real Nova', serif;
+
+    // font-family: 'Nanum Pen Script', cursive;
+
+    // font-family: 'Gentium Book Basic', serif;
+
+body {
+    font-size: calc(1rem + 0.75vw);
+    background-color: $darkGrey;
+    // font-family: 'Rubik';
+    // scroll-snap-type: y proximity;
+    font-family: 'DM Sans', sans-serif;
+    // font-family: monumentExtended, sans-serif;
+    // font-family: 'Gentium Book Basic', serif;
+}
+
+
+.projects {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    // background-color: coral;
+    padding: 50px;
+}
+
+.contact {
+    scroll-snap-align: start;
+    height:100vh;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1680px;
+    width: 80%;    
+} 
+
+// HEADER
+
+header {
+    height: 100vh;
+    // background: #bdc3c7;
+    // background: #1b1b1b;
+    background: $darkGrey;
+    scroll-snap-align: start;
+}
+
+.headerContainer {
+  animation: headerVerticalLine 0.3s linear forwards;
+
+    .headerTitleContainer {
+        animation: headerHorizontalLine 0.3s 0.5s linear forwards;
+        width: 100%;
+
+        h1 {
+            // font-size: calc(5rem + 7vw);
+            font-size: calc(1.5rem + 6vw);
+            // width: 80%;
+            // color: #1a1919;
+            // color: #bdc3c7;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            color: $orange;
+            margin: 0;
+            text-transform: uppercase;
+            line-height: 85%;
+            font-family: 'Dela Gothic One', cursive;
+            // font-family: 'Dela Gothic One', cursive;
+            // font-family: 'Ibarra Real Nova', serif;
+            // font-family: 'Nanum Pen Script', cursive;
+            // font-family: 'Gentium Book Basic', serif;
+            padding: 40vh 1.5rem 1.5rem 0;
+            opacity: 0;
+            animation: fadeInH1 ease-in 1s 1s 1 forwards;     
+        }
+    }
+
+
+    h2 {
+        font-size: calc(2rem + 1vw);
+        font-weight: normal;
+        color: $lightBrown;
+        margin: 0; 
+        position: absolute;
+        top: 3%;
+        animation: slideInH2 ease 1s 1s 1 forwards;
+        opacity: 0;
+        font-family: 'Gentium Book Basic', serif;
+    }
+
+    h3 {
+        opacity: 0;
+        font-size: calc(1.5rem + 1vw);
+        // font-style: italic;
+        color: #bdc3c7;
+        color: $whiteShade;
+        -webkit-text-stroke-width: 0.2rem;
+        -webkit-text-stroke-color: black;   
+        position: absolute;
+        bottom: 3%;
+        margin: 0;
+        animation: slideInH3 ease 1s 1s 1 forwards;
+    }
+}
+
+// NAV
+
+.mainNav {
+    opacity: 0;
+    top: 77%;
+    left: 90%;
+    position: fixed;
+    padding-left: 1vw;
+    animation: slideInNav ease 1s 1s 1 forwards;
+
+    > * > * {
+        padding: 0.5rem 0;
+        display: inline-block;
+        
+        a {
+            text-transform: uppercase;
+            color: $lightBrown;
+            
+            &:hover ~ .underline,
+            .linkActive ~ .underline {
+                animation: navHorizontalLine 0.5s linear forwards;
+            }
+        }
+        
+        .underline {
+            border: 0.1rem solid transparent;
+        }  
+    }
+}  
+
+.ilyaAnchor {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 3%;
+    font-family: 'Gentium Book Basic', serif;
+    
+    a {
+        font-size: calc(1.25rem + 1vw);
+        font-weight: normal;
+        color: $lightBrown;
+    }      
+}
+
+/* Arrow */
+
+// .underline {
+//     border: 0.1rem solid transparent;
+// }
+
+// :hover ~ .underline {
+//     animation: navHorizontalLine 0.5s linear forwards;
+// }
+
+// ABOUT
+
+.about {
+    height: 100vh;
+    scroll-snap-align: start;
+    border-right: 0.1rem solid $lightBrown;
+
+    h4 {
+        font-size: calc(1.5rem + 3vw);
+        // width: 80%;
+        // color: #1a1919;
+        // color: #bdc3c7;
+        color: $orange;
+        margin: 0;
+        text-transform: uppercase;
+        line-height: 85%;
+        font-family: 'Dela Gothic One', cursive;
+        // font-family: 'Dela Gothic One', cursive;
+        // font-family: 'Ibarra Real Nova', serif;
+        // font-family: 'Nanum Pen Script', cursive;
+        // font-family: 'Gentium Book Basic', serif; 
+        text-align: right;  
+        
+    }
+}
+
+.aboutContainer {
+    img {
+        width: 50rem;
+    }
+
+    p {
+        color: white;
+    }
+}
+
+
+// ANIMATIONS
+
+// HEADER
+
+@keyframes navHorizontalLine {
+    0%{
+        width: 0%;
+
+
+    }
+    100% {
+        width: 100%;
+        border: 0.1rem solid $orange;
+
+    }
+}
+
+
+@keyframes headerVerticalLine {
+
+ 0% {
+    height: 0%;
+  }
+
+ 100% {
+    border-right: 0.1rem solid $lightBrown;
+    height: 100%;
+  }
+}
+
+@keyframes headerHorizontalLine {
+
+ 0% {
+    width:0%;
+  }
+
+ 100% {
+    border-bottom: 0.1rem solid $lightBrown;
+    width:100%;
+  }
+} 
+
+@keyframes fadeInH1 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+     }
+}
+
+@keyframes slideInNav {
+    0% {
+        transform: translateX(15rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInH2 {
+    0% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInH3 {
+    0% {
+        transform: translateY(10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
