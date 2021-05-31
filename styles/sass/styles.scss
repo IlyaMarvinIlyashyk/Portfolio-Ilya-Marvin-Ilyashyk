@@ -159,7 +159,7 @@ h1 {
         padding-left: 40%;
     }
 
-    .arrow {
+    .headerArrow {
         width: calc(2rem + 2.5vw);
         border: 0.2rem solid transparent;
 
@@ -181,6 +181,8 @@ h1 {
 
 // ABOUT
 
+// think about the width here plz
+
 .about {
     min-height: 100vh;
     scroll-snap-align: start;
@@ -192,26 +194,20 @@ h1 {
     justify-content: space-evenly;
 
     .aboutText {
-        width: 55%;
-        padding: 0 5%;
+        width: 50%;
+        padding: 0 2.5% 0 7.5%;
 
         p:first-of-type {
             margin-top: 0;
         }
 
         p {
-            padding: 0 10%;
+            padding: 0 2.5%;
         }
-    }
-
-    img {
-        width: 35%;
-        align-self: flex-start;
     }
 }
 
 .aboutSocial {
-    width: 10%;
 
     h4 {
         font-size: calc(2rem + 1vw);
@@ -238,28 +234,54 @@ h1 {
        color: $primaryBlue;
     }
   
+     }
+    }
+}
+
+.imageAndSkillsContainer {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    img {
+        width: 80%;
+    }
+
+    .skillsContainer {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    
+        h3 {
+            color: $primaryBlue;
+            font-size: calc(1.5rem + 1vw);
+            font-weight: 100;
+            margin: 0;
+        }
+
+        ul {
+            display: flex;
+            color: $primaryBlue;
+            align-self: center;
+            flex-wrap: wrap;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0 1rem;
+                font-size: 2rem;
+
+                i {
+                    font-size: 5rem;
+                }
+            }
         }
     }
-    
 }
 
-.skillsContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
 
-    h3 {
-        color: $primaryBlue;
-        font-size: calc(2rem + 1vw);
-        font-weight: 100;
-    }
-
-    ul {
-        display: flex;
-        color: $primaryBlue;
-    }
-}
 
 
 

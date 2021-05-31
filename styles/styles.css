@@ -268,13 +268,11 @@ p {
 }
 
 .projects {
-  scroll-snap-align: start;
   min-height: 100vh;
   padding: 50px;
 }
 
 .contact {
-  scroll-snap-align: start;
   height: 100vh;
 }
 
@@ -370,12 +368,12 @@ h1 {
   padding-left: 40%;
 }
 
-.arrowAndScrambleContainer .arrow {
+.arrowAndScrambleContainer .headerArrow {
   width: calc(2rem + 2.5vw);
   border: 0.2rem solid transparent;
 }
 
-.arrowAndScrambleContainer .arrow:hover {
+.arrowAndScrambleContainer .headerArrow:hover {
   border-radius: 50%;
   border: 0.2rem solid #4933BC;
 }
@@ -404,8 +402,8 @@ h1 {
 }
 
 .aboutContainer .aboutText {
-  width: 55%;
-  padding: 0 5%;
+  width: 50%;
+  padding: 0 2.5% 0 7.5%;
 }
 
 .aboutContainer .aboutText p:first-of-type {
@@ -413,17 +411,7 @@ h1 {
 }
 
 .aboutContainer .aboutText p {
-  padding: 0 10%;
-}
-
-.aboutContainer img {
-  width: 35%;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
-.aboutSocial {
-  width: 10%;
+  padding: 0 2.5%;
 }
 
 .aboutSocial h4 {
@@ -459,29 +447,71 @@ h1 {
   color: #4933BC;
 }
 
-.skillsContainer {
+.imageAndSkillsContainer {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.imageAndSkillsContainer img {
+  width: 80%;
+}
+
+.imageAndSkillsContainer .skillsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+
+.imageAndSkillsContainer .skillsContainer h3 {
+  color: #4933BC;
+  font-size: calc(1.5rem + 1vw);
+  font-weight: 100;
+  margin: 0;
+}
+
+.imageAndSkillsContainer .skillsContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #4933BC;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.imageAndSkillsContainer .skillsContainer ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 1rem;
+  font-size: 2rem;
 }
 
-.skillsContainer h3 {
-  color: #4933BC;
-  font-size: calc(2rem + 1vw);
-  font-weight: 100;
-}
-
-.skillsContainer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #4933BC;
+.imageAndSkillsContainer .skillsContainer ul li i {
+  font-size: 5rem;
 }
 
 @-webkit-keyframes navUnderline {
