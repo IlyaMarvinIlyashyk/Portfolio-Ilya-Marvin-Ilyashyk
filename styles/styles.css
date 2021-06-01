@@ -260,16 +260,21 @@ body {
   font-family: 'DM Sans', sans-serif;
 }
 
-p {
+h4 {
+  font-size: calc(2rem + 1vw);
   color: #4933BC;
-  line-height: calc(2rem + 0.75vw);
-  font-size: calc(1.5rem + 0.5vw);
+  margin: 0;
   font-weight: 100;
+  text-transform: uppercase;
+  line-height: 90%;
+  font-family: 'Dela Gothic One', cursive;
 }
 
-.projects {
-  min-height: 100vh;
-  padding: 50px;
+p {
+  color: #4933BC;
+  line-height: 140%;
+  font-size: calc(1.5rem + 0.5vw);
+  font-weight: 100;
 }
 
 .contact {
@@ -354,7 +359,7 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 10% 0 5% 0;
+  margin: 8.5vw 0 6vw 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -382,46 +387,33 @@ h1 {
   position: absolute;
   right: 10%;
   width: 80%;
-  top: 20%;
+  top: 22.5%;
   z-index: -1;
 }
 
 .about {
-  min-height: 100vh;
-  scroll-snap-align: start;
-}
-
-.aboutContainer {
-  padding-top: 5vw;
+  padding: 6vw 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  border-bottom: 0.2rem solid #4933BC;
 }
 
-.aboutContainer .aboutText {
+.about .aboutText {
   width: 50%;
   padding: 0 2.5% 0 7.5%;
 }
 
-.aboutContainer .aboutText p:first-of-type {
+.about .aboutText p:first-of-type {
   margin-top: 0;
 }
 
-.aboutContainer .aboutText p {
+.about .aboutText p {
+  margin: 4% 0;
   padding: 0 2.5%;
-}
-
-.aboutSocial h4 {
-  font-size: calc(2rem + 1vw);
-  color: #4933BC;
-  margin: 0;
-  font-weight: 100;
-  text-transform: uppercase;
-  line-height: 90%;
-  font-family: 'Dela Gothic One', cursive;
 }
 
 .aboutSocial ul {
@@ -448,6 +440,7 @@ h1 {
 }
 
 .imageAndSkillsContainer {
+  width: 35%;
   -ms-flex-item-align: start;
       align-self: flex-start;
   display: -webkit-box;
@@ -475,13 +468,26 @@ h1 {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 80%;
+  padding-top: 2.5%;
 }
 
-.imageAndSkillsContainer .skillsContainer h3 {
+.imageAndSkillsContainer .skillsContainer h5 {
   color: #4933BC;
   font-size: calc(1.5rem + 1vw);
   font-weight: 100;
   margin: 0;
+  padding: 4% 0;
+}
+
+.imageAndSkillsContainer .skillsContainer h5::before {
+  content: '';
+  background-image: url(/assets/aboutArrow.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 100%;
+  width: calc(1rem + 0.75vw);
+  height: calc(1rem + 0.75vw);
+  margin-right: 1rem;
 }
 
 .imageAndSkillsContainer .skillsContainer ul {
@@ -489,6 +495,8 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   color: #4933BC;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-item-align: center;
       align-self: center;
   -ms-flex-wrap: wrap;
@@ -506,12 +514,69 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem 0;
   font-size: 2rem;
+  width: 25%;
 }
 
 .imageAndSkillsContainer .skillsContainer ul li i {
-  font-size: 5rem;
+  font-size: calc(1.5rem + 1.5vw);
+}
+
+.projects {
+  padding: 6vw 0;
+}
+
+.projectsContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projectsContainer img {
+  width: 100%;
+}
+
+.projectsContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.projectsContainer video {
+  width: 100%;
+  opacity: 0.75;
+}
+
+.projectsContainer video:hover {
+  opacity: 1.1;
+}
+
+.projectsContainer .newsImage,
+.projectsContainer .willowImage {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -webkit-box-shadow: 20rem 1rem #D1DFE2;
+          box-shadow: 20rem 1rem #D1DFE2;
+  margin-left: 5%;
+}
+
+.projectsContainer .newsImage video,
+.projectsContainer .willowImage video {
+  -webkit-box-shadow: 1rem 1rem #D1DFE2;
+          box-shadow: 1rem 1rem #D1DFE2;
+}
+
+h5 {
+  font-size: 10rem;
+  margin: 0;
+  color: #4933BC;
+  text-transform: uppercase;
 }
 
 @-webkit-keyframes navUnderline {

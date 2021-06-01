@@ -53,3 +53,36 @@ window.onscroll = () => {
 
     previousScrollPosition = currentScrollPosition;
 }
+
+document.querySelector(".podcastVideo").addEventListener("mouseover", function () {
+    this.play();
+});
+
+document.querySelector(".podcastVideo").addEventListener("mouseleave", function () {
+    this.pause();
+});
+
+document.querySelector(".newsVideo").addEventListener("mouseover", function () {
+    this.play();
+});
+
+document.querySelector(".newsVideo").addEventListener("mouseleave", function () {
+    this.pause();
+});
+
+document.querySelector(".covidVideo").addEventListener("mouseover", function () {
+    this.play();
+});
+
+document.querySelector(".covidVideo").addEventListener("mouseleave", function () {
+    this.pause();
+});
+
+document.querySelector(".willowVideo").addEventListener("mouseover", function () {
+    this.play();
+});
+
+document.querySelector(".willowVideo").addEventListener("mouseleave", function () {
+    this.pause();
+});
+
