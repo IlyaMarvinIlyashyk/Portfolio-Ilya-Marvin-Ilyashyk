@@ -42,6 +42,8 @@ function printText() {
 }
 printText();
 
+// NAV BAR SCROLL EFFECT
+
 let previousScrollPosition = window.pageYOffset;
 window.onscroll = () => {
     const currentScrollPosition = window.pageYOffset;
@@ -53,6 +55,8 @@ window.onscroll = () => {
 
     previousScrollPosition = currentScrollPosition;
 }
+
+// VIDEOS SCRIPT
 
 document.querySelector(".podcastVideo").addEventListener("mouseover", function () {
     this.play();
