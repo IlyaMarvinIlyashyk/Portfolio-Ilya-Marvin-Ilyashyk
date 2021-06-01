@@ -308,23 +308,13 @@ h1 {
     video {
         width: 100%;
         opacity: 0.7;
+        // border: 0.2rem solid transparent;
     }
 
     video:hover {
         opacity: 1.1;
+        // border: 0.2rem solid $primaryBlue;
     }
-
-    .newsImage,
-    .willowImage {
-        justify-self: end;
-        box-shadow: 20rem 1rem #D1DFE2;
-        margin-left: 5%;
-
-        video {
-            box-shadow: 1rem 1rem #D1DFE2;
-        }
-    }
-
 
 }
 

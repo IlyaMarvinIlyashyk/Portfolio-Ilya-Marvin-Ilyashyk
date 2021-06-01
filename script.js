@@ -7,7 +7,7 @@ import scramblerFunction from './scramble.js'
 scramblerFunction();
 
 const scrambleText = [
-    'Hey',
+    'Hello',
     'Salut',
     'Privet',
     '¿Qué tal?',
