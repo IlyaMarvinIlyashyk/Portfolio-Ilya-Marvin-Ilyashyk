@@ -297,19 +297,7 @@ a {
 
 header {
   border-bottom: 0.2rem solid #4933BC;
-}
-
-h1 {
-  font-size: calc(1rem + 8.25vw);
-  font-weight: lighter;
   position: relative;
-  right: 0.25%;
-  margin: 0;
-  text-transform: uppercase;
-  line-height: 90%;
-  font-family: 'Dela Gothic One', cursive;
-  padding: 37vh 1.5rem 1.5rem 0;
-  opacity: 1;
 }
 
 .navContainer {
@@ -359,6 +347,19 @@ h1 {
 
 .mainNav ul li:last-of-type {
   padding-right: 0;
+}
+
+h1 {
+  font-size: calc(1rem + 8.25vw);
+  font-weight: lighter;
+  position: relative;
+  right: 0.25%;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 90%;
+  font-family: 'Dela Gothic One', cursive;
+  padding: 37vh 1.5rem 1.5rem 0;
+  opacity: 1;
 }
 
 .arrowAndScrambleContainer {
@@ -769,7 +770,7 @@ footer {
 }
 
 footer p {
-  font-size: 2rem;
+  font-size: calc(1.25rem + 0.5vw);
   margin: 0rem;
   border-top: 0.2rem solid #4933BC;
 }
@@ -803,6 +804,111 @@ footer .circleContact {
   }
   .projectsContainer > li:nth-of-type(even) {
     margin: 7.5% 0 7.5% 5%;
+  }
+}
+
+@media (max-width: 800px) {
+  header {
+    min-height: 101vh;
+  }
+  h1 {
+    font-size: calc(1rem + 10vw);
+  }
+  .arrowAndScrambleContainer h3, .arrowAndScrambleContainer .headerArrow {
+    position: absolute;
+    bottom: 5%;
+  }
+  .arrowAndScrambleContainer h3 {
+    bottom: 7%;
+    right: 45%;
+    padding: 0;
+  }
+  .circle {
+    top: 65%;
+    right: 0%;
+    width: 100%;
+  }
+  .imageAndSkillsContainer .skillsContainer {
+    padding-top: 10%;
+  }
+  .imageAndSkillsContainer .skillsContainer ul {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  .imageAndSkillsContainer .skillsContainer ul li {
+    width: 50%;
+  }
+  .projectsDescription p:last-of-type {
+    display: none;
+  }
+  .projectsContainer {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .projectsContainer > li ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .projectsContainer > li ul li {
+    margin: 0 1.5rem;
+    padding: 0.75rem;
+    background-color: #879EA4;
+    color: #C4D5D9;
+  }
+  .projectsContainer > li ul li:first-of-type {
+    margin-left: 0;
+  }
+  .projectsContainer > li:nth-of-type(odd) {
+    margin: 5% 0 0 0;
+    text-align: left;
+  }
+  .projectsContainer > li:nth-of-type(even) {
+    margin: 5% 0 0 0;
+  }
+  .projectsContainer > li:nth-of-type(4) {
+    -ms-grid-row: 3;
+        grid-row-start: 3;
+  }
+  .projectsContainer > li:nth-of-type(8) {
+    -ms-grid-row: 7;
+        grid-row-start: 7;
+  }
+  .projectsContainer > li:nth-of-type(4n + 3) ul {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  .projectsContainer > li:nth-of-type(4n + 3) ul li:last-of-type {
+    margin-right: 0;
+  }
+  .projectsContainer > li:nth-of-type(4n + 3) .projectsLinks a:last-of-type {
+    padding-right: 0;
+  }
+  .projectsContainer .projectsLinks {
+    margin-top: 4%;
+  }
+  .projectsContainer .projectsLinks a {
+    padding: 1rem;
+  }
+  .projectsContainer .projectsLinks a:first-of-type {
+    padding-left: 0;
+  }
+  .projectsContainer .projectsLinks a:first-of-type::before {
+    content: '';
+    background-image: url(/assets/aboutArrow.svg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: 100%;
+    width: calc(1rem + 0.75vw);
+    height: calc(1rem + 0.75vw);
+    margin-right: 1rem;
+    position: relative;
+    top: 0.25vw;
+  }
+  .projectsContainer .projectsLinks:nth-of-type(2n) {
+    margin: 20%;
   }
 }
 
