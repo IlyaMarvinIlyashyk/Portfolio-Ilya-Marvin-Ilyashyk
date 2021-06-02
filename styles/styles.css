@@ -554,6 +554,10 @@ h1 {
   margin: 4% 0;
 }
 
+.projectsContainer > li img {
+  display: none;
+}
+
 .projectsContainer > li video {
   width: 100%;
   opacity: 0.8;
@@ -816,7 +820,7 @@ footer .circleContact {
   }
   .arrowAndScrambleContainer h3, .arrowAndScrambleContainer .headerArrow {
     position: absolute;
-    bottom: 5%;
+    bottom: 6%;
   }
   .arrowAndScrambleContainer h3 {
     bottom: 7%;
@@ -845,6 +849,12 @@ footer .circleContact {
   .projectsContainer {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
+  }
+  .projectsContainer > li video {
+    display: none;
+  }
+  .projectsContainer > li img {
+    display: unset;
   }
   .projectsContainer > li ul {
     display: -webkit-box;

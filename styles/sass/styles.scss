@@ -312,6 +312,10 @@ h1 {
             margin: 4% 0;
         }
 
+        img {
+            display: none;
+        }
+
         video {
             width: 100%;
             opacity: 0.8;
@@ -598,7 +602,7 @@ footer {
 
         h3, .headerArrow {
             position: absolute;
-            bottom: 5%;
+            bottom: 6%;
         }
 
         h3 {
@@ -636,7 +640,11 @@ footer {
     > li {
 
         video {
-            // display: none;
+            display: none;
+        }
+
+        img {
+            display: unset;
         }
 
         ul {
