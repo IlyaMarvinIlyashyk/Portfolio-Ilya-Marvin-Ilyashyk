@@ -89,6 +89,10 @@ header {
         margin: 0; 
         padding: 1vw 0;
         font-family: 'Gentium Book Basic', serif;
+
+        span:last-of-type {
+            display: none;
+        }
     }
     
     ul {
@@ -291,22 +295,14 @@ h1 {
     
 }
 
-// .projectsContainer ul {
-//     display: flex;
-//     color: $primaryBlue;
-// }
-
-// .projectsContainer img {
-//     width: 100%;
-// }
-
 .projectsContainer {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
 
     > li {
-        // align-self: flex-start;
+
+        margin: 5%;
 
         p {
             margin: 4% 0;
@@ -364,13 +360,13 @@ h1 {
     }
 
     > li:nth-of-type(odd) {
-        margin: 5% 5% 5% 0;
+        margin-left: 0;
         text-align: right;
         // place-self: right;
     }
 
     > li:nth-of-type(even) {
-        margin: 5% 0 5% 5%;
+        margin-right: 5%;
         text-align: left;
     }
 
@@ -598,6 +594,17 @@ footer {
         font-size: calc(1rem + 10vw);
     }
 
+    .mainNav h2 {
+
+        span:first-of-type {
+            display: none;
+        }
+
+        span:last-of-type {
+            display: unset;
+        }
+    }
+
     .arrowAndScrambleContainer {
 
         h3, .headerArrow {
@@ -635,95 +642,90 @@ footer {
     }
 
     .projectsContainer {
-    grid-template-columns: 100%;
+        grid-template-columns: 100%;
 
-    > li {
+        > li {
 
-        video {
-            display: none;
-        }
+            video {
+                display: none;
+            }
 
-        img {
-            display: unset;
-        }
+            .projectsLinks {
+                margin-top: 3%;
 
-        ul {
-            display: flex;
+                a {
+                font-size: calc(1rem + 1.25vw);
+                }
+            }
 
-            li {
-                margin: 0 1.5rem;
-                padding: 0.75rem;
-                background-color:#879EA4;
-                color: $white;
-                &:first-of-type {
-                    margin-left: 0;
+            p {
+                margin: 3% 0;
+            }
+
+            img {
+                display: unset;
+                padding-top: 5%;
+            }
+
+            ul {
+                display: flex;
+
+                li {
+                    margin: 0 1.5rem;
+                    padding: 0.75rem;
+                    background-color:#879EA4;
+                    color: $white;
+
+                    &:first-of-type {
+                        margin-left: 0;
+                    }
                 }
             }
         }
+
+        > li:nth-of-type(odd) {
+            margin: 3% 0 0 0;
+            text-align: left;
+        }
+
+        > li:nth-of-type(even) {
+            margin: 3% 0 0 0;
+        }
+
+        > li:nth-of-type(4) {
+            grid-row-start: 3;
+        }
+
+        > li:nth-of-type(8) {
+            grid-row-start: 7;
+        }
+
+        > li:nth-of-type(4n + 3) {
+            ul {
+                justify-content: unset;
+            }
+        }
     }
 
-    > li:nth-of-type(odd) {
-        margin: 5% 0 0 0;
+    .contactForm {
+        display: none;
+    }
+
+    .contactContainer .contactSocial {
         text-align: left;
-    }
 
-    > li:nth-of-type(even) {
-        margin: 5% 0 0 0;
-    }
+        h5 {
+            padding: 10% 0;
+        }
 
-    > li:nth-of-type(4) {
-        grid-row-start: 3;
-    }
-
-    > li:nth-of-type(8) {
-        grid-row-start: 7;
-    }
-
-    > li:nth-of-type(4n + 3) {
         ul {
-            justify-content: unset;
+            justify-content: flex-start;
 
-            li:last-of-type {
-                margin-right: 0;
-            }
-        }
-
-        .projectsLinks {
-            a:last-of-type {
-                padding-right: 0;
+            li {
+                padding: 0 5% 0 0;
             }
         }
     }
-
-    .projectsLinks {
-        margin-top: 4%;
-        
-        a {
-            padding: 1rem;
-        }
-        
-        a:first-of-type {
-            padding-left: 0;
-
-            &::before {
-                content: '';
-                background-image: url(/assets/aboutArrow.svg);
-                background-repeat: no-repeat;
-                display: inline-block;
-                background-size: 100%;
-                width: calc(1rem + 0.75vw);
-                height: calc(1rem + 0.75vw);
-                margin-right: 1rem;
-                position: relative;
-                top: 0.25vw;
-            }
-        }
-    }
-    .projectsLinks:nth-of-type(2n) {
-        margin: 20%;
-    }
-}
-    
 }
 
 
