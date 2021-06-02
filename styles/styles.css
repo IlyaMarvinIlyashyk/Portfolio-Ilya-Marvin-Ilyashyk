@@ -325,6 +325,28 @@ header {
           align-items: center;
 }
 
+.mainNav .hamburger {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  right: 5%;
+  top: 0%;
+  margin-top: 2vw;
+  font-size: 3rem;
+  background-color: inherit;
+  border: none;
+  color: #4933BC;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  z-index: 100;
+}
+
+.mainNav .hamburger .inactive {
+  display: none;
+}
+
 .mainNav h2 {
   font-size: calc(2rem + 1vw);
   font-weight: normal;
@@ -335,6 +357,11 @@ header {
 
 .mainNav h2 span:last-of-type {
   display: none;
+}
+
+.mainNav .showNav {
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
 }
 
 .mainNav ul li {
@@ -938,7 +965,59 @@ footer p {
             justify-content: center;
   }
   .contactContainer .contactSocial ul li {
-    padding: 0 5% 0 0;
+    padding: 0 6% 0 0;
+  }
+}
+
+@media (max-width: 625px) {
+  .mainNav {
+    padding: 1rem 0;
+  }
+  .mainNav h2 {
+    padding: 2vw 0;
+  }
+  .mainNav .hamburger {
+    display: unset;
+  }
+  .mainNav ul {
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 0.2rem solid #4933BC;
+    background-color: #C4D5D9;
+    padding: 1rem;
+    width: 90%;
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+  }
+  .mainNav ul li {
+    padding: 1rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .mainNav ul li:last-of-type {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: calc(1rem + 8vw);
+  }
+  .arrowAndScrambleContainer .headerArrow {
+    left: 5%;
+  }
+  .arrowAndScrambleContainer h3 {
+    right: 5%;
   }
 }
 

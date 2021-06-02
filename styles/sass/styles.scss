@@ -83,6 +83,25 @@ header {
     align-items: center;
     // animation: slideDown ease 1s 1s 1 forwards;
 
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        position: fixed;
+        right: 5%;
+        top: 0%;
+        margin-top: 2vw;
+        font-size: 3rem;
+        background-color: inherit;
+        border: none;
+        color: $primaryBlue;
+        transition: transform 0.2s;
+        z-index: 100;
+
+        .inactive {
+            display: none;
+        }
+    }
+
     h2 {
         font-size: calc(2rem + 1vw);
         font-weight: normal;
@@ -93,6 +112,10 @@ header {
         span:last-of-type {
             display: none;
         }
+    }
+
+    .showNav {
+        transform: translateY(-20%);
     }
     
     ul {
@@ -732,12 +755,65 @@ footer {
                 justify-content: center;
 
                 li {
-                    padding: 0 5% 0 0;
+                    padding: 0 6% 0 0;
                 }
             }
         }
     }
+}
+
+@media (max-width: 625px) {
+
+    .mainNav {
+
+        h2 {
+            padding: 2vw 0;
+        }
+
+        .hamburger {
+            display: unset;
+        }
+
+        padding: 1rem 0;
+
+        ul {
+            position: fixed;
+            right: 5%;
+            top: 5%;
+            display: flex;
+            flex-direction: column;
+            border: 0.2rem solid $primaryBlue;
+            background-color: $white;
+            padding: 1rem;
+            width: 90%;
+            transform: translateY(-150%);
+            transition: transform 0.2s;
+
+            li {
+                padding: 1rem;
+                align-self: center;
+            }
+
+            li:last-of-type {
+                padding: 1rem;
+            }
+        }
+    }
+
+    h1 {
+        font-size: calc(1rem + 8vw);
+    }
+
+    .arrowAndScrambleContainer {
+
+        .headerArrow {
+            left: 5%
+        }
     
+        h3 {
+            right: 5%;
+        }
+    }
     
 }
 

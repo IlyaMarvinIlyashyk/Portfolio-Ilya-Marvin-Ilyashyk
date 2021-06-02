@@ -44,17 +44,65 @@ printText();
 
 // NAV BAR SCROLL EFFECT
 
-let previousScrollPosition = window.pageYOffset;
-window.onscroll = () => {
-    const currentScrollPosition = window.pageYOffset;
-    if (previousScrollPosition > currentScrollPosition) {
-        document.querySelector(".navContainer").style.top = "0";
-    } else {
-        document.querySelector(".navContainer").style.top = "-10rem";
+const navDesktop = () => {
+    
+    let previousScrollPosition = window.pageYOffset;
+    
+    if (window.innerWidth >= 625) {
+        window.onscroll = () => {
+            const currentScrollPosition = window.pageYOffset;
+            
+            if (previousScrollPosition > currentScrollPosition) {
+                
+                document.querySelector(".navContainer").style.top = "0";
+            } else {
+                document.querySelector(".navContainer").style.top = "-10rem";
+            }
+            
+            previousScrollPosition = currentScrollPosition;
+        }
+    }
+    
+    else if (window.innerWidth < 625) {
+        return
+    }
+}
+
+window.addEventListener("resize", navDesktop)
+window.addEventListener("load", navDesktop)
+const menu = document.querySelector("ul");
+const hamburger = document.querySelector(".hamburger");
+const active = document.querySelector(".active");
+const inactive = document.querySelector(".inactive");
+
+hamburger.addEventListener("click", toggleMenu)
+
+function toggleMenu() {
+
+    if (menu.classList.contains("showNav")) {
+        menu.classList.remove("showNav");
+        inactive.style.display = "none";
+        active.style.display = "block"
     }
 
-    previousScrollPosition = currentScrollPosition;
+    else {
+        menu.classList.add("showNav");
+        inactive.style.display = "block";
+        active.style.display = "none";
+    }
 }
+
+const menuLinks = document.querySelectorAll(".navLink")
+
+menuLinks.forEach(
+    function (navLink) {
+        navLink.addEventListener("click", toggleMenu)
+    })
+
+
+console.log(window.innerWidth)
+
+
 
 // VIDEOS SCRIPT
 
