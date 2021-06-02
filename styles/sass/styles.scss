@@ -440,7 +440,7 @@ h1 {
 }
 
 .contactContainer {
-    margin-top: 4%;
+    margin-top: 5%;
     display: flex;
     justify-content: space-between;
 
@@ -533,22 +533,23 @@ h1 {
 
 footer {
     position: relative;
-
+    
+    .circleContact {
+      position: absolute;
+      right: 22%;
+      z-index: -1;
+      width: 55%;
+      height: auto;
+      bottom: 0%;
+  }
     p {
         font-size: calc(1.25rem + 0.5vw);
-        margin: 0rem;
+        padding: 1rem;
+        margin: 0;
         border-top: 0.2rem solid $primaryBlue;
-        // text-align: center
     };
 
-      .circleContact {
-        position: absolute;
-        right: 22%;
-        z-index: -1;
-        width: 55%;
-        height: auto;
-        bottom: 0%;
-    }
+        // text-align: center
 }
 
 // MEDIA QUERIES
@@ -664,7 +665,7 @@ footer {
 
             img {
                 display: unset;
-                padding-top: 5%;
+                padding-top: 6%;
             }
 
             ul {
@@ -692,6 +693,12 @@ footer {
             margin: 3% 0 0 0;
         }
 
+        > li:nth-of-type(1) {
+            img {
+                padding-top: 3.5%;
+            }
+        }
+
         > li:nth-of-type(4) {
             grid-row-start: 3;
         }
@@ -711,21 +718,27 @@ footer {
         display: none;
     }
 
-    .contactContainer .contactSocial {
-        text-align: left;
+    .contactContainer {
+        justify-content: center;
+        
+        .contactSocial {
+            text-align: center;
 
-        h5 {
-            padding: 10% 0;
-        }
+            h5 {
+                padding: 10% 0;
+            }
 
-        ul {
-            justify-content: flex-start;
+            ul {
+                justify-content: center;
 
-            li {
-                padding: 0 5% 0 0;
+                li {
+                    padding: 0 5% 0 0;
+                }
             }
         }
     }
+    
+    
 }
 
 

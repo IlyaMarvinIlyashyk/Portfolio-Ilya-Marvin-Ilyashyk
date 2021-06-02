@@ -679,7 +679,7 @@ h1 {
 }
 
 .contactContainer {
-  margin-top: 4%;
+  margin-top: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -781,12 +781,6 @@ footer {
   position: relative;
 }
 
-footer p {
-  font-size: calc(1.25rem + 0.5vw);
-  margin: 0rem;
-  border-top: 0.2rem solid #4933BC;
-}
-
 footer .circleContact {
   position: absolute;
   right: 22%;
@@ -794,6 +788,13 @@ footer .circleContact {
   width: 55%;
   height: auto;
   bottom: 0%;
+}
+
+footer p {
+  font-size: calc(1.25rem + 0.5vw);
+  padding: 1rem;
+  margin: 0;
+  border-top: 0.2rem solid #4933BC;
 }
 
 @media (max-width: 1120px) {
@@ -878,7 +879,7 @@ footer .circleContact {
   }
   .projectsContainer > li img {
     display: unset;
-    padding-top: 5%;
+    padding-top: 6%;
   }
   .projectsContainer > li ul {
     display: -webkit-box;
@@ -901,6 +902,9 @@ footer .circleContact {
   .projectsContainer > li:nth-of-type(even) {
     margin: 3% 0 0 0;
   }
+  .projectsContainer > li:nth-of-type(1) img {
+    padding-top: 3.5%;
+  }
   .projectsContainer > li:nth-of-type(4) {
     -ms-grid-row: 3;
         grid-row-start: 3;
@@ -917,16 +921,21 @@ footer .circleContact {
   .contactForm {
     display: none;
   }
+  .contactContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .contactContainer .contactSocial {
-    text-align: left;
+    text-align: center;
   }
   .contactContainer .contactSocial h5 {
     padding: 10% 0;
   }
   .contactContainer .contactSocial ul {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .contactContainer .contactSocial ul li {
     padding: 0 5% 0 0;
