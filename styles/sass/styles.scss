@@ -26,12 +26,12 @@
 body {
     font-size: calc(1rem + 0.75vw);
     background-color: $white;
-
-    // font-family: 'Rubik';
-    // scroll-snap-type: y proximity;
     font-family: 'DM Sans', sans-serif;
-    // font-family: monumentExtended, sans-serif;
-    // font-family: 'Gentium Book Basic', serif;
+    line-height: 140%;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
 }
 
 h4 {
@@ -46,7 +46,7 @@ h4 {
 
 p {
     color: $primaryBlue;
-    line-height: 140%;
+    // line-height: 140%;
     font-size: calc(1rem + 0.75vw);
     // font-size: calc(1.5rem + 0.5vw);
     font-weight: 400;
@@ -58,16 +58,18 @@ a {
     font-weight: bolder;
 }
 
-.contact {
-    // scroll-snap-align: start;
-    height:100vh;
-}
-
 .wrapper {
     margin: 0 auto;
     max-width: 1680px;
-    width: 90%;    
+    width: 80%;    
 } 
+
+.about,
+.projects,
+.contact {
+    padding: 6vw 0;
+    border-bottom: 0.2rem solid $primaryBlue;
+}
 
 // HEADER
 
@@ -193,14 +195,12 @@ h1 {
 // think about the width here plz
 
 .about {
-    padding: 6vw 0;
     display: flex;
     justify-content: space-evenly;
-    border-bottom: 0.2rem solid $primaryBlue;
 
     .aboutText {
         width: 50%;
-        padding: 0 2.5% 0 7.5%;
+        padding: 0 2.5% 0 5.5%;
         
         p:first-of-type {
             margin-top: 0;
@@ -234,7 +234,7 @@ h1 {
 }
 
 .imageAndSkillsContainer {
-    width: 35%;
+    width: 40%;
     align-self: flex-start;
     display: flex;
     flex-direction: column;
@@ -282,7 +282,7 @@ h1 {
                 flex-direction: column;
                 align-items: center;
                 flex-wrap: wrap;
-                padding: 1rem 0;
+                padding: 0.5rem 0;
                 font-size: calc(1rem + 0.5vw);
                 width: 25%;
 
@@ -297,7 +297,7 @@ h1 {
 // PROJECTS
 
 .projects {
-    padding: 6vw 0;
+    padding-bottom: 4vw;
 }
 
 .projectsDescription {
@@ -350,13 +350,13 @@ h1 {
         }
         
         h5 {
-            font-size: calc(2rem + 2vw);
+            font-size: calc(2rem + 1vw);
             // width: 50%;
             margin: 0;
             color: $primaryBlue;
             // text-transform: uppercase;
             font-weight: bolder;
-            // font-style: italic;
+            font-style: italic;
             position: relative;
         }
 
@@ -423,38 +423,175 @@ h1 {
         
         a:first-of-type {
             padding-left: 0;
+
+            &::before {
+                content: '';
+                background-image: url(/assets/aboutArrow.svg);
+                background-repeat: no-repeat;
+                display: inline-block;
+                background-size: 100%;
+                width: calc(1rem + 0.75vw);
+                height: calc(1rem + 0.75vw);
+                margin-right: 1rem;
+                position: relative;
+                top: 0.25vw;
+            }
         }
     }
-
     .projectsLinks:nth-of-type(2n) {
         margin: 20%;
     }
+}
 
+// CONTACT 
+
+.contact {
+    position: relative;
+    border: none;
+
+    .circleContact {
+        position: absolute;
+        right: 25%;
+        // width: 47%;
+        // top: 20%;
+        z-index: -1;
+        width: 50%;
+        height: auto;
+        bottom: -5%;
+    }
+}
+
+
+
+.contactContainer {
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-between;
+
+    .contactSocial {
+        text-align: right;
+        
+        h5 {
+            padding: 15% 0;
+            font-style: normal;
+            font-weight: normal;
+            font-size: calc(1rem + 2vw);
+            text-decoration: underline;
+            text-decoration-color: $primaryBlue;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            
+            li {
+                font-size: calc(1.5rem + 2.5rem);
+                padding-left: 5%;
+            }
+        }
+    }
+}
+
+.contactForm {
+    
+    .nameEmail {
+        display: flex;
+        justify-content: space-between;
+        
+        input[type=text],
+        input[type=email] {
+            width: 49%;
+            background-color: #879EA4;
+            background-color: inherit;
+            border: 0.2rem solid $primaryBlue;
+        }
+    }
+    
+    .comment,
+    .message  {
+        margin-bottom: 0;
+        
+        textarea {
+            resize: none;
+            width: 100%;
+            background-color: #879EA4;
+            background-color: inherit;
+            border: 0.2rem solid $primaryBlue;
+        }
+    }
+    
+    button {
+        margin-top: 2%;
+        // width: 100%;
+        padding: 0;
+        color: $primaryBlue;
+        font-weight: 700;
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            background-image: url(/assets/aboutArrow.svg);
+            background-repeat: no-repeat;
+            display: inline-block;
+            background-size: 100%;
+            width: calc(1rem + 0.75vw);
+            height: calc(1rem + 0.75vw);
+            margin-right: 1rem;
+            position: relative;
+            top: 0.25vw;
+        }
+        
+        &:hover,
+        &:focus {
+        }
+    }
+}
+
+.contactForm {
+    width: 50%;
+
+    & > * {
+        
+        & > * {
+            padding: 1rem 2rem;
+            border: none;
+        }
+    }
+
+    .message  {
+        margin-top: 2%;
+    }
+}
+
+// FOOTER 
+
+footer {
+    p {
+        font-size: calc(1rem + 0.5vw);
+        margin: 0;
+        border-top: 0.2rem solid $primaryBlue;
+    };
 }
 
 
 
 
-    // li.text {
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: flex-end;
-    // }
-    
-
-    
-
-
-
-        
-        
-        
-        
 
 
 
 
-  
+
+
+
+
+
+
 
 
 

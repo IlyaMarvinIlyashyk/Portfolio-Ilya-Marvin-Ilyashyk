@@ -259,6 +259,11 @@ body {
   font-size: calc(1rem + 0.75vw);
   background-color: #C4D5D9;
   font-family: 'DM Sans', sans-serif;
+  line-height: 140%;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
 }
 
 h4 {
@@ -273,7 +278,6 @@ h4 {
 
 p {
   color: #4933BC;
-  line-height: 140%;
   font-size: calc(1rem + 0.75vw);
   font-weight: 400;
   margin: 4% 0;
@@ -284,14 +288,17 @@ a {
   font-weight: bolder;
 }
 
-.contact {
-  height: 100vh;
-}
-
 .wrapper {
   margin: 0 auto;
   max-width: 1680px;
-  width: 90%;
+  width: 80%;
+}
+
+.about,
+.projects,
+.contact {
+  padding: 6vw 0;
+  border-bottom: 0.2rem solid #4933BC;
 }
 
 header {
@@ -400,19 +407,17 @@ h1 {
 }
 
 .about {
-  padding: 6vw 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  border-bottom: 0.2rem solid #4933BC;
 }
 
 .about .aboutText {
   width: 50%;
-  padding: 0 2.5% 0 7.5%;
+  padding: 0 2.5% 0 5.5%;
 }
 
 .about .aboutText p:first-of-type {
@@ -447,7 +452,7 @@ h1 {
 }
 
 .imageAndSkillsContainer {
-  width: 35%;
+  width: 40%;
   -ms-flex-item-align: start;
       align-self: flex-start;
   display: -webkit-box;
@@ -523,7 +528,7 @@ h1 {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   font-size: calc(1rem + 0.5vw);
   width: 25%;
 }
@@ -533,7 +538,7 @@ h1 {
 }
 
 .projects {
-  padding: 6vw 0;
+  padding-bottom: 4vw;
 }
 
 .projectsDescription p {
@@ -573,10 +578,11 @@ h1 {
 }
 
 .projectsContainer > li h5 {
-  font-size: calc(2rem + 2vw);
+  font-size: calc(2rem + 1vw);
   margin: 0;
   color: #4933BC;
   font-weight: bolder;
+  font-style: italic;
   position: relative;
 }
 
@@ -634,8 +640,150 @@ h1 {
   padding-left: 0;
 }
 
+.projectsContainer .projectsLinks a:first-of-type::before {
+  content: '';
+  background-image: url(/assets/aboutArrow.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 100%;
+  width: calc(1rem + 0.75vw);
+  height: calc(1rem + 0.75vw);
+  margin-right: 1rem;
+  position: relative;
+  top: 0.25vw;
+}
+
 .projectsContainer .projectsLinks:nth-of-type(2n) {
   margin: 20%;
+}
+
+.contact {
+  position: relative;
+  border: none;
+}
+
+.contact .circleContact {
+  position: absolute;
+  right: 25%;
+  z-index: -1;
+  width: 50%;
+  height: auto;
+  bottom: -5%;
+}
+
+.contactContainer {
+  margin-top: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactContainer .contactSocial {
+  text-align: right;
+}
+
+.contactContainer .contactSocial h5 {
+  padding: 15% 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: calc(1rem + 2vw);
+  text-decoration: underline;
+  -webkit-text-decoration-color: #4933BC;
+          text-decoration-color: #4933BC;
+}
+
+.contactContainer .contactSocial p {
+  margin: 0;
+}
+
+.contactContainer .contactSocial ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contactContainer .contactSocial ul li {
+  font-size: calc(1.5rem + 2.5rem);
+  padding-left: 5%;
+}
+
+.contactForm .nameEmail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactForm .nameEmail input[type=text],
+.contactForm .nameEmail input[type=email] {
+  width: 49%;
+  background-color: #879EA4;
+  background-color: inherit;
+  border: 0.2rem solid #4933BC;
+}
+
+.contactForm .comment,
+.contactForm .message {
+  margin-bottom: 0;
+}
+
+.contactForm .comment textarea,
+.contactForm .message textarea {
+  resize: none;
+  width: 100%;
+  background-color: #879EA4;
+  background-color: inherit;
+  border: 0.2rem solid #4933BC;
+}
+
+.contactForm button {
+  margin-top: 2%;
+  padding: 0;
+  color: #4933BC;
+  font-weight: 700;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.contactForm button::before {
+  content: '';
+  background-image: url(/assets/aboutArrow.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 100%;
+  width: calc(1rem + 0.75vw);
+  height: calc(1rem + 0.75vw);
+  margin-right: 1rem;
+  position: relative;
+  top: 0.25vw;
+}
+
+.contactForm {
+  width: 50%;
+}
+
+.contactForm > * > * {
+  padding: 1rem 2rem;
+  border: none;
+}
+
+.contactForm .message {
+  margin-top: 2%;
+}
+
+footer p {
+  font-size: calc(1rem + 0.5vw);
+  margin: 0;
+  border-top: 0.2rem solid #4933BC;
 }
 
 @-webkit-keyframes navUnderline {
