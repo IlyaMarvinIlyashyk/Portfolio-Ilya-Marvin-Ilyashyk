@@ -250,16 +250,12 @@ a {
   text-decoration: none;
 }
 
-@font-face {
-  font-family: monumentExtended;
-  src: format("opentype") url(/../MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf);
-}
-
 body {
   font-size: calc(1rem + 0.75vw);
   background-color: #C4D5D9;
   font-family: 'DM Sans', sans-serif;
   line-height: 140%;
+  color: #4933BC;
 }
 
 h1, h2, h3, h4, h5 {
@@ -268,7 +264,6 @@ h1, h2, h3, h4, h5 {
 
 h4 {
   font-size: calc(2rem + 1vw);
-  color: #4933BC;
   margin: 0;
   font-weight: 100;
   text-transform: uppercase;
@@ -277,7 +272,6 @@ h4 {
 }
 
 p {
-  color: #4933BC;
   font-size: calc(1rem + 0.75vw);
   font-weight: 400;
   margin: 4% 0;
@@ -306,9 +300,8 @@ header {
 }
 
 h1 {
-  font-size: calc(1.5rem + 8vw);
+  font-size: calc(1rem + 8.25vw);
   font-weight: lighter;
-  color: #4933BC;
   position: relative;
   right: 0.25%;
   margin: 0;
@@ -347,7 +340,6 @@ h1 {
 .mainNav h2 {
   font-size: calc(2rem + 1vw);
   font-weight: normal;
-  color: #4933BC;
   margin: 0;
   padding: 1vw 0;
   font-family: 'Gentium Book Basic', serif;
@@ -360,7 +352,6 @@ h1 {
 
 .mainNav ul li a {
   text-transform: uppercase;
-  color: #4933BC;
   font-size: calc(1rem + 0.75vw);
   border: 0.1rem solid transparent;
   font-weight: normal;
@@ -383,7 +374,6 @@ h1 {
 .arrowAndScrambleContainer h3 {
   font-size: calc(1.5rem + 1.5vw);
   font-weight: 100;
-  color: #4933BC;
   margin: 0;
   padding-left: 40%;
 }
@@ -448,7 +438,6 @@ h1 {
 
 .aboutSocial ul > li > * {
   font-size: calc(2rem + 1vw);
-  color: #4933BC;
 }
 
 .imageAndSkillsContainer {
@@ -484,7 +473,6 @@ h1 {
 }
 
 .imageAndSkillsContainer .skillsContainer h5 {
-  color: #4933BC;
   font-size: calc(1.5rem + 1vw);
   font-weight: 400;
   margin: 0;
@@ -506,7 +494,6 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #4933BC;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -ms-flex-item-align: center;
@@ -580,7 +567,6 @@ h1 {
 .projectsContainer > li h5 {
   font-size: calc(2rem + 1vw);
   margin: 0;
-  color: #4933BC;
   font-weight: bolder;
   font-style: italic;
   position: relative;
@@ -590,7 +576,6 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #4933BC;
 }
 
 .projectsContainer > li ul li {
@@ -658,17 +643,26 @@ h1 {
 }
 
 .contact {
-  position: relative;
   border: none;
+  position: relative;
 }
 
 .contact .circleContact {
   position: absolute;
   right: 25%;
   z-index: -1;
-  width: 50%;
+  width: 55%;
   height: auto;
-  bottom: -5%;
+  bottom: -8%;
+}
+
+.contact img {
+  width: calc(1rem + 2vw);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  position: absolute;
+  bottom: 5%;
+  right: 0;
 }
 
 .contactContainer {
@@ -709,8 +703,12 @@ h1 {
 }
 
 .contactContainer .contactSocial ul li {
-  font-size: calc(1.5rem + 2.5rem);
+  font-size: calc(2rem + 1vw);
   padding-left: 5%;
+}
+
+.contactForm {
+  width: 50%;
 }
 
 .contactForm .nameEmail {
@@ -725,20 +723,19 @@ h1 {
 .contactForm .nameEmail input[type=text],
 .contactForm .nameEmail input[type=email] {
   width: 49%;
-  background-color: #879EA4;
+  padding: 1rem 2rem;
   background-color: inherit;
   border: 0.2rem solid #4933BC;
 }
 
-.contactForm .comment,
 .contactForm .message {
-  margin-bottom: 0;
+  margin: 2% 0 0 0;
 }
 
-.contactForm .comment textarea,
 .contactForm .message textarea {
   resize: none;
   width: 100%;
+  padding: 1rem 2rem;
   background-color: #879EA4;
   background-color: inherit;
   border: 0.2rem solid #4933BC;
@@ -767,23 +764,46 @@ h1 {
   top: 0.25vw;
 }
 
-.contactForm {
-  width: 50%;
-}
-
-.contactForm > * > * {
-  padding: 1rem 2rem;
-  border: none;
-}
-
-.contactForm .message {
-  margin-top: 2%;
+footer {
+  position: relative;
 }
 
 footer p {
-  font-size: calc(1rem + 0.5vw);
-  margin: 0;
+  font-size: 2rem;
+  margin: 0rem;
   border-top: 0.2rem solid #4933BC;
+}
+
+footer .circleContact {
+  position: absolute;
+  right: 22%;
+  z-index: -1;
+  width: 55%;
+  height: auto;
+  bottom: 0%;
+}
+
+@media (max-width: 1120px) {
+  .wrapper {
+    width: 90%;
+  }
+  .imageAndSkillsContainer .skillsContainer {
+    padding-top: 5%;
+  }
+  .imageAndSkillsContainer .skillsContainer ul {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .imageAndSkillsContainer .skillsContainer ul li {
+    width: calc(100% / 3);
+  }
+  .projectsContainer > li:nth-of-type(odd) {
+    margin: 7.5% 5% 7.5% 0;
+  }
+  .projectsContainer > li:nth-of-type(even) {
+    margin: 7.5% 0 7.5% 5%;
+  }
 }
 
 @-webkit-keyframes navUnderline {

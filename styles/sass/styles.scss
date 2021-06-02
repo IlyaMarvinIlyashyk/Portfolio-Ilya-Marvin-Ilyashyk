@@ -9,25 +9,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Gentium+Book+Basic:wght@700&family=Ibarra+Real+Nova:wght@500&family=Nanum+Pen+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;0,700;1,500;1,700&display=swap');
-@font-face {
-    font-family: monumentExtended; 
-    src: 
-    format('opentype')
-    url(/../MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf);
-}
-// font-family: 'Dela Gothic One', cursive;
-
-    // font-family: 'Ibarra Real Nova', serif;
-
-    // font-family: 'Nanum Pen Script', cursive;
-
-    // font-family: 'Gentium Book Basic', serif;
 
 body {
     font-size: calc(1rem + 0.75vw);
     background-color: $white;
     font-family: 'DM Sans', sans-serif;
     line-height: 140%;
+    color: $primaryBlue;
 }
 
 h1, h2, h3, h4, h5 {
@@ -36,7 +24,6 @@ h1, h2, h3, h4, h5 {
 
 h4 {
     font-size: calc(2rem + 1vw);
-    color: $primaryBlue;
     margin: 0;
     font-weight: 100;
     text-transform: uppercase;
@@ -45,10 +32,7 @@ h4 {
 }
 
 p {
-    color: $primaryBlue;
-    // line-height: 140%;
     font-size: calc(1rem + 0.75vw);
-    // font-size: calc(1.5rem + 0.5vw);
     font-weight: 400;
     margin: 4% 0;
 }
@@ -74,14 +58,12 @@ a {
 // HEADER
 
 header {
-    // height: 101vh;
     border-bottom: 0.2rem solid $primaryBlue;
 }
 
 h1 {
-    font-size: calc(1.5rem + 8vw);
+    font-size: calc(1rem + 8.25vw);
     font-weight: lighter;
-    color: $primaryBlue;
     position: relative;
     right: 0.25%;
     margin: 0;
@@ -117,7 +99,6 @@ h1 {
     h2 {
         font-size: calc(2rem + 1vw);
         font-weight: normal;
-        color: $primaryBlue;
         margin: 0; 
         padding: 1vw 0;
         font-family: 'Gentium Book Basic', serif;
@@ -131,7 +112,6 @@ h1 {
             
             a {
                 text-transform: uppercase;
-                color: $primaryBlue;
                 font-size: calc(1rem + 0.75vw);
                 border: 0.1rem solid transparent;
                 font-weight: normal;
@@ -164,7 +144,6 @@ h1 {
         // opacity: 0;
         font-size: calc(1.5rem + 1.5vw);
         font-weight: 100;
-        color: $primaryBlue;
         margin: 0;
         // animation: slideInH3 ease 1s 1s 1 forwards;
         padding-left: 40%;
@@ -220,16 +199,13 @@ h1 {
         align-items: center;
         padding-top: 80%;
         
-        > li{
-
+        > li {
             padding: 15% 0;
 
            > * {
-       font-size: calc(2rem + 1vw);
-       color: $primaryBlue;
-    }
-  
-     }
+                font-size: calc(2rem + 1vw);
+            }   
+        }
     }
 }
 
@@ -251,7 +227,6 @@ h1 {
         padding-top: 2.5%;
     
         h5 {
-            color: $primaryBlue;
             font-size: calc(1.5rem + 1vw);
             font-weight: 400;
             margin: 0;
@@ -272,7 +247,6 @@ h1 {
 
         ul {
             display: flex;
-            color: $primaryBlue;
             justify-content: space-around;
             align-self: center;
             flex-wrap: wrap;
@@ -351,9 +325,7 @@ h1 {
         
         h5 {
             font-size: calc(2rem + 1vw);
-            // width: 50%;
             margin: 0;
-            color: $primaryBlue;
             // text-transform: uppercase;
             font-weight: bolder;
             font-style: italic;
@@ -362,7 +334,6 @@ h1 {
 
         ul {
             display: flex;
-            color: $primaryBlue;
 
             li {
                 margin: 0 1.5rem;
@@ -446,22 +417,26 @@ h1 {
 // CONTACT 
 
 .contact {
-    position: relative;
     border: none;
+    position: relative;
 
     .circleContact {
         position: absolute;
         right: 25%;
-        // width: 47%;
-        // top: 20%;
         z-index: -1;
-        width: 50%;
+        width: 55%;
         height: auto;
-        bottom: -5%;
+        bottom: -8%;
+    }
+
+    img {
+        width: calc(1rem + 2vw);
+        transform: rotate(180deg);
+        position: absolute;
+        bottom: 5%;
+        right: 0;
     }
 }
-
-
 
 .contactContainer {
     margin-top: 4%;
@@ -489,7 +464,7 @@ h1 {
             justify-content: flex-end;
             
             li {
-                font-size: calc(1.5rem + 2.5rem);
+                font-size: calc(2rem + 1vw);
                 padding-left: 5%;
             }
         }
@@ -497,6 +472,7 @@ h1 {
 }
 
 .contactForm {
+    width: 50%;
     
     .nameEmail {
         display: flex;
@@ -505,19 +481,19 @@ h1 {
         input[type=text],
         input[type=email] {
             width: 49%;
-            background-color: #879EA4;
+            padding: 1rem 2rem;
             background-color: inherit;
             border: 0.2rem solid $primaryBlue;
         }
     }
     
-    .comment,
     .message  {
-        margin-bottom: 0;
+        margin: 2% 0 0 0;
         
         textarea {
             resize: none;
             width: 100%;
+            padding: 1rem 2rem;
             background-color: #879EA4;
             background-color: inherit;
             border: 0.2rem solid $primaryBlue;
@@ -526,7 +502,6 @@ h1 {
     
     button {
         margin-top: 2%;
-        // width: 100%;
         padding: 0;
         color: $primaryBlue;
         font-weight: 700;
@@ -553,32 +528,61 @@ h1 {
     }
 }
 
-.contactForm {
-    width: 50%;
-
-    & > * {
-        
-        & > * {
-            padding: 1rem 2rem;
-            border: none;
-        }
-    }
-
-    .message  {
-        margin-top: 2%;
-    }
-}
-
 // FOOTER 
 
 footer {
+    position: relative;
+
     p {
-        font-size: calc(1rem + 0.5vw);
-        margin: 0;
+        font-size: 2rem;
+        margin: 0rem;
         border-top: 0.2rem solid $primaryBlue;
+        // text-align: center
     };
+
+      .circleContact {
+        position: absolute;
+        right: 22%;
+        z-index: -1;
+        width: 55%;
+        height: auto;
+        bottom: 0%;
+    }
 }
 
+// MEDIA QUERIES
+
+
+@media (max-width: 1120px) {
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .imageAndSkillsContainer .skillsContainer {
+        padding-top: 5%;
+
+        ul {
+            justify-content: flex-start;
+
+            li {
+            width: calc(100% / 3)
+            }
+        }
+    }
+
+    .projectsContainer {
+        
+        > li:nth-of-type(odd) {
+            margin: 7.5% 5% 7.5% 0;
+        }
+
+        > li:nth-of-type(even) {
+            margin: 7.5% 0 7.5% 5%;
+        }
+    }
+
+}
 
 
 
@@ -688,3 +692,6 @@ footer {
 // ask if it looks better more squished?
 // arrow in front of the titles
 // more space on the bottom?
+
+
+// MEDIA QUERIES
