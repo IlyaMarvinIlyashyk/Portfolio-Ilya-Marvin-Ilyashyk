@@ -90,3 +90,11 @@ document.querySelector(".willowVideo").addEventListener("mouseleave", function (
     this.pause();
 });
 
+document.querySelector(".everythingVideo").addEventListener("mouseover", function () {
+    this.play();
+});
+
+document.querySelector(".everythingVideo").addEventListener("mouseleave", function () {
+    this.pause();
+});
+
