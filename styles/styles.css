@@ -960,7 +960,7 @@ footer p {
 
 @media (max-width: 625px) {
   header {
-    min-height: 94vh;
+    min-height: 95vh;
   }
   .about,
   .projects,
@@ -1085,7 +1085,7 @@ footer p {
     font-size: calc(1rem + 1.5vw);
   }
   .projectsContainer > li:first-of-type img {
-    padding: 7% 0 3.5%;
+    padding: 7% 0 2%;
   }
   .projectsContainer > li img {
     padding: 10% 0 2.5%;
