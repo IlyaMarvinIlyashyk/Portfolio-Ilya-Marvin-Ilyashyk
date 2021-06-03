@@ -328,7 +328,7 @@ header {
   display: none;
   cursor: pointer;
   position: fixed;
-  right: 4vw;
+  right: 5%;
   top: 0%;
   margin-top: 2vw;
   font-size: 3rem;
@@ -428,7 +428,7 @@ h1 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding-bottom: 4vw;
+  padding-bottom: 5vw;
 }
 
 .about .aboutText {
@@ -835,6 +835,11 @@ footer p {
   h1 {
     font-size: calc(1rem + 10vw);
   }
+  .circle {
+    top: 62.5%;
+    right: 5%;
+    width: 90%;
+  }
   .mainNav h2 span:first-of-type {
     display: none;
   }
@@ -849,11 +854,6 @@ footer p {
     bottom: 8%;
     right: 45%;
     padding: 0;
-  }
-  .circle {
-    top: 62.5%;
-    right: 5%;
-    width: 90%;
   }
   .imageAndSkillsContainer .skillsContainer {
     padding-top: 10%;
@@ -959,9 +959,6 @@ footer p {
 }
 
 @media (max-width: 625px) {
-  header {
-    min-height: 92vh;
-  }
   .about,
   .projects,
   .contact {
@@ -970,6 +967,9 @@ footer p {
   p {
     font-size: calc(1.25rem + 1.25vw);
     line-height: 150%;
+  }
+  header {
+    min-height: 92vh;
   }
   .circle {
     top: 77.5%;

@@ -4,17 +4,7 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-    // scroll-snap-type: y proximity;
 }
-
-// body {
-//     // font-family: "font-family: 'Rubik', sans-serif";
-//     // @include colors ();
-//     font-size: calc(1rem + 0.75vw);
-//     background-color: #7486E7;
-//     font-family: 'Rubik';
-// }
-
 
 ul {
     padding: 0;
@@ -30,4 +20,51 @@ img {
 
 a {
     text-decoration: none;
+}
+
+body {
+    font-size: calc(1rem + 0.75vw);
+    background-color: $white;
+    font-family: 'DM Sans', sans-serif;
+    font-family: $generalFont;
+    line-height: 140%;
+    color: $purple;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+h1, h4 {
+    font-weight: lighter;
+}
+
+h4 {
+    font-size: calc(2rem + 1vw);
+    text-transform: uppercase;
+    line-height: 90%;
+    font-family: $titleFont;
+}
+
+p {
+    font-size: calc(1rem + 0.75vw);
+    margin: 4% 0;
+}
+
+a {
+    color: $purple;
+    font-weight: bolder;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1680px;
+    width: 80%;    
+} 
+
+.about,
+.projects,
+.contact {
+    padding: 6vw 0;
+    border-bottom: 0.2rem solid $purple;
 }
