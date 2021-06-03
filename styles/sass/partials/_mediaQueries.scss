@@ -264,8 +264,7 @@
             position: fixed;
             right: 5%;
             top: 9rem;
-            display: flex;
-            flex-direction: column;
+            @include flex (x, x, column);
             border: 0.2rem solid $purple;
             background-color: $white;
             padding: 1rem;
@@ -324,8 +323,7 @@
         }        
         
         .aboutSocial {
-            display: flex;
-            justify-content: space-between;
+            @include flex (space-between, x);
 
             ul {
                 padding: 0;
