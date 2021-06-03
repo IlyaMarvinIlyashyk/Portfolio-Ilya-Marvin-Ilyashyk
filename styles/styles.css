@@ -244,10 +244,6 @@ img {
   width: 100%;
 }
 
-a {
-  text-decoration: none;
-}
-
 body {
   font-size: calc(1rem + 0.75vw);
   background-color: #C4D5D9;
@@ -280,6 +276,7 @@ p {
 a {
   color: #4933BC;
   font-weight: bolder;
+  text-decoration: none;
 }
 
 .wrapper {
@@ -322,6 +319,10 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .mainNav .hamburger {
@@ -391,10 +392,17 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 8.5vw 0 6vw 0;
+  -webkit-box-pack: x;
+      -ms-flex-pack: x;
+          justify-content: x;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 8.5vw 0 6vw 0;
 }
 
 .arrowAndScrambleContainer h3 {
@@ -428,6 +436,13 @@ h1 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: x;
+      -ms-flex-align: x;
+          align-items: x;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding-bottom: 5vw;
 }
 
@@ -448,13 +463,16 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: x;
+      -ms-flex-pack: x;
+          justify-content: x;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-top: 80%;
 }
 
@@ -473,13 +491,16 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: x;
+      -ms-flex-pack: x;
+          justify-content: x;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 
 .imageAndSkillsContainer img {
@@ -490,6 +511,12 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: x;
+      -ms-flex-pack: x;
+          justify-content: x;
+  -webkit-box-align: x;
+      -ms-flex-align: x;
+          align-items: x;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -522,6 +549,13 @@ h1 {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: x;
+      -ms-flex-align: x;
+          align-items: x;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -530,13 +564,16 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: x;
+      -ms-flex-pack: x;
+          justify-content: x;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 0.5rem 0;
   font-size: calc(1rem + 0.5vw);
   width: 25%;
@@ -698,6 +735,13 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: x;
+      -ms-flex-align: x;
+          align-items: x;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .contactContainer .contactSocial {
@@ -723,6 +767,13 @@ h1 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: x;
+      -ms-flex-align: x;
+          align-items: x;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .contactContainer .contactSocial ul li {
@@ -741,6 +792,13 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: x;
+      -ms-flex-align: x;
+          align-items: x;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .contactForm .nameEmail input[type=text],
@@ -990,6 +1048,12 @@ footer p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: x;
+        -ms-flex-pack: x;
+            justify-content: x;
+    -webkit-box-align: x;
+        -ms-flex-align: x;
+            align-items: x;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1051,6 +1115,13 @@ footer p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: x;
+        -ms-flex-align: x;
+            align-items: x;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .about .aboutSocial ul {
     padding: 0;

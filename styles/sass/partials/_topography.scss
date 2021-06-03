@@ -1,5 +1,4 @@
-
-// GENERAL
+// GENERAL TOPOGRAPHY 
 
 html {
     font-size: 62.5%;
@@ -16,10 +15,6 @@ img {
     display: block;
     height: auto;
     width: 100%;
-}
-
-a {
-    text-decoration: none;
 }
 
 body {
@@ -54,6 +49,7 @@ p {
 a {
     color: $purple;
     font-weight: bolder;
+    text-decoration: none;
 }
 
 .wrapper {

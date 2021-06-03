@@ -1,3 +1,5 @@
+// ALL INDEX STYLES
+
 // HEADER
 
 header {
@@ -20,10 +22,7 @@ header {
 }
 
 .mainNav {
-    display: flex;
-    // opacity: 1;
-    justify-content: space-between;
-    align-items: center;
+    @include flex (space-between, center);
     // animation: slideDown ease 1s 1s 1 forwards;
 
     .hamburger {
@@ -102,9 +101,8 @@ h1 {
 }
 
 .arrowAndScrambleContainer {
-    display: flex;
+    @include flex (x, center);
     margin: 8.5vw 0 6vw 0;
-    align-items: center;
     
     h3 {
         font-size: calc(1.5rem + 1.5vw);
@@ -135,8 +133,7 @@ h1 {
 // ABOUT
 
 .about {
-    display: flex;
-    justify-content: space-evenly;
+    @include flex (space-evenly, x);
     padding-bottom: 5vw;
 
     .aboutText {
@@ -155,10 +152,8 @@ h1 {
 
 .aboutSocial {
 
-    ul {   
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    ul {
+        @include flex (x, center, column);   
         padding-top: 80%;
         
         > li {
@@ -174,17 +169,14 @@ h1 {
 .imageAndSkillsContainer {
     width: 40%;
     align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    @include flex (x, flex-end, column);
 
     img {
         width: 80%;
     }
 
     .skillsContainer {
-        display: flex;
-        flex-direction: column;
+        @include flex (x, x, column);
         width: 80%;
         padding-top: 2.5%;
     
@@ -207,16 +199,11 @@ h1 {
         }
 
         ul {
-            display: flex;
-            justify-content: space-around;
-            // align-self: center;
+            @include flex (space-around, x);
             flex-wrap: wrap;
 
             li {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                // flex-wrap: wrap;
+                @include flex (x, center, column);
                 padding: 0.5rem 0;
                 font-size: calc(1rem + 0.5vw);
                 width: 25%;
@@ -382,8 +369,7 @@ h1 {
 
 .contactContainer {
     margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
+    @include flex (space-between, x);
 
     .contactSocial {
         text-align: right;
@@ -400,8 +386,7 @@ h1 {
         }
 
         ul {
-            display: flex;
-            justify-content: flex-end;
+            @include flex (flex-end, x);
             
             li {
                 font-size: calc(2rem + 1vw);
@@ -415,8 +400,7 @@ h1 {
     width: 50%;
     
     .nameEmail {
-        display: flex;
-        justify-content: space-between;
+        @include flex (space-between, x);
         
         input[type=text],
         input[type=email] {
