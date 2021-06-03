@@ -775,6 +775,10 @@ footer {
 
 @media (max-width: 625px) {
 
+    header {
+        min-height: 91vh;
+    }
+
     .about,
     .projects,
     .contact {
@@ -782,7 +786,7 @@ footer {
     }
 
     p {
-        font-size: calc(1rem + 1.25vw);
+        font-size: calc(1.25rem + 1.25vw);
         line-height: 150%;
     }
 
@@ -906,13 +910,16 @@ footer {
         .projectsContainer {
 
             > li:first-of-type {
-                padding-top: 5%;
+
+                img {
+                    padding-top: 7%;
+                }
             }
 
             > li {   
 
                 img {
-                    padding-top: 12.5%;
+                    padding-top: 10%;
                 }
             }
         }

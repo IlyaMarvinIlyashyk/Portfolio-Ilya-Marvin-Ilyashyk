@@ -971,13 +971,16 @@ footer p {
 }
 
 @media (max-width: 625px) {
+  header {
+    min-height: 91vh;
+  }
   .about,
   .projects,
   .contact {
     padding: 9vw 0;
   }
   p {
-    font-size: calc(1rem + 1.25vw);
+    font-size: calc(1.25rem + 1.25vw);
     line-height: 150%;
   }
   .circle {
@@ -1090,11 +1093,11 @@ footer p {
     width: 25%;
     font-size: calc(1rem + 1.5vw);
   }
-  .projectsContainer > li:first-of-type {
-    padding-top: 5%;
+  .projectsContainer > li:first-of-type img {
+    padding-top: 7%;
   }
   .projectsContainer > li img {
-    padding-top: 12.5%;
+    padding-top: 10%;
   }
   .contact {
     padding-bottom: 4vw;
