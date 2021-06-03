@@ -428,6 +428,7 @@ h1 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding-bottom: 4vw;
 }
 
 .about .aboutText {
@@ -546,7 +547,7 @@ h1 {
 }
 
 .projects {
-  padding-bottom: 3vw;
+  padding-bottom: 4vw;
 }
 
 .projectsDescription p {
@@ -845,7 +846,7 @@ footer p {
     bottom: 6%;
   }
   .arrowAndScrambleContainer h3 {
-    bottom: 7%;
+    bottom: 8%;
     right: 45%;
     padding: 0;
   }
@@ -959,7 +960,7 @@ footer p {
 
 @media (max-width: 625px) {
   header {
-    min-height: 96vh;
+    min-height: 98vh;
   }
   .about,
   .projects,
@@ -1017,13 +1018,13 @@ footer p {
     padding: 1rem;
   }
   h1 {
-    font-size: calc(1rem + 8vw);
+    font-size: calc(1rem + 8.5vw);
   }
   .arrowAndScrambleContainer .headerArrow {
     bottom: 10%;
   }
   .arrowAndScrambleContainer h3 {
-    bottom: 10%;
+    bottom: 12%;
     right: 5%;
   }
   .about {
@@ -1086,10 +1087,16 @@ footer p {
     padding: 7% 0 3.5%;
   }
   .projectsContainer > li img {
-    padding: 10% 0 3.5%;
+    padding: 10% 0 2.5%;
   }
   .projectsContainer > li p {
-    margin: 5% 0;
+    margin: 3.5% 0;
+  }
+  .projectsContainer > li .projectsLinks {
+    margin-top: 4%;
+  }
+  .projectsContainer > li .projectsLinks a {
+    font-size: 2rem;
   }
   .contact {
     padding-bottom: 4vw;

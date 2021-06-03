@@ -195,6 +195,7 @@ h1 {
 .about {
     display: flex;
     justify-content: space-evenly;
+    padding-bottom: 4vw;
 
     .aboutText {
         width: 50%;
@@ -289,7 +290,7 @@ h1 {
 // PROJECTS
 
 .projects {
-    padding-bottom: 3vw;
+    padding-bottom: 4vw;
 }
 
 .projectsDescription {
@@ -607,7 +608,7 @@ footer {
         }
 
         h3 {
-            bottom: 7%;
+            bottom: 8%;
             right: 45%;
             padding: 0;
         }
@@ -751,7 +752,7 @@ footer {
 @media (max-width: 625px) {
 
     header {
-        min-height: 96vh;
+        min-height: 98vh;
     }
 
     .about,
@@ -810,7 +811,7 @@ footer {
     }
 
     h1 {
-        font-size: calc(1rem + 8vw);
+        font-size: calc(1rem + 8.5vw);
     }
 
     .arrowAndScrambleContainer {
@@ -820,7 +821,7 @@ footer {
         }
     
         h3 {
-            bottom: 10%;
+            bottom: 12%;
             right: 5%;
         }
     }
@@ -897,11 +898,19 @@ footer {
             > li {   
 
                 img {
-                    padding: 10% 0 3.5%;
+                    padding: 10% 0 2.5%;
                 }
 
                 p {
-                    margin: 5% 0;
+                    margin: 3.5% 0;
+                }
+
+                .projectsLinks {
+                    margin-top: 4%;
+
+                    a{
+                        font-size: 2rem;
+                    }
                 }
             }
         }
