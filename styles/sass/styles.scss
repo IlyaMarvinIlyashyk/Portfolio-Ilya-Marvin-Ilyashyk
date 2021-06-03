@@ -782,14 +782,14 @@ footer {
         ul {
             position: fixed;
             right: 5%;
-            top: 5%;
+            top: 10%;
             display: flex;
             flex-direction: column;
             border: 0.2rem solid $purple;
             background-color: $white;
             padding: 1rem;
             width: 90%;
-            transform: translateY(-150%);
+            transform: translateY(-200%);
             transition: transform 0.2s;
 
             li {
@@ -819,7 +819,7 @@ footer {
         }
     
         h3 {
-            bottom: 12%;
+            bottom: 11%;
             right: 5%;
         }
     }
