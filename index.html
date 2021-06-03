@@ -9,119 +9,241 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
+    <!-- <link rel="stylesheet" href="./assets/devices.css-1.2/assets/devices.min.css" type="text/css"> -->
     
     <title>👨‍💻Ilya Marvin Ilyashyk</title>
 </head>
 
 <body>
-    
+
     <header id="home" class="wrapper">
-    
             <div class="navContainer wrapper">
                 <nav class="mainNav">
-                    <h2>Ilya Marvin Ilyashyk</h2>
-                    <!-- <input type="checkbox" class="hamburgerMenu" />
-                    <label for="hamburgerMenu" tabindex="0" class="toggleLabel">&#x2630</label> -->
+                    <a href="#home"><h2>Ilya <span>Marvin Ilyashyk</span> <span>M.I</span></h2></a>
+
+                    <button class="hamburger">
+                        <span class="active"><i class="fas fa-bars"></i></span>
+                        <span class="inactive"><i class="fas fa-times"></i></span>
+                    </button>
+
                     <ul>
-                        <li><a href="#about">about</a><div class="underline"></div></li>
-                        <li><a href="#projects">projects</a><div class="underline"></div></li>
-                        <li><a href="#contact">contact</a><div class="underline"></div></li>
+                        
+                        <li><a class="navLink" href="#about">about</a><div class="underline"></div></li>
+                        <li><a class="navLink" href="#projects">projects</a><div class="underline"></div></li>
+                        <li><a class="navLink" href="#contact">contact</a><div class="underline"></div></li>
                     </ul>
                 </nav>
                 <div class="navUnderline"></div>
             </div>
-            
             <h1>
                 <span>Web-</span>
                 Developer
             </h1>
-            
             <div class="arrowAndScrambleContainer">
-                <a href="#about"><img class="arrow" src="./assets/arrow.svg" alt=""></a>
+                <a href="#about"><img class="headerArrow" src="./assets/headerArrow.svg" alt=""></a>
                 <h3 id="scrambleText"></h3>
             </div>
-
             <!-- <img class="image" src="./assets/Headshot 2-2.jpg" alt=""> -->
-
             <img class="circle" src="./assets/circle.svg" alt="">
-
         </header>
 
     <main>
 
         <section class="about wrapper" id="about">
-
-            <div class="aboutContainer">
-                <div class="aboutSocial">
-                    <h4>About</h4>
-                    <ul>
-                        <li><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter fa-fw" alt="Twitter Icon"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in fa-fw" alt="LinkedIn Icon"></i></a></li>
-                    </ul>
-                </div>
-                <div class="aboutText">
-                    <p>I'm Ilya, a stage/ screen Actor turned  Web-Developer from Toronto, Canada.<p>
-                    <p>I use my endless passion for coding and design to build and develop web content that is user-friendly, intuitive and most importantly, accessible to all.</p>
-                    <p>My current obsession is React. I’m polishing my Hooks and States skills by working on a simple Netflix-like movie app using the Movie DB API.</p>
-                    <p>Also, I'm a sucker for animations. GSAP absolutely blows my mind. Therefore, I am trying to teach myself the power of GSAP, one tween at a time! You can check out my code and anything else I’m working on this GitHub <a href="">link</a>.</p>
-                    <p>Feel free to reach out anytime!</p>
-                </div>
-                <img class="headshot" src="./assets/Headshot 2-2.jpg" alt="Ilya's Headshot"> 
-            </div>
-            
-            <div class="skillsContainer">
-                <h3>Skills/</h3>
+            <div class="aboutSocial">
+                <h4>About</h4>
                 <ul>
-                    <li><i class="fab fa-html5 fa-fw"></i></li>
-                    <li><i class="fab fa-css3-alt fa-fw"></i></li>
-                    <li><i class="fab fa-sass fa-fw"></i></li>
-                    <li><i class="fab fa-js fa-fw"></i></li>
-                    <li><i class="devicon-jquery-plain"></i></li>
-                    <li><i class="fab fa-react fa-fw"></i></li>
-                    <li><i class="fas fa-code-branch fa-fw"></i></li>
-                    <li><i class="devicon-firebase-plain"></i></li>
-                    <li><i class="fas fa-universal-access fa-fw"></i></li>
-                    <li><i class="fas fa-mobile-alt fa-fw"></i></li>
+                    <li><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter fa-fw" alt="Twitter Icon"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in fa-fw" alt="LinkedIn Icon"></i></a></li>
                 </ul>
             </div>
-         
+            <div class="aboutText">
+                <p>I'm Ilya, a stage/ screen Actor turned  Web-Developer from Toronto, Canada.<p>
+                <p>I use my endless passion for coding and design to build and develop web content that is user-friendly, intuitive and most importantly, accessible to all.</p>
+                <p>My current obsession is React. I’m polishing my Hooks and States skills by working on a simple Netflix-like movie app using the Movie DB API.</p>
+                <p>Also, I'm a sucker for animations. GSAP absolutely blows my mind. Therefore, I am trying to teach myself the power of GSAP, one tween at a time! You can check out my code and anything else I’m working on this <a href="">GitHub link</a>.</p>
+                <p>When I'm not coding or acting, I'm usually out hiking/ camping or planning my next trip abroad.</p>
+                <p>Resume: <a href="./assets/Ilya Marvin Ilyashyk Resume.pdf">view</a> or <a href="./assets/Ilya Marvin Ilyashyk Resume.pdf" download>download</a></p>
+            </div>
+            <div class="imageAndSkillsContainer">
+                <img class="headshot" src="./assets/Headshot 2-2.jpg" alt="Ilya's Headshot"> 
+                <div class="skillsContainer">
+                    <h5>Skills</h5>
+                    <ul>
+                        <li><i class="fab fa-html5 fa-fw"></i>HTML5</li>
+                        <li><i class="fab fa-css3-alt fa-fw"></i>CSS3</li>
+                        <li><i class="fab fa-sass fa-fw"></i>Sass</li>
+                        <li><i class="fab fa-js fa-fw"></i>JavaScript</li>
+                        <li><i class="devicon-jquery-plain"></i>jQuery</li>
+                        <li><i class="fab fa-react fa-fw"></i>React</li>
+                        <li><i class="fas fa-code-branch fa-fw"></i>GitHub</li>
+                        <li><i class="devicon-firebase-plain"></i>Firebase</li>
+                        <!-- <li><i class="fas fa-universal-access fa-fw"></i>accessibility</li> -->
+                        <!-- <li><i class="fas fa-mobile-alt fa-fw"></i>Responsive Desgin</li> -->
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="projects" class="projects wrapper">
-            <h4>These are my projects!</h4>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem voluptates consectetur incidunt accusantium nisi? Distinctio maiores sit eos excepturi doloremque voluptates assumenda voluptatem. Quae veritatis fuga officiis! Rem facere recusandae inventore maiores numquam minus ex provident! Harum excepturi temporibus eius ut, minima non? Itaque eius recusandae voluptatibus atque laboriosam molestias! Quas, inventore ab illum porro, laboriosam perferendis eum aperiam quaerat voluptatibus fuga a reprehenderit mollitia consequatur, numquam velit repellat dolorem officia? Delectus recusandae ex nesciunt perspiciatis exercitationem, quia doloremque officia consectetur ab pariatur dolorum alias nemo nisi, iusto accusantium maxime officiis. Dolores incidunt eos, repellendus aliquam sit quis numquam laborum voluptate quasi, debitis est velit, atque aut. Non incidunt doloremque ipsum corrupti quos nulla iure, sequi animi doloribus praesentium molestiae! Id distinctio cupiditate qui, magnam fugit blanditiis deleniti culpa nulla. Illum consequatur quibusdam, aliquid in magni animi laboriosam rem doloribus exercitationem voluptates optio blanditiis vero eos, quae aspernatur tempore! Voluptate dolor, quasi iste beatae officiis, dolorum quae, neque tenetur sint libero aperiam? Minus possimus voluptas hic architecto deleniti excepturi atur! Nulla, natus expedita maiores doloremque perspiciatis sed, libero quae eius accusantium, reprehenderit consequatur iure quidem quas porro esse nisi tempore facere amet! Nostrum, ex optio adipisci repudiandae is animi reprehenderit aut? Et, reprehenderit? Expedita soluta aliquid, optio quis incidunt ducimus esse magni, rerum quaerat eum possimus beatae nulla totam necessitatibus. Porro aliquid eveniet laborum deserunt. Totam obcaecati ea hic praesentium iste quod dolores veritatis eius nesciunt veniam nulla fugit vero aliquid ullam perspiciatis ipsum deserunt doloribus, tempore mollitia excepturi distinctio voluptatem facilis accusamus doloremque!!!!
-        </section>
+            
+            <h4>Projects</h4>
+            <div class="projectsDescription">
+                <p>Most recent at the top.</p>
+                <p>Hover over a project for a preview.</p>
+            </div>
+            
+            <ul class="projectsContainer">
 
+                <li>
+                    <video class="podcastVideo" src="./assets/Podcast Prioritizer - Google Chrome 2021-06-01 13-59-42-3.m4v" loop muted="muted"></video>
+                    <img src="./assets/podcastApp.PNG" alt="screenshot of the Podcast Prioritizer App">
+
+                </li>
+                <li>
+                    <!-- <div class="projectsText"> -->
+                    <h5>Podcast Prioritizer</h5>
+                    <p>This app suggests a podcast to listen to based on the user's inputted length of journey. Podcast Prioritizer was created by <a href="">Clement Sung</a>, <a href="">Aubrey Kazdan</a>, <a href="">Paul Szadurski</a> and myself. It uses the MapQuest, GIPHY and ListenNotes RESTful APIs. This app was built with a Mobile-First approach in mind using the React library.</p>
+                    <ul>
+                        <li><i class="fab fa-html5 fa-fw"></i></li>
+                        <li><i class="fab fa-css3-alt fa-fw"></i></li>
+                        <li><i class="fab fa-react fa-fw"></i></li>
+                    </ul>
+                    <div class="projectsLinks">
+                        <a href="https://podcast-prioritizer.netlify.app/">Live</a>
+                        <a href="https://github.com/capibara33/podcastPrioritizer">Repo</a>
+                    </div>
+                    <!-- </div>   -->
+                </li>
+                <li>
+                    <!-- <div class="projectsText"> -->
+                    <h5>The News App</h5>
+                    <p>The News App is a lite clone of the New York Times website, using their RESTful API. This app was built using core React concepts.</p>
+                    <ul class="skills">
+                        <li><i class="fab fa-html5 fa-fw"></i></li>
+                        <li><i class="fab fa-css3-alt fa-fw"></i></li>
+                        <li><i class="fab fa-react fa-fw"></i></li>
+                    </ul>
+                    <div class="projectsLinks">
+                        <a href="https://nostalgic-bhaskara-ecca56.netlify.app/">Live</a>
+                        <a href="https://github.com/IlyaMarvinIlyashyk/Project3NewsApp">Repo</a>
+                    </div>
+                    <!-- </div> -->
+                </li>
+                <li>
+                    <video class="newsVideo" src="./assets/The News App - Google Chrome 2021-06-01 14-50-03-4.m4v" loop muted="muted"></video>
+                    <img src="./assets/newsApp.PNG" alt="screenshot of the News App">
+                </li>
+                <li>
+                    <video class="covidVideo" src="./assets/Covid, Positive - Google Chrome 2021-06-01 14-51-32-2.m4v" loop muted="muted"></video>
+                    <img src="./assets/covidApp.PNG" alt="screenshot of the Covid. Positive App">
+                </li>
+                <li>
+                    <!-- <div class="projectsText"> -->
+                    <h5>Covid, Positive</h5>
+                    <p>This pure vanilla JavaScript app highlights two of the more encouraging sets of statistics of Canadian COVID-19 data available: recovery and vaccinations. Covid, Positive was created by <a href="https://jakespodek.com/">Jake Spodek</a> and myself using the GIPHY, and COVID RESTful APIs. </p>
+                    <ul>
+                        <li><i class="fab fa-html5 fa-fw"></i></li>
+                        <li><i class="fab fa-css3-alt fa-fw"></i></li>
+                        <li><i class="fab fa-sass fa-fw"></i></li>
+                        <li><i class="fab fa-js fa-fw"></i></li>
+                    </ul>
+                    <div class="projectsLinks">
+                        <a href="https://jake-ilya-project2.github.io/covidPositive/">Live</a>
+                        <a href="https://github.com/Jake-Ilya-Project2/covidPositive">Repo</a>
+                    </div>
+                <!-- </div> -->
+                </li>
+                <li>
+                    <!-- <div class="projectsText"> -->
+                    <h5>Willow</h5>    
+                    <p>Willow is a multi-page PSD conversion made using a client brief and static design files. This is a functional, fully responsive website built primarily using Sass.</p>
+                    <ul>
+                        <li><i class="fab fa-html5 fa-fw"></i></li>
+                        <li><i class="fab fa-css3-alt fa-fw"></i></li>
+                        <li><i class="fab fa-sass fa-fw"></i></li>
+                    </ul>
+                    <div class="projectsLinks">
+                        <a href="https://ilyamarvinilyashyk.github.io/Project1/">Live</a>
+                        <a href="https://github.com/IlyaMarvinIlyashyk/Project1">Repo</a>
+                    </div>
+                    <!-- </div> -->
+                </li>
+                <li>
+                    <video class="willowVideo" src="./assets/🌷Willow  Home - Google Chrome 2021-06-01 14-52-47-5.m4v" loop muted="muted"></video>
+                    <img src="./assets/willowApp.PNG" alt="screenshot of Willow's website">
+                </li>
+                <li>
+                    <video class="everythingVideo" src="./assets/Anti-Boredom-App - Google Chrome 2021-06-01 14-55-07-1(1).m4v" loop
+                    muted="muted"></video>
+                    <img src="./assets/everythingApp.PNG" alt="screenshot of the Everything App">
+
+                </li>
+                <li>
+                    <!-- <div class="projectsText"> -->
+                    <h5>The Everything-App</h5>
+                    <p>This eclectic app uses a Kanye West Quote API, a name Nationalize API, which predicts the nationality of a person's given input, a Bored API which gives the user a random task and finally, the Trivia DB API which...asks you some questions. This app was made with jQuery.</p>
+                    <ul>
+                        <li><i class="fab fa-html5 fa-fw"></i></li>
+                        <li><i class="fab fa-css3-alt fa-fw"></i></li>
+                        <li><i class="devicon-jquery-plain"></i></li>
+                    </ul>
+                    <div class="projectsLinks">
+                        <a href="https://ilyamarvinilyashyk.github.io/project_2_2/">Live</a>
+                        <a href="https://github.com/IlyaMarvinIlyashyk/project_2_2">Repo</a>
+                    </div>
+                    <!-- </div> -->
+                </li>
+
+            </ul>
+
+        </section>
+        
         <section class="contact wrapper" id="contact">
-            <h4>Contact me!</h4>
             
-            <form class="contactMainForm" action="#">
-            
-                <div class="nameEmail">
-                    <label for="text" class="sr-only">Name:</label>
-                    <input type="text" name="name" id="name" placeholder="Name" required>
-            
-                    <label for="email" class="sr-only">Email address:</label>
-                    <input type="email" name="email" id="email" placeholder="Email address" required>
-                </div>
-            
-                <div class="message">
-                    <label for="message" class="sr-only">Message:</label>
-                    <textarea name="message" id="message" placeholder="Message" rows="10" columns="max" required></textarea>
-                </div>
-            
-                <button type="submit">Submit</button>
-            
-            </form>
-            
+            <h4>Contact</h4>
+
+                <div class="contactContainer">
+                    <form class="contactForm" method="POST" data-netlify="true">
+                    
+                        <div class="nameEmail">
+                            <label for="text" class="sr-only">Name:</label>
+                            <input type="text" name="name" id="name" placeholder="Name" required>
+                    
+                            <label for="email" class="sr-only">Email address:</label>
+                            <input type="email" name="email" id="email" placeholder="Email address" required>
+                        </div>
+                    
+                        <div class="message">
+                            <label for="message" class="sr-only">Message:</label>
+                            <textarea name="message" id="message" placeholder="Message" rows="7" columns="max" required></textarea>
+                        </div>
+                    
+                        <button type="submit">Submit</button>
+                    
+                    </form>
+
+                    <div class="contactSocial">
+                        <p>Feel free to reach out! </p>
+                        <h5><a href="mailto:ilya44.m@gmail.com">ilya44.m@gmail.com</a></h5>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter fa-fw" alt="Twitter Icon"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in fa-fw" alt="LinkedIn Icon"></i></a></li>
+                        </ul>
+                    </div>
+                    
+            </div>
+
+            <a href="#home"><img src="./assets/headerArrow.svg" alt=""></a>
+
         </section>
-
-
 
     </main>
-    <footer>
-
+    <footer class="wrapper">
+        <img class="circleContact" src="./assets/circleContact.svg" alt="">
+        <p>Developed by Ilya Marvin Ilyashyk</p>
     </footer>
 
     <script type="module" src="./script.js"></script>
