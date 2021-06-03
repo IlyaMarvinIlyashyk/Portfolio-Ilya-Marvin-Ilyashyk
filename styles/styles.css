@@ -428,7 +428,7 @@ h1 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding-bottom: 4vw;
+  padding-bottom: 5vw;
 }
 
 .about .aboutText {
