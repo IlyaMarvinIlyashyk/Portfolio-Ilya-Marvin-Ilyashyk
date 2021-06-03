@@ -115,7 +115,7 @@ header {
     }
 
     .showNav {
-        transform: translateY(-20%);
+        transform: translateY(-25%);
     }
     
     ul {
@@ -752,7 +752,7 @@ footer {
 @media (max-width: 625px) {
 
     header {
-        min-height: 91vh;
+        min-height: 94vh;
     }
 
     .about,
@@ -801,6 +801,7 @@ footer {
 
                 a{
                     font-weight: bolder;    
+                    font-size: 1.75rem;
                 }
             }
 

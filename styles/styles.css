@@ -357,8 +357,8 @@ header {
 }
 
 .mainNav .showNav {
-  -webkit-transform: translateY(-20%);
-          transform: translateY(-20%);
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
 }
 
 .mainNav ul li {
@@ -960,7 +960,7 @@ footer p {
 
 @media (max-width: 625px) {
   header {
-    min-height: 91vh;
+    min-height: 94vh;
   }
   .about,
   .projects,
@@ -1013,6 +1013,7 @@ footer p {
   }
   .mainNav ul li a {
     font-weight: bolder;
+    font-size: 1.75rem;
   }
   .mainNav ul li:last-of-type {
     padding: 1rem;
