@@ -964,6 +964,9 @@ footer p {
   .contactContainer .contactSocial ul li {
     padding: 0 6% 0 0;
   }
+  footer p {
+    text-align: center;
+  }
   footer .circleContact {
     right: 20%;
     width: 60%;
@@ -972,7 +975,7 @@ footer p {
 
 @media (max-width: 625px) {
   header {
-    min-height: 91vh;
+    min-height: 96vh;
   }
   .about,
   .projects,
@@ -984,7 +987,7 @@ footer p {
     line-height: 150%;
   }
   .circle {
-    top: 75%;
+    top: 77.5%;
   }
   .mainNav {
     padding: 1rem 0;
@@ -1031,7 +1034,6 @@ footer p {
   }
   .arrowAndScrambleContainer .headerArrow {
     bottom: 10%;
-    left: 5%;
   }
   .arrowAndScrambleContainer h3 {
     bottom: 10%;
@@ -1094,17 +1096,20 @@ footer p {
     font-size: calc(1rem + 1.5vw);
   }
   .projectsContainer > li:first-of-type img {
-    padding-top: 7%;
+    padding: 7% 0 3.5%;
   }
   .projectsContainer > li img {
-    padding-top: 10%;
+    padding: 10% 0 3.5%;
+  }
+  .projectsContainer > li p {
+    margin: 5% 0;
   }
   .contact {
     padding-bottom: 4vw;
   }
   footer .circleContact {
-    right: 12.25%;
-    width: 75%;
+    right: 7.75%;
+    width: 85%;
   }
 }
 
