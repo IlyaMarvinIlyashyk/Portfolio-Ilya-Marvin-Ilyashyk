@@ -328,7 +328,7 @@ header {
   display: none;
   cursor: pointer;
   position: fixed;
-  right: 5%;
+  right: 4vw;
   top: 0%;
   margin-top: 2vw;
   font-size: 3rem;
