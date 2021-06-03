@@ -62,27 +62,26 @@ const navDesktop = () => {
             previousScrollPosition = currentScrollPosition;
         }
     }
-    
-    else if (window.innerWidth < 625) {
-        return
-    }
-}
+};
 
-window.addEventListener("resize", navDesktop)
-window.addEventListener("load", navDesktop)
+window.addEventListener("resize", navDesktop);
+window.addEventListener("load", navDesktop);
+
+// HAMBURGER NAV
+
 const menu = document.querySelector("ul");
 const hamburger = document.querySelector(".hamburger");
 const active = document.querySelector(".active");
 const inactive = document.querySelector(".inactive");
 
-hamburger.addEventListener("click", toggleMenu)
+hamburger.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
 
     if (menu.classList.contains("showNav")) {
         menu.classList.remove("showNav");
         inactive.style.display = "none";
-        active.style.display = "block"
+        active.style.display = "block";
     }
 
     else {
@@ -90,59 +89,24 @@ function toggleMenu() {
         inactive.style.display = "block";
         active.style.display = "none";
     }
-}
+};
 
-const menuLinks = document.querySelectorAll(".navLink")
+const menuLinks = document.querySelectorAll(".navLink");
 
 menuLinks.forEach(
     function (navLink) {
         navLink.addEventListener("click", toggleMenu)
     })
 
-
-console.log(window.innerWidth)
-
-
-
 // VIDEOS SCRIPT
 
-document.querySelector(".podcastVideo").addEventListener("mouseover", function () {
-    this.play();
-});
+const videos = document.querySelectorAll("video")
 
-document.querySelector(".podcastVideo").addEventListener("mouseleave", function () {
-    this.pause();
+videos.forEach((e) => {
+    e.addEventListener("mouseover", function () {
+        this.play();
+    });
+    e.addEventListener("mouseleave", function () {
+        this.pause();
+    });
 });
-
-document.querySelector(".newsVideo").addEventListener("mouseover", function () {
-    this.play();
-});
-
-document.querySelector(".newsVideo").addEventListener("mouseleave", function () {
-    this.pause();
-});
-
-document.querySelector(".covidVideo").addEventListener("mouseover", function () {
-    this.play();
-});
-
-document.querySelector(".covidVideo").addEventListener("mouseleave", function () {
-    this.pause();
-});
-
-document.querySelector(".willowVideo").addEventListener("mouseover", function () {
-    this.play();
-});
-
-document.querySelector(".willowVideo").addEventListener("mouseleave", function () {
-    this.pause();
-});
-
-document.querySelector(".everythingVideo").addEventListener("mouseover", function () {
-    this.play();
-});
-
-document.querySelector(".everythingVideo").addEventListener("mouseleave", function () {
-    this.pause();
-});
-

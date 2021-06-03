@@ -5,51 +5,13 @@
 @keyframes navUnderline {
     0%{
         width: 0%;
-
-
+        
     }
     100% {
         width: 100%;
         border: 0.1rem solid $purple;
-
     }
 }
-
-
-// @keyframes headerVerticalLine {
-
-//  0% {
-//     height: 0%;
-//   }
-
-//  100% {
-//     border-right: 0.1rem solid $lightBrown;
-//     height: 100%;
-//   }
-// }
-
-@keyframes navUnderline {
-
- 0% {
-    width:0%;
-  }
-
- 100% {
-    border-bottom: 0.2rem solid $purple;
-    width:100%;
-  }
-} 
-
-@keyframes fadeInH1 {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-     }
-}
-
 
 @keyframes slideDown {
     0% {
@@ -62,18 +24,44 @@
     }
 }
 
-@keyframes slideInH2 {
+@keyframes fadeIn {
     0% {
-        transform: translateY(-10rem);
+        opacity: 0;
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0);
-    }
+     }
 }
 
-@keyframes slideInH3 {
+// @keyframes headerVerticalLine {
+    
+    //  0% {
+//     height: 0%;
+//   }
+
+//  100% {
+//     border-right: 0.1rem solid $lightBrown;
+//     height: 100%;
+//   }
+// }
+
+// @keyframes navUnderline {
+
+//  0% {
+//     width:0%;
+//   }
+
+//  100% {
+//     border-bottom: 0.2rem solid $purple;
+//     width:100%;
+//   }
+// } 
+
+
+
+
+@keyframes slideUp {
     0% {
         transform: translateY(10rem);
     }
@@ -83,3 +71,14 @@
         transform: translateY(0);
     }
 }
+
+// @keyframes slideInH3 {
+//     0% {
+//         transform: translateY(10rem);
+//     }
+
+//     100% {
+//         opacity: 1;
+//         transform: translateY(0);
+//     }
+// }

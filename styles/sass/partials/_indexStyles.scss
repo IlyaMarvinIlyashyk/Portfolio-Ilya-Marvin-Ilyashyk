@@ -16,14 +16,15 @@ header {
     transition: all 0.3s;
 
     .navUnderline {
-        border-bottom: 0.2rem solid $purple;
-        // animation: navUnderline 0.3s 0.5s linear forwards;
+        border-bottom: 0.2rem solid transparent;
+        animation: navUnderline 0.3s linear forwards;
     }
 }
 
 .mainNav {
     @include flex (space-between, center);
-    // animation: slideDown ease 1s 1s 1 forwards;
+    animation: slideDown ease 0.4s 0.3s 1 forwards;
+    opacity: 0;
 
     .hamburger {
         display: none;
@@ -46,7 +47,6 @@ header {
 
     h2 {
         font-size: calc(2rem + 1vw);
-        // margin: 0; 
         padding: 1vw 0;
         font-family: $nameFont;
 
@@ -92,23 +92,24 @@ h1 {
     font-size: calc(1rem + 8.25vw);
     position: relative;
     right: 0.25%;
-    // margin: 0;
     text-transform: uppercase;
     line-height: 90%;
     font-family: $titleFont;
     padding: 37vh 1.5rem 1.5rem 0;
-    // animation: fadeInH1 ease-in 1s 1s 1 forwards; 
+    opacity: 0;
+    animation: fadeIn ease-in 0.5s 0.3s 1 forwards; 
 }
 
 .arrowAndScrambleContainer {
     @include flex (x, center);
     margin: 8.5vw 0 6vw 0;
+    opacity: 0;
+    animation: slideUp ease 0.4s 0.3s 1 forwards;
     
     h3 {
         font-size: calc(1.5rem + 1.5vw);
         font-weight: normal;
         padding-left: 40%;
-        // animation: slideInH3 ease 1s 1s 1 forwards;
     }
 
     .headerArrow {

@@ -306,7 +306,9 @@ header {
 }
 
 .navContainer .navUnderline {
-  border-bottom: 0.2rem solid #4933BC;
+  border-bottom: 0.2rem solid transparent;
+  -webkit-animation: navUnderline 0.3s linear forwards;
+          animation: navUnderline 0.3s linear forwards;
 }
 
 .mainNav {
@@ -323,6 +325,9 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-animation: slideDown ease 0.4s 0.3s 1 forwards;
+          animation: slideDown ease 0.4s 0.3s 1 forwards;
+  opacity: 0;
 }
 
 .mainNav .hamburger {
@@ -386,6 +391,9 @@ h1 {
   line-height: 90%;
   font-family: "Dela Gothic One", cursive;
   padding: 37vh 1.5rem 1.5rem 0;
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 0.5s 0.3s 1 forwards;
+          animation: fadeIn ease-in 0.5s 0.3s 1 forwards;
 }
 
 .arrowAndScrambleContainer {
@@ -403,6 +411,9 @@ h1 {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 8.5vw 0 6vw 0;
+  opacity: 0;
+  -webkit-animation: slideUp ease 0.4s 0.3s 1 forwards;
+          animation: slideUp ease 0.4s 0.3s 1 forwards;
 }
 
 .arrowAndScrambleContainer h3 {
@@ -1199,34 +1210,6 @@ footer p {
   }
 }
 
-@keyframes navUnderline {
-  0% {
-    width: 0%;
-  }
-  100% {
-    border-bottom: 0.2rem solid #4933BC;
-    width: 100%;
-  }
-}
-
-@-webkit-keyframes fadeInH1 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInH1 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @-webkit-keyframes slideDown {
   0% {
     -webkit-transform: translateY(-10rem);
@@ -1251,31 +1234,25 @@ footer p {
   }
 }
 
-@-webkit-keyframes slideInH2 {
+@-webkit-keyframes fadeIn {
   0% {
-    -webkit-transform: translateY(-10rem);
-            transform: translateY(-10rem);
+    opacity: 0;
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
   }
 }
 
-@keyframes slideInH2 {
+@keyframes fadeIn {
   0% {
-    -webkit-transform: translateY(-10rem);
-            transform: translateY(-10rem);
+    opacity: 0;
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
   }
 }
 
-@-webkit-keyframes slideInH3 {
+@-webkit-keyframes slideUp {
   0% {
     -webkit-transform: translateY(10rem);
             transform: translateY(10rem);
@@ -1287,7 +1264,7 @@ footer p {
   }
 }
 
-@keyframes slideInH3 {
+@keyframes slideUp {
   0% {
     -webkit-transform: translateY(10rem);
             transform: translateY(10rem);
