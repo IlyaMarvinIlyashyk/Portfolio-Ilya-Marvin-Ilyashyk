@@ -307,8 +307,8 @@ header {
 
 .navContainer .navUnderline {
   border-bottom: 0.2rem solid transparent;
-  -webkit-animation: navUnderline 0.3s linear forwards;
-          animation: navUnderline 0.3s linear forwards;
+  -webkit-animation: navUnderline 0.4s linear forwards;
+          animation: navUnderline 0.4s linear forwards;
 }
 
 .mainNav {
@@ -1196,7 +1196,7 @@ footer p {
   }
   100% {
     width: 100%;
-    border: 0.1rem solid #4933BC;
+    border-bottom: 0.2rem solid #4933BC;
   }
 }
 
@@ -1206,7 +1206,7 @@ footer p {
   }
   100% {
     width: 100%;
-    border: 0.1rem solid #4933BC;
+    border-bottom: 0.2rem solid #4933BC;
   }
 }
 
