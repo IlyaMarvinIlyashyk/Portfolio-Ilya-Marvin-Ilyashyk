@@ -72,14 +72,15 @@
     }
 
     .arrowAndScrambleContainer {
+        animation: fadeIn ease 0.4s 0.3s 1 forwards;
 
         h3, .headerArrow {
             position: absolute;
-            bottom: 6%;
+            bottom: 8%;
         }
 
         h3 {
-            bottom: 8%;
+            bottom: 10%;
             right: 45%;
             padding: 0;
         }
@@ -262,21 +263,20 @@
 
         ul {
             position: fixed;
-            right: 5%;
             top: 9rem;
             @include flex (x, x, column);
             border: 0.2rem solid $purple;
             background-color: $white;
             padding: 1rem;
-            width: 90%;
+            width: 100%;
             transform: translateY(-200%);
-            transition: transform 0.2s;
+            transition: transform 0.3s;
 
             li {
                 padding: 1rem;
                 align-self: center;
 
-                a{
+                a {
                     font-weight: bolder;    
                     font-size: 1.75rem;
                 }
