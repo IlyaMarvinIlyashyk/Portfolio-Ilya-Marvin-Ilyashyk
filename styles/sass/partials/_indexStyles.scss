@@ -103,7 +103,7 @@ h1 {
 
 .arrowAndScrambleContainer {
     @include flex (x, center);
-    margin: 9vw 0 6vw 0;
+    margin: 10vw 0 6vw 0;
     opacity: 0;
     animation: slideUp ease 0.4s 0.3s 1 forwards;
     
