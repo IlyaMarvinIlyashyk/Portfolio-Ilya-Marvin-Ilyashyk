@@ -9,6 +9,13 @@ header {
 
 // NAV
 
+.is-visible {
+    top: 0;
+}
+.is-hidden {
+    top: -20rem;
+}  
+
 .navContainer {
     position: fixed;
     z-index: 2;

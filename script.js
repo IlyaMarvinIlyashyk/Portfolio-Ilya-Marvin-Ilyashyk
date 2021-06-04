@@ -44,59 +44,59 @@ printText();
 
 // NAV BAR SCROLL EFFECT
 
-const navDesktop = () => {
+// const navDesktop = () => {
     
-    let previousScrollPosition = window.pageYOffset;
+//     let previousScrollPosition = window.pageYOffset;
     
-    if (window.innerWidth >= 625) {
-        window.onscroll = () => {
-            const currentScrollPosition = window.pageYOffset;
+//     if (window.innerWidth >= 625) {
+//         window.onscroll = () => {
+//             const currentScrollPosition = window.pageYOffset;
             
-            if (previousScrollPosition > currentScrollPosition) {
+//             if (previousScrollPosition > currentScrollPosition) {
                 
-                document.querySelector(".navContainer").style.top = "0";
-            } else {
-                document.querySelector(".navContainer").style.top = "-10rem";
-            }
+//                 document.querySelector(".navContainer").style.top = "0";
+//             } else {
+//                 document.querySelector(".navContainer").style.top = "-10rem";
+//             }
             
-            previousScrollPosition = currentScrollPosition;
-        }
-    }
-};
+//             previousScrollPosition = currentScrollPosition;
+//         }
+//     }
+// };
 
-window.addEventListener("resize", navDesktop);
-window.addEventListener("load", navDesktop);
+// window.addEventListener("resize", navDesktop);
+// window.addEventListener("load", navDesktop);
 
-// HAMBURGER NAV
+// // HAMBURGER NAV
 
-const menu = document.querySelector("ul");
-const hamburger = document.querySelector(".hamburger");
-const active = document.querySelector(".active");
-const inactive = document.querySelector(".inactive");
+// const menu = document.querySelector("ul");
+// const hamburger = document.querySelector(".hamburger");
+// const active = document.querySelector(".active");
+// const inactive = document.querySelector(".inactive");
 
-hamburger.addEventListener("click", toggleMenu);
+// hamburger.addEventListener("click", toggleMenu);
 
-function toggleMenu() {
+// function toggleMenu() {
 
-    if (menu.classList.contains("showNav")) {
-        menu.classList.remove("showNav");
-        inactive.style.display = "none";
-        active.style.display = "block";
-    }
+//     if (menu.classList.contains("showNav")) {
+//         menu.classList.remove("showNav");
+//         inactive.style.display = "none";
+//         active.style.display = "block";
+//     }
 
-    else {
-        menu.classList.add("showNav");
-        inactive.style.display = "block";
-        active.style.display = "none";
-    }
-};
+//     else {
+//         menu.classList.add("showNav");
+//         inactive.style.display = "block";
+//         active.style.display = "none";
+//     }
+// };
 
-const menuLinks = document.querySelectorAll(".navLink");
+// const menuLinks = document.querySelectorAll(".navLink");
 
-menuLinks.forEach(
-    function (navLink) {
-        navLink.addEventListener("click", toggleMenu)
-    })
+// menuLinks.forEach(
+//     function (navLink) {
+//         navLink.addEventListener("click", toggleMenu)
+//     })
 
 // VIDEOS SCRIPT
 
@@ -114,3 +114,69 @@ videos.forEach((e) => {
 
 })
 
+let scrollPos = 0;
+const nav = document.querySelector('.navContainer');
+
+function checkPosition() {
+    let windowY = window.scrollY;
+    if (windowY < scrollPos) {
+        // Scrolling UP
+        nav.classList.add('is-visible');
+        nav.classList.remove('is-hidden');
+    } else {
+        // Scrolling DOWN
+        nav.classList.add('is-hidden');
+        nav.classList.remove('is-visible');
+    }
+    scrollPos = windowY;
+}
+
+function toggleMenu() {
+
+    if (menu.classList.contains("showNav")) {
+        menu.classList.remove("showNav");
+        inactive.style.display = "none";
+        active.style.display = "block";
+    }
+
+    else {
+        menu.classList.add("showNav");
+        inactive.style.display = "block";
+        active.style.display = "none";
+    }
+};
+
+window.addEventListener('scroll', checkPosition);
+
+const menu = document.querySelector("ul");
+const hamburger = document.querySelector(".hamburger");
+const active = document.querySelector(".active");
+const inactive = document.querySelector(".inactive");
+const menuLinks = document.querySelectorAll(".navLink");
+
+function mobile () {
+
+    if (window.innerWidth < 625) {
+        
+        hamburger.addEventListener("click", toggleMenu);
+
+        menuLinks.forEach(
+            function (navLink) {
+                navLink.addEventListener("click", toggleMenu)
+            })
+    }
+
+    else {
+        hamburger.removeEventListener("click", toggleMenu);
+        
+        menuLinks.forEach(
+            function (navLink) {
+                navLink.removeEventListener("click", toggleMenu)
+        }) 
+    }
+}
+
+
+
+window.addEventListener("resize", mobile);
+window.addEventListener("load", mobile);
