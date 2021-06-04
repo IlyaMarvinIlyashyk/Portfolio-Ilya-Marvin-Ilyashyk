@@ -244,10 +244,6 @@ img {
   width: 100%;
 }
 
-a {
-  text-decoration: none;
-}
-
 body {
   font-size: calc(1rem + 0.75vw);
   background-color: #C4D5D9;
@@ -280,6 +276,7 @@ p {
 a {
   color: #4933BC;
   font-weight: bolder;
+  text-decoration: none;
 }
 
 .wrapper {
@@ -295,9 +292,30 @@ a {
   border-bottom: 0.2rem solid #4933BC;
 }
 
+.skillsContainer h5::before,
+form button::before,
+.projectsLinks a:first-of-type::before {
+  content: '';
+  background-image: url(/assets/aboutArrow.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 100%;
+  width: calc(1rem + 0.8vw);
+  height: calc(1rem + 0.8vw);
+  margin-right: 1rem;
+}
+
 header {
   border-bottom: 0.2rem solid #4933BC;
   position: relative;
+}
+
+.is-visible {
+  top: 0;
+}
+
+.is-hidden {
+  top: -20rem;
 }
 
 .navContainer {
@@ -309,7 +327,9 @@ header {
 }
 
 .navContainer .navUnderline {
-  border-bottom: 0.2rem solid #4933BC;
+  border-bottom: 0.2rem solid transparent;
+  -webkit-animation: navUnderline 0.4s linear forwards;
+          animation: navUnderline 0.4s linear forwards;
 }
 
 .mainNav {
@@ -322,14 +342,26 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-animation: slideDown ease 0.4s 0.3s 1 forwards;
+          animation: slideDown ease 0.4s 0.3s 1 forwards;
+  opacity: 0;
+}
+
+.mainNav .showNav {
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
 }
 
 .mainNav .hamburger {
   display: none;
   cursor: pointer;
   position: fixed;
-  right: 5%;
-  top: 0%;
+  right: 0;
+  top: 0;
   margin-top: 2vw;
   font-size: 3rem;
   background-color: inherit;
@@ -356,14 +388,10 @@ header {
   display: none;
 }
 
-.mainNav .showNav {
-  -webkit-transform: translateY(-20%);
-          transform: translateY(-20%);
-}
-
 .mainNav ul li {
   padding: 2rem;
   display: inline-block;
+  border: 0.2rem solid transparent;
 }
 
 .mainNav ul li a {
@@ -385,16 +413,29 @@ h1 {
   line-height: 90%;
   font-family: "Dela Gothic One", cursive;
   padding: 37vh 1.5rem 1.5rem 0;
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 0.5s 0.3s 1 forwards;
+          animation: fadeIn ease-in 0.5s 0.3s 1 forwards;
 }
 
 .arrowAndScrambleContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 8.5vw 0 6vw 0;
+  -webkit-box-pack: x;
+      -ms-flex-pack: x;
+          justify-content: x;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 7.5vw 0 6vw 0;
+  opacity: 0;
+  -webkit-animation: slideUp ease 0.4s 0.3s 1 forwards;
+          animation: slideUp ease 0.4s 0.3s 1 forwards;
 }
 
 .arrowAndScrambleContainer h3 {
@@ -404,13 +445,17 @@ h1 {
 }
 
 .arrowAndScrambleContainer .headerArrow {
+  -webkit-transform-origin: up;
+          transform-origin: up;
   width: calc(2rem + 2.5vw);
   border: 0.2rem solid transparent;
 }
 
-.arrowAndScrambleContainer .headerArrow:hover {
-  border-radius: 50%;
-  border: 0.2rem solid #4933BC;
+.arrowAndScrambleContainer .headerArrow:hover, .arrowAndScrambleContainer .headerArrow:focus {
+  -webkit-animation: bounceDown 1s ease infinite;
+          animation: bounceDown 1s ease infinite;
+  -webkit-transform-origin: top;
+          transform-origin: top;
 }
 
 .circle {
@@ -428,6 +473,14 @@ h1 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: x;
+      -ms-flex-align: x;
+          align-items: x;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-bottom: 5vw;
 }
 
 .about .aboutText {
@@ -447,13 +500,16 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: x;
+      -ms-flex-pack: x;
+          justify-content: x;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-top: 80%;
 }
 
@@ -472,13 +528,16 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: x;
+      -ms-flex-pack: x;
+          justify-content: x;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 
 .imageAndSkillsContainer img {
@@ -489,6 +548,12 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: x;
+      -ms-flex-pack: x;
+          justify-content: x;
+  -webkit-box-align: x;
+      -ms-flex-align: x;
+          align-items: x;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -504,23 +569,19 @@ h1 {
   padding: 4% 0;
 }
 
-.imageAndSkillsContainer .skillsContainer h5::before {
-  content: '';
-  background-image: url(/assets/aboutArrow.svg);
-  background-repeat: no-repeat;
-  display: inline-block;
-  background-size: 100%;
-  width: calc(1rem + 0.75vw);
-  height: calc(1rem + 0.75vw);
-  margin-right: 1rem;
-}
-
 .imageAndSkillsContainer .skillsContainer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: x;
+      -ms-flex-align: x;
+          align-items: x;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -529,13 +590,16 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: x;
+      -ms-flex-pack: x;
+          justify-content: x;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 0.5rem 0;
   font-size: calc(1rem + 0.5vw);
   width: 25%;
@@ -546,7 +610,7 @@ h1 {
 }
 
 .projects {
-  padding-bottom: 3vw;
+  padding-bottom: 4vw;
 }
 
 .projectsDescription p {
@@ -651,7 +715,8 @@ h1 {
 }
 
 .projectsContainer .projectsLinks a {
-  padding: 1rem;
+  padding: 1rem 1rem 0.25rem;
+  font-size: calc(1rem + 1vw);
 }
 
 .projectsContainer .projectsLinks a:first-of-type {
@@ -659,16 +724,8 @@ h1 {
 }
 
 .projectsContainer .projectsLinks a:first-of-type::before {
-  content: '';
-  background-image: url(/assets/aboutArrow.svg);
-  background-repeat: no-repeat;
-  display: inline-block;
-  background-size: 100%;
-  width: calc(1rem + 0.75vw);
-  height: calc(1rem + 0.75vw);
-  margin-right: 1rem;
   position: relative;
-  top: 0.25vw;
+  top: 0.25rem;
 }
 
 .projectsContainer .projectsLinks:nth-of-type(2n) {
@@ -681,12 +738,17 @@ h1 {
 }
 
 .contact img {
-  width: calc(1rem + 2vw);
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  width: calc(2rem + 2.5vw);
   position: absolute;
   bottom: 5%;
   right: 0;
+}
+
+.contact img:hover, .contact img:focus {
+  -webkit-animation: bounceUp 1s ease infinite;
+          animation: bounceUp 1s ease infinite;
+  -webkit-transform-origin: top;
+          transform-origin: top;
 }
 
 .contactContainer {
@@ -697,6 +759,13 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: x;
+      -ms-flex-align: x;
+          align-items: x;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .contactContainer .contactSocial {
@@ -722,6 +791,13 @@ h1 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: x;
+      -ms-flex-align: x;
+          align-items: x;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .contactContainer .contactSocial ul li {
@@ -740,6 +816,13 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: x;
+      -ms-flex-align: x;
+          align-items: x;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .contactForm .nameEmail input[type=text],
@@ -772,14 +855,6 @@ h1 {
 }
 
 .contactForm button::before {
-  content: '';
-  background-image: url(/assets/aboutArrow.svg);
-  background-repeat: no-repeat;
-  display: inline-block;
-  background-size: 100%;
-  width: calc(1rem + 0.75vw);
-  height: calc(1rem + 0.75vw);
-  margin-right: 1rem;
   position: relative;
   top: 0.25vw;
 }
@@ -834,25 +909,29 @@ footer p {
   h1 {
     font-size: calc(1rem + 10vw);
   }
+  .circle {
+    top: 62.5%;
+    right: 5%;
+    width: 90%;
+  }
   .mainNav h2 span:first-of-type {
     display: none;
   }
   .mainNav h2 span:last-of-type {
     display: unset;
   }
+  .arrowAndScrambleContainer {
+    -webkit-animation: fadeIn ease 0.4s 0.3s 1 forwards;
+            animation: fadeIn ease 0.4s 0.3s 1 forwards;
+  }
   .arrowAndScrambleContainer h3, .arrowAndScrambleContainer .headerArrow {
     position: absolute;
-    bottom: 6%;
+    bottom: 8%;
   }
   .arrowAndScrambleContainer h3 {
-    bottom: 7%;
+    bottom: 10%;
     right: 45%;
     padding: 0;
-  }
-  .circle {
-    top: 62.5%;
-    right: 5%;
-    width: 90%;
   }
   .imageAndSkillsContainer .skillsContainer {
     padding-top: 10%;
@@ -958,9 +1037,6 @@ footer p {
 }
 
 @media (max-width: 625px) {
-  header {
-    min-height: 96vh;
-  }
   .about,
   .projects,
   .contact {
@@ -969,6 +1045,9 @@ footer p {
   p {
     font-size: calc(1.25rem + 1.25vw);
     line-height: 150%;
+  }
+  header {
+    min-height: 92vh;
   }
   .circle {
     top: 77.5%;
@@ -984,11 +1063,16 @@ footer p {
   }
   .mainNav ul {
     position: fixed;
-    right: 5%;
-    top: 5%;
+    top: 9rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: x;
+        -ms-flex-pack: x;
+            justify-content: x;
+    -webkit-box-align: x;
+        -ms-flex-align: x;
+            align-items: x;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -996,13 +1080,13 @@ footer p {
     border: 0.2rem solid #4933BC;
     background-color: #C4D5D9;
     padding: 1rem;
-    width: 90%;
-    -webkit-transform: translateY(-150%);
-            transform: translateY(-150%);
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
-    transition: transform 0.2s, -webkit-transform 0.2s;
+    width: 100%;
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
   }
   .mainNav ul li {
     padding: 1rem;
@@ -1012,18 +1096,19 @@ footer p {
   }
   .mainNav ul li a {
     font-weight: bolder;
+    font-size: 1.75rem;
   }
   .mainNav ul li:last-of-type {
     padding: 1rem;
   }
   h1 {
-    font-size: calc(1rem + 8vw);
+    font-size: calc(1rem + 8.5vw);
   }
   .arrowAndScrambleContainer .headerArrow {
     bottom: 10%;
   }
   .arrowAndScrambleContainer h3 {
-    bottom: 10%;
+    bottom: 11%;
     right: 5%;
   }
   .about {
@@ -1049,6 +1134,13 @@ footer p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: x;
+        -ms-flex-align: x;
+            align-items: x;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .about .aboutSocial ul {
     padding: 0;
@@ -1083,13 +1175,19 @@ footer p {
     font-size: calc(1rem + 1.5vw);
   }
   .projectsContainer > li:first-of-type img {
-    padding: 7% 0 3.5%;
+    padding: 7% 0 2%;
   }
   .projectsContainer > li img {
-    padding: 10% 0 3.5%;
+    padding: 10% 0 2.5%;
   }
   .projectsContainer > li p {
-    margin: 5% 0;
+    margin: 4% 0 3.5%;
+  }
+  .projectsContainer > li .projectsLinks {
+    margin-top: 4%;
+  }
+  .projectsContainer > li .projectsLinks a {
+    font-size: 2rem;
   }
   .contact {
     padding-bottom: 4vw;
@@ -1106,45 +1204,17 @@ footer p {
   }
   100% {
     width: 100%;
-    border: 0.1rem solid #4933BC;
-  }
-}
-
-@keyframes navUnderline {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-    border: 0.1rem solid #4933BC;
-  }
-}
-
-@keyframes navUnderline {
-  0% {
-    width: 0%;
-  }
-  100% {
     border-bottom: 0.2rem solid #4933BC;
+  }
+}
+
+@keyframes navUnderline {
+  0% {
+    width: 0%;
+  }
+  100% {
     width: 100%;
-  }
-}
-
-@-webkit-keyframes fadeInH1 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInH1 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+    border-bottom: 0.2rem solid #4933BC;
   }
 }
 
@@ -1172,31 +1242,7 @@ footer p {
   }
 }
 
-@-webkit-keyframes slideInH2 {
-  0% {
-    -webkit-transform: translateY(-10rem);
-            transform: translateY(-10rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes slideInH2 {
-  0% {
-    -webkit-transform: translateY(-10rem);
-            transform: translateY(-10rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes slideInH3 {
+@-webkit-keyframes slideUp {
   0% {
     -webkit-transform: translateY(10rem);
             transform: translateY(10rem);
@@ -1208,7 +1254,7 @@ footer p {
   }
 }
 
-@keyframes slideInH3 {
+@keyframes slideUp {
   0% {
     -webkit-transform: translateY(10rem);
             transform: translateY(10rem);
@@ -1218,4 +1264,181 @@ footer p {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes bounceSide {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes bounceSide {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes bounceDown {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounceDown {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes bounceUp {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounceUp {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.projectsContainer li .projectsLinks a::after,
+form a::after {
+  display: none;
+}
+
+.projectsContainer li .projectsLinks a:hover::before, .projectsContainer li .projectsLinks a:focus::before, .projectsContainer li .projectsLinks button:hover::before, .projectsContainer li .projectsLinks button:focus::before,
+form a:hover::before,
+form a:focus::before,
+form button:hover::before,
+form button:focus::before {
+  -webkit-animation: bounceSide 1s ease infinite;
+          animation: bounceSide 1s ease infinite;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.mainNav ul li a,
+.mainNav h2,
+.aboutSocial ul li a,
+.contactContainer .contactSocial ul li a,
+.contactContainer .contactSocial h5 a,
+form button,
+.projectsContainer li .projectsLinks a {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.mainNav ul li a:hover, .mainNav ul li a:focus,
+.mainNav h2:hover,
+.mainNav h2:focus,
+.aboutSocial ul li a:hover,
+.aboutSocial ul li a:focus,
+.contactContainer .contactSocial ul li a:hover,
+.contactContainer .contactSocial ul li a:focus,
+.contactContainer .contactSocial h5 a:hover,
+.contactContainer .contactSocial h5 a:focus,
+form button:hover,
+form button:focus,
+.projectsContainer li .projectsLinks a:hover,
+.projectsContainer li .projectsLinks a:focus {
+  color: #879EA4;
+}
+
+.aboutText a::after,
+.projectsContainer > li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #4933BC;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.aboutText a,
+.projectsContainer > li a {
+  position: relative;
+}
+
+.aboutText a:hover::after, .aboutText a:focus::after,
+.projectsContainer > li a:hover::after,
+.projectsContainer > li a:focus::after {
+  visibility: visible;
+  width: 100%;
 }

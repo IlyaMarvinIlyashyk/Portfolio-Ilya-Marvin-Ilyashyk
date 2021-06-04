@@ -1,0 +1,147 @@
+// ANIMATIONS
+
+@keyframes navUnderline {
+    0%{
+        width: 0%;
+        
+    }
+    100% {
+        width: 100%;
+        border-bottom: 0.2rem solid $purple;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+     }
+}
+
+@keyframes bounceSide {
+    0%   { 
+        transform: translateX(0); 
+    }
+    50%  { 
+        transform: translateX(-2rem); 
+    }
+    100% { 
+        transform: translateX(0); 
+    }
+}
+
+@keyframes bounceDown {
+    0%   { 
+        transform: translateY(0); 
+    }
+    50%  { 
+        transform: translateY(-2rem); 
+    }
+    100% { 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes bounceUp {
+    0%   { 
+        transform: translateY(0); 
+    }
+    50%  { 
+        transform: translateY(-2rem); 
+    }
+    100% { 
+        transform: translateY(0); 
+    }
+}
+
+// SIDE ARROW ANIMATION
+
+.projectsContainer li .projectsLinks,
+form {
+
+    a::after {
+        display: none;
+    }
+
+    a,button {
+        &:hover::before,
+        &:focus::before {
+            animation: bounceSide 1s ease infinite; 
+            transform-origin: right;
+        }
+    }
+}
+
+// TRANSITIONS
+
+// grey colour
+
+.mainNav ul li a,
+.mainNav h2,
+.aboutSocial ul li a,
+.contactContainer .contactSocial ul li a,
+.contactContainer .contactSocial h5 a,
+form button,
+.projectsContainer li .projectsLinks a {
+                                                   
+    transition: color 0.3s;
+
+    &:hover,
+    &:focus {
+        color:$grey
+    }
+}
+
+// underline
+
+.aboutText,
+.projectsContainer > li {
+
+    a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: $purple;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    a {
+        position: relative;
+
+        &:hover::after,
+        &:focus::after {
+            visibility: visible;
+            width: 100%;
+        }
+    }
+}
+

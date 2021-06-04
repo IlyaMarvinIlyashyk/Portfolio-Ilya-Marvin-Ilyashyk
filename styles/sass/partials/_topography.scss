@@ -1,20 +1,9 @@
-
-// GENERAL
+// GENERAL TOPOGRAPHY 
 
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-    // scroll-snap-type: y proximity;
 }
-
-// body {
-//     // font-family: "font-family: 'Rubik', sans-serif";
-//     // @include colors ();
-//     font-size: calc(1rem + 0.75vw);
-//     background-color: #7486E7;
-//     font-family: 'Rubik';
-// }
-
 
 ul {
     padding: 0;
@@ -28,6 +17,69 @@ img {
     width: 100%;
 }
 
+body {
+    font-size: calc(1rem + 0.75vw);
+    background-color: $white;
+    font-family: 'DM Sans', sans-serif;
+    font-family: $generalFont;
+    line-height: 140%;
+    color: $purple;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+h1, h4 {
+    font-weight: lighter;
+}
+
+h4 {
+    font-size: calc(2rem + 1vw);
+    text-transform: uppercase;
+    line-height: 90%;
+    font-family: $titleFont;
+}
+
+p {
+    font-size: calc(1rem + 0.75vw);
+    margin: 4% 0;
+}
+
 a {
+    color: $purple;
+    font-weight: bolder;
     text-decoration: none;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1680px;
+    width: 80%;    
+} 
+
+.about,
+.projects,
+.contact {
+    padding: 6vw 0;
+    border-bottom: 0.2rem solid $purple;
+}
+
+// arrow
+
+.skillsContainer h5, 
+form button,
+.projectsLinks a:first-of-type {
+    
+    &::before {
+            content: '';
+            background-image: url(/assets/aboutArrow.svg);
+            background-repeat: no-repeat;
+            display: inline-block;
+            background-size: 100%;
+            width: calc(1rem + 0.8vw);
+            height: calc(1rem + 0.8vw);
+            margin-right: 1rem;
+        }
+
 }

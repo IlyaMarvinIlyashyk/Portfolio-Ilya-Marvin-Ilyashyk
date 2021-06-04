@@ -35,114 +35,91 @@ const handleScramble = (newText) => {
 
 let i = 0;
 
-function printText() {
+const printText = () => {
     scrambler.scramble(scrambleText[i % scrambleText.length], handleScramble);
     setTimeout(printText, 3000);
     i++;
 }
 printText();
 
-// NAV BAR SCROLL EFFECT
+// VIDEOS SCRIPT
 
-const navDesktop = () => {
-    
-    let previousScrollPosition = window.pageYOffset;
-    
-    if (window.innerWidth >= 625) {
-        window.onscroll = () => {
-            const currentScrollPosition = window.pageYOffset;
-            
-            if (previousScrollPosition > currentScrollPosition) {
-                
-                document.querySelector(".navContainer").style.top = "0";
-            } else {
-                document.querySelector(".navContainer").style.top = "-10rem";
-            }
-            
-            previousScrollPosition = currentScrollPosition;
-        }
+const videos = document.querySelectorAll('video')
+
+videos.forEach((e) => {
+    e.addEventListener('mouseover', function () {
+        this.play();
+    });
+
+    e.addEventListener('mouseleave', function () {
+        this.pause();
+    });
+})
+
+// NAV BAR SCROLL
+
+const nav = document.querySelector('.navContainer');
+
+let scrollPos = 0;
+
+const scrollNavBar = () => {
+    let windowY = window.scrollY;
+    if (windowY < scrollPos) {
+        // Scrolling UP
+        nav.classList.add('is-visible');
+        nav.classList.remove('is-hidden');
+    } else {
+        // Scrolling DOWN
+        nav.classList.add('is-hidden');
+        nav.classList.remove('is-visible');
     }
-    
-    else if (window.innerWidth < 625) {
-        return
-    }
+    scrollPos = windowY;
 }
 
-window.addEventListener("resize", navDesktop)
-window.addEventListener("load", navDesktop)
-const menu = document.querySelector("ul");
-const hamburger = document.querySelector(".hamburger");
-const active = document.querySelector(".active");
-const inactive = document.querySelector(".inactive");
+window.addEventListener('scroll', scrollNavBar);
 
-hamburger.addEventListener("click", toggleMenu)
+// MOBILE HAMBURGER
 
-function toggleMenu() {
+const menu = document.querySelector('ul');
+const hamburger = document.querySelector('.hamburger');
+const active = document.querySelector('.active');
+const inactive = document.querySelector('.inactive');
+const menuLinks = document.querySelectorAll('.navLink');
 
-    if (menu.classList.contains("showNav")) {
-        menu.classList.remove("showNav");
-        inactive.style.display = "none";
-        active.style.display = "block"
+const toggleMenu = () => {
+
+    if (menu.classList.contains('showNav')) {
+        menu.classList.remove('showNav');
+        inactive.style.display = 'none';
+        active.style.display = 'block';
     }
 
     else {
-        menu.classList.add("showNav");
-        inactive.style.display = "block";
-        active.style.display = "none";
+        menu.classList.add('showNav');
+        inactive.style.display = 'block';
+        active.style.display = 'none';
+    }
+};
+
+const mobile = () => {
+
+    if (window.innerWidth < 625) {
+        
+        hamburger.addEventListener('click', toggleMenu);
+
+        menuLinks.forEach((navLink) => {
+            navLink.addEventListener('click', toggleMenu)
+        })
+    }
+
+    else {
+        hamburger.removeEventListener('click', toggleMenu);
+        
+        menuLinks.forEach((navLink) => {
+            navLink.removeEventListener('click', toggleMenu)
+        }) 
     }
 }
 
-const menuLinks = document.querySelectorAll(".navLink")
-
-menuLinks.forEach(
-    function (navLink) {
-        navLink.addEventListener("click", toggleMenu)
-    })
-
-
-console.log(window.innerWidth)
-
-
-
-// VIDEOS SCRIPT
-
-document.querySelector(".podcastVideo").addEventListener("mouseover", function () {
-    this.play();
-});
-
-document.querySelector(".podcastVideo").addEventListener("mouseleave", function () {
-    this.pause();
-});
-
-document.querySelector(".newsVideo").addEventListener("mouseover", function () {
-    this.play();
-});
-
-document.querySelector(".newsVideo").addEventListener("mouseleave", function () {
-    this.pause();
-});
-
-document.querySelector(".covidVideo").addEventListener("mouseover", function () {
-    this.play();
-});
-
-document.querySelector(".covidVideo").addEventListener("mouseleave", function () {
-    this.pause();
-});
-
-document.querySelector(".willowVideo").addEventListener("mouseover", function () {
-    this.play();
-});
-
-document.querySelector(".willowVideo").addEventListener("mouseleave", function () {
-    this.pause();
-});
-
-document.querySelector(".everythingVideo").addEventListener("mouseover", function () {
-    this.play();
-});
-
-document.querySelector(".everythingVideo").addEventListener("mouseleave", function () {
-    this.pause();
-});
-
+window.addEventListener('resize', mobile);
+window.addEventListener('load', mobile);
