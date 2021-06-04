@@ -105,8 +105,15 @@ h1 {
     }
 
     .headerArrow {
+        transform-origin: up;
         width: calc(2rem + 2.5vw);
         border: 0.2rem solid transparent;
+
+        &:hover,
+        &:focus {
+            animation: bounceDown 1s ease infinite;
+            transform-origin: top;
+        }
     }
 }
 
@@ -173,17 +180,6 @@ h1 {
             font-weight: 400;
             margin: 0;
             padding: 4% 0;
-        }
-
-        h5::before {
-            content: '';
-            background-image: url(/assets/aboutArrow.svg);
-            background-repeat: no-repeat;
-            display: inline-block;
-            background-size: 100%;
-            width: calc(1rem + 0.75vw);
-            height: calc(1rem + 0.75vw);
-            margin-right: 1rem;
         }
 
         ul {
@@ -316,25 +312,16 @@ h1 {
         
         a {
             padding: 1rem 1rem 0.25rem;
+            font-size: calc(1rem + 1vw);
+
         }
         
         a:first-of-type {
             padding-left: 0;
 
             &::before {
-                content: '';
-                background-image: url(/assets/aboutArrow.svg);
-                background-repeat: no-repeat;
-                display: inline-block;
-                background-size: 100%;
-                width: calc(1rem + 0.75vw);
-                height: calc(1rem + 0.75vw);
-                margin-right: 1rem;
                 position: relative;
-                top: 0.25vw;
-                transform-origin: left;
-                animation-duration: 1s;
-                animation-iteration-count: infinite;
+                top: 0.25rem;
             }
         }
     }
@@ -352,10 +339,15 @@ h1 {
     img {
         // width: calc(1rem + 2vw);
         width: calc(2rem + 2.5vw);
-        transform: rotate(180deg);
         position: absolute;
         bottom: 5%;
         right: 0;
+        
+        &:hover,
+        &:focus {
+            animation: bounceUp 1s ease infinite;
+            transform-origin: top;
+        }
     }
 }
 
@@ -424,20 +416,8 @@ h1 {
         cursor: pointer;
 
         &::before {
-            content: '';
-            background-image: url(/assets/aboutArrow.svg);
-            background-repeat: no-repeat;
-            display: inline-block;
-            background-size: 100%;
-            width: calc(1rem + 0.75vw);
-            height: calc(1rem + 0.75vw);
-            margin-right: 1rem;
             position: relative;
             top: 0.25vw;
-        }
-        
-        &:hover,
-        &:focus {
         }
     }
 }

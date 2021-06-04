@@ -64,3 +64,22 @@ a {
     padding: 6vw 0;
     border-bottom: 0.2rem solid $purple;
 }
+
+// arrow
+
+.skillsContainer h5, 
+form button,
+.projectsLinks a:first-of-type {
+    
+    &::before {
+            content: '';
+            background-image: url(/assets/aboutArrow.svg);
+            background-repeat: no-repeat;
+            display: inline-block;
+            background-size: 100%;
+            width: calc(1rem + 0.8vw);
+            height: calc(1rem + 0.8vw);
+            margin-right: 1rem;
+        }
+
+}

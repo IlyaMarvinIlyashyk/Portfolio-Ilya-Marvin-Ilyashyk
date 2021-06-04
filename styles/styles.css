@@ -292,6 +292,19 @@ a {
   border-bottom: 0.2rem solid #4933BC;
 }
 
+.skillsContainer h5::before,
+form button::before,
+.projectsLinks a:first-of-type::before {
+  content: '';
+  background-image: url(/assets/aboutArrow.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 100%;
+  width: calc(1rem + 0.8vw);
+  height: calc(1rem + 0.8vw);
+  margin-right: 1rem;
+}
+
 header {
   border-bottom: 0.2rem solid #4933BC;
   position: relative;
@@ -424,8 +437,17 @@ h1 {
 }
 
 .arrowAndScrambleContainer .headerArrow {
+  -webkit-transform-origin: up;
+          transform-origin: up;
   width: calc(2rem + 2.5vw);
   border: 0.2rem solid transparent;
+}
+
+.arrowAndScrambleContainer .headerArrow:hover, .arrowAndScrambleContainer .headerArrow:focus {
+  -webkit-animation: bounceDown 1s ease infinite;
+          animation: bounceDown 1s ease infinite;
+  -webkit-transform-origin: top;
+          transform-origin: top;
 }
 
 .circle {
@@ -537,17 +559,6 @@ h1 {
   font-weight: 400;
   margin: 0;
   padding: 4% 0;
-}
-
-.imageAndSkillsContainer .skillsContainer h5::before {
-  content: '';
-  background-image: url(/assets/aboutArrow.svg);
-  background-repeat: no-repeat;
-  display: inline-block;
-  background-size: 100%;
-  width: calc(1rem + 0.75vw);
-  height: calc(1rem + 0.75vw);
-  margin-right: 1rem;
 }
 
 .imageAndSkillsContainer .skillsContainer ul {
@@ -697,6 +708,7 @@ h1 {
 
 .projectsContainer .projectsLinks a {
   padding: 1rem 1rem 0.25rem;
+  font-size: calc(1rem + 1vw);
 }
 
 .projectsContainer .projectsLinks a:first-of-type {
@@ -704,22 +716,8 @@ h1 {
 }
 
 .projectsContainer .projectsLinks a:first-of-type::before {
-  content: '';
-  background-image: url(/assets/aboutArrow.svg);
-  background-repeat: no-repeat;
-  display: inline-block;
-  background-size: 100%;
-  width: calc(1rem + 0.75vw);
-  height: calc(1rem + 0.75vw);
-  margin-right: 1rem;
   position: relative;
-  top: 0.25vw;
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  top: 0.25rem;
 }
 
 .projectsContainer .projectsLinks:nth-of-type(2n) {
@@ -733,11 +731,16 @@ h1 {
 
 .contact img {
   width: calc(2rem + 2.5vw);
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
   position: absolute;
   bottom: 5%;
   right: 0;
+}
+
+.contact img:hover, .contact img:focus {
+  -webkit-animation: bounceUp 1s ease infinite;
+          animation: bounceUp 1s ease infinite;
+  -webkit-transform-origin: top;
+          transform-origin: top;
 }
 
 .contactContainer {
@@ -844,14 +847,6 @@ h1 {
 }
 
 .contactForm button::before {
-  content: '';
-  background-image: url(/assets/aboutArrow.svg);
-  background-repeat: no-repeat;
-  display: inline-block;
-  background-size: 100%;
-  width: calc(1rem + 0.75vw);
-  height: calc(1rem + 0.75vw);
-  margin-right: 1rem;
   position: relative;
   top: 0.25vw;
 }
@@ -1281,11 +1276,119 @@ footer p {
   }
 }
 
+@-webkit-keyframes bounceSide {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes bounceSide {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes bounceDown {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounceDown {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes bounceUp {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-1.5rem);
+            transform: translateY(-1.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounceUp {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-1.5rem);
+            transform: translateY(-1.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.projectsContainer li .projectsLinks a::after,
+form a::after {
+  display: none;
+}
+
+.projectsContainer li .projectsLinks a:hover::before, .projectsContainer li .projectsLinks a:focus::before, .projectsContainer li .projectsLinks button:hover::before, .projectsContainer li .projectsLinks button:focus::before,
+form a:hover::before,
+form a:focus::before,
+form button:hover::before,
+form button:focus::before {
+  -webkit-animation: bounceSide 1s ease infinite;
+          animation: bounceSide 1s ease infinite;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
 .mainNav ul li a,
 .mainNav h2,
 .aboutSocial ul li a,
 .contactContainer .contactSocial ul li a,
-.contactContainer .contactSocial h5 a {
+.contactContainer .contactSocial h5 a,
+form button,
+.projectsContainer li .projectsLinks a {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
@@ -1298,62 +1401,12 @@ footer p {
 .contactContainer .contactSocial ul li a:hover,
 .contactContainer .contactSocial ul li a:focus,
 .contactContainer .contactSocial h5 a:hover,
-.contactContainer .contactSocial h5 a:focus {
+.contactContainer .contactSocial h5 a:focus,
+form button:hover,
+form button:focus,
+.projectsContainer li .projectsLinks a:hover,
+.projectsContainer li .projectsLinks a:focus {
   color: #879EA4;
-}
-
-.arrowAndScrambleContainer .headerArrow {
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
-.arrowAndScrambleContainer .headerArrow:hover, .arrowAndScrambleContainer .headerArrow:focus {
-  -webkit-transform: translateY(1.75rem);
-          transform: translateY(1.75rem);
-}
-
-.contact img {
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
-.contact img:hover, .contact img:focus {
-  -webkit-transform: rotate(180deg) translateY(1.75rem);
-          transform: rotate(180deg) translateY(1.75rem);
-}
-
-@-webkit-keyframes point {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  50% {
-    -webkit-transform: translateX(-1.5rem);
-            transform: translateX(-1.5rem);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@keyframes point {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  50% {
-    -webkit-transform: translateX(-1.5rem);
-            transform: translateX(-1.5rem);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
 }
 
 .aboutText a::after,
@@ -1365,6 +1418,7 @@ footer p {
   bottom: 0;
   left: 0;
   background-color: #4933BC;
+  visibility: hidden;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -1377,16 +1431,6 @@ footer p {
 .aboutText a:hover::after, .aboutText a:focus::after,
 .projectsContainer > li a:hover::after,
 .projectsContainer > li a:focus::after {
+  visibility: visible;
   width: 100%;
-}
-
-.projectsContainer li .projectsLinks a::after {
-  display: none;
-}
-
-.projectsContainer li .projectsLinks a:hover::before, .projectsContainer li .projectsLinks a:focus::before {
-  -webkit-animation-name: point;
-          animation-name: point;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
 }

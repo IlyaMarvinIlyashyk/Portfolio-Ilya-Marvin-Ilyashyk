@@ -49,6 +49,7 @@ const navDesktop = () => {
     let previousScrollPosition = window.pageYOffset;
     
     if (window.innerWidth >= 625) {
+
         window.onscroll = () => {
             const currentScrollPosition = window.pageYOffset;
             
@@ -60,6 +61,9 @@ const navDesktop = () => {
             }
             
             previousScrollPosition = currentScrollPosition;
+
+            if (menu.classList.contains("showNav")) {
+                menu.classList.remove("showNav"); }
         }
     }
 };
@@ -110,3 +114,6 @@ videos.forEach((e) => {
         this.pause();
     });
 });
+
+
+
