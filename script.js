@@ -35,89 +35,34 @@ const handleScramble = (newText) => {
 
 let i = 0;
 
-function printText() {
+const printText = () => {
     scrambler.scramble(scrambleText[i % scrambleText.length], handleScramble);
     setTimeout(printText, 3000);
     i++;
 }
 printText();
 
-// NAV BAR SCROLL EFFECT
-
-// const navDesktop = () => {
-    
-//     let previousScrollPosition = window.pageYOffset;
-    
-//     if (window.innerWidth >= 625) {
-//         window.onscroll = () => {
-//             const currentScrollPosition = window.pageYOffset;
-            
-//             if (previousScrollPosition > currentScrollPosition) {
-                
-//                 document.querySelector(".navContainer").style.top = "0";
-//             } else {
-//                 document.querySelector(".navContainer").style.top = "-10rem";
-//             }
-            
-//             previousScrollPosition = currentScrollPosition;
-//         }
-//     }
-// };
-
-// window.addEventListener("resize", navDesktop);
-// window.addEventListener("load", navDesktop);
-
-// // HAMBURGER NAV
-
-// const menu = document.querySelector("ul");
-// const hamburger = document.querySelector(".hamburger");
-// const active = document.querySelector(".active");
-// const inactive = document.querySelector(".inactive");
-
-// hamburger.addEventListener("click", toggleMenu);
-
-// function toggleMenu() {
-
-//     if (menu.classList.contains("showNav")) {
-//         menu.classList.remove("showNav");
-//         inactive.style.display = "none";
-//         active.style.display = "block";
-//     }
-
-//     else {
-//         menu.classList.add("showNav");
-//         inactive.style.display = "block";
-//         active.style.display = "none";
-//     }
-// };
-
-// const menuLinks = document.querySelectorAll(".navLink");
-
-// menuLinks.forEach(
-//     function (navLink) {
-//         navLink.addEventListener("click", toggleMenu)
-//     })
-
 // VIDEOS SCRIPT
 
-const videos = document.querySelectorAll("video")
+const videos = document.querySelectorAll('video')
 
 videos.forEach((e) => {
-    e.addEventListener("mouseover", function () {
+    e.addEventListener('mouseover', function () {
         this.play();
     });
 
-    e.addEventListener("mouseleave", function () {
+    e.addEventListener('mouseleave', function () {
         this.pause();
     });
-
-
 })
 
-let scrollPos = 0;
+// NAV BAR SCROLL
+
 const nav = document.querySelector('.navContainer');
 
-function checkPosition() {
+let scrollPos = 0;
+
+const scrollNavBar = () => {
     let windowY = window.scrollY;
     if (windowY < scrollPos) {
         // Scrolling UP
@@ -131,52 +76,50 @@ function checkPosition() {
     scrollPos = windowY;
 }
 
-function toggleMenu() {
+window.addEventListener('scroll', scrollNavBar);
 
-    if (menu.classList.contains("showNav")) {
-        menu.classList.remove("showNav");
-        inactive.style.display = "none";
-        active.style.display = "block";
+// MOBILE HAMBURGER
+
+const menu = document.querySelector('ul');
+const hamburger = document.querySelector('.hamburger');
+const active = document.querySelector('.active');
+const inactive = document.querySelector('.inactive');
+const menuLinks = document.querySelectorAll('.navLink');
+
+const toggleMenu = () => {
+
+    if (menu.classList.contains('showNav')) {
+        menu.classList.remove('showNav');
+        inactive.style.display = 'none';
+        active.style.display = 'block';
     }
 
     else {
-        menu.classList.add("showNav");
-        inactive.style.display = "block";
-        active.style.display = "none";
+        menu.classList.add('showNav');
+        inactive.style.display = 'block';
+        active.style.display = 'none';
     }
 };
 
-window.addEventListener('scroll', checkPosition);
-
-const menu = document.querySelector("ul");
-const hamburger = document.querySelector(".hamburger");
-const active = document.querySelector(".active");
-const inactive = document.querySelector(".inactive");
-const menuLinks = document.querySelectorAll(".navLink");
-
-function mobile () {
+const mobile = () => {
 
     if (window.innerWidth < 625) {
         
-        hamburger.addEventListener("click", toggleMenu);
+        hamburger.addEventListener('click', toggleMenu);
 
-        menuLinks.forEach(
-            function (navLink) {
-                navLink.addEventListener("click", toggleMenu)
-            })
+        menuLinks.forEach((navLink) => {
+            navLink.addEventListener('click', toggleMenu)
+        })
     }
 
     else {
-        hamburger.removeEventListener("click", toggleMenu);
+        hamburger.removeEventListener('click', toggleMenu);
         
-        menuLinks.forEach(
-            function (navLink) {
-                navLink.removeEventListener("click", toggleMenu)
+        menuLinks.forEach((navLink) => {
+            navLink.removeEventListener('click', toggleMenu)
         }) 
     }
 }
 
-
-
-window.addEventListener("resize", mobile);
-window.addEventListener("load", mobile);
+window.addEventListener('resize', mobile);
+window.addEventListener('load', mobile);

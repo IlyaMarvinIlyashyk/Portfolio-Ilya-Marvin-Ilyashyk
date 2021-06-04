@@ -351,6 +351,11 @@ header {
   opacity: 0;
 }
 
+.mainNav .showNav {
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
+}
+
 .mainNav .hamburger {
   display: none;
   cursor: pointer;
@@ -381,11 +386,6 @@ header {
 
 .mainNav h2 span:last-of-type {
   display: none;
-}
-
-.mainNav .showNav {
-  -webkit-transform: translateY(-25%);
-          transform: translateY(-25%);
 }
 
 .mainNav ul li {
@@ -1350,8 +1350,8 @@ footer p {
             transform: translateY(0);
   }
   50% {
-    -webkit-transform: translateY(-1.5rem);
-            transform: translateY(-1.5rem);
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -1365,8 +1365,8 @@ footer p {
             transform: translateY(0);
   }
   50% {
-    -webkit-transform: translateY(-1.5rem);
-            transform: translateY(-1.5rem);
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
   }
   100% {
     -webkit-transform: translateY(0);

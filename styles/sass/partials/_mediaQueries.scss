@@ -95,7 +95,7 @@
             justify-content: unset;
 
             li {
-            width: 50%
+                width: 50%
             }
         }
     }
@@ -251,16 +251,15 @@
 
     .mainNav {
 
+        padding: 1rem 0;
+        
         h2 {
             padding: 2vw 0;
         }
-        
 
         .hamburger {
             display: unset;
         }
-
-        padding: 1rem 0;
 
         ul {
             position: fixed;
