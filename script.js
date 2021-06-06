@@ -134,4 +134,6 @@ window.addEventListener('load', mobile);
 //     document.getElementById("loader").style.display = "none";
 // });
 
+// Animate on Scroll Library by Michal Sajnog
+
 AOS.init();
