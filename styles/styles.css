@@ -229,6 +229,7 @@ html {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 ul {
@@ -1016,7 +1017,7 @@ footer p {
     line-height: 150%;
   }
   header {
-    min-height: 92.5vh;
+    min-height: 90vh;
   }
   .circle {
     top: 77.5%;
