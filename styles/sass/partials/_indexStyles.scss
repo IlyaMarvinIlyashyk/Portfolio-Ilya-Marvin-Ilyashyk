@@ -5,7 +5,7 @@
 header {
     border-bottom: 0.2rem solid $purple;
     position: relative;
-    min-height: 105vh;
+    min-height: 106vh;
     @include flex (space-between, x, column);
 }
 

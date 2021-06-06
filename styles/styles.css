@@ -310,7 +310,7 @@ form button::before,
 header {
   border-bottom: 0.2rem solid #4933BC;
   position: relative;
-  min-height: 105vh;
+  min-height: 106vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -885,6 +885,9 @@ footer p {
 }
 
 @media (max-width: 800px) {
+  header {
+    min-height: 96vh;
+  }
   h1 {
     font-size: calc(1rem + 10vw);
   }
