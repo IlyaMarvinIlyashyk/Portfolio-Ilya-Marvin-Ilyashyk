@@ -5,7 +5,8 @@
 header {
     border-bottom: 0.2rem solid $purple;
     position: relative;
-    min-height: 101vh;
+    min-height: 105vh;
+    @include flex (space-between, x, column);
 }
 
 // NAV
@@ -91,32 +92,33 @@ header {
 
 h1 {
     font-size: calc(1rem + 8.25vw);
-    position: relative;
-    right: 0.25%;
+    transform: translateX(-0.5%);
     text-transform: uppercase;
     line-height: 90%;
     font-family: $titleFont;
-    padding: 34vh 1.5rem 1.5rem 0;
+    padding-top: 35vh;
     opacity: 0;
     animation: fadeIn ease-in 0.5s 0.3s 1 forwards; 
 }
 
 .arrowAndScrambleContainer {
-    @include flex (x, center);
-    margin: 10vw 0 6vw 0;
+    margin-bottom: 6vw;
     opacity: 0;
     animation: slideUp ease 0.4s 0.3s 1 forwards;
+    position: relative;
     
     h3 {
         font-size: calc(1.5rem + 1.5vw);
         font-weight: normal;
-        padding-left: 40%;
+        text-align: center;
     }
 
     .headerArrow {
         transform-origin: up;
         width: calc(2rem + 2.5vw);
         border: 0.2rem solid transparent;
+        position: absolute;
+        bottom: -60%;
 
         &:hover,
         &:focus {
@@ -128,9 +130,9 @@ h1 {
 
 .circle {
     position: absolute;
-    right: 7.5%;
-    width: 85%;
-    top: 35%;
+    right: 5%;
+    width: 90%;
+    top: 40%;
     z-index: -1;
 }
 

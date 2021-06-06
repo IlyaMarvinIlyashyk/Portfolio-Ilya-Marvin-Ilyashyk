@@ -307,7 +307,20 @@ form button::before,
 header {
   border-bottom: 0.2rem solid #4933BC;
   position: relative;
-  min-height: 101vh;
+  min-height: 105vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: x;
+      -ms-flex-align: x;
+          align-items: x;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .is-visible {
@@ -407,41 +420,29 @@ header {
 
 h1 {
   font-size: calc(1rem + 8.25vw);
-  position: relative;
-  right: 0.25%;
+  -webkit-transform: translateX(-0.5%);
+          transform: translateX(-0.5%);
   text-transform: uppercase;
   line-height: 90%;
   font-family: "Dela Gothic One", cursive;
-  padding: 34vh 1.5rem 1.5rem 0;
+  padding-top: 35vh;
   opacity: 0;
   -webkit-animation: fadeIn ease-in 0.5s 0.3s 1 forwards;
           animation: fadeIn ease-in 0.5s 0.3s 1 forwards;
 }
 
 .arrowAndScrambleContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: x;
-      -ms-flex-pack: x;
-          justify-content: x;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin: 10vw 0 6vw 0;
+  margin-bottom: 6vw;
   opacity: 0;
   -webkit-animation: slideUp ease 0.4s 0.3s 1 forwards;
           animation: slideUp ease 0.4s 0.3s 1 forwards;
+  position: relative;
 }
 
 .arrowAndScrambleContainer h3 {
   font-size: calc(1.5rem + 1.5vw);
   font-weight: normal;
-  padding-left: 40%;
+  text-align: center;
 }
 
 .arrowAndScrambleContainer .headerArrow {
@@ -449,6 +450,8 @@ h1 {
           transform-origin: up;
   width: calc(2rem + 2.5vw);
   border: 0.2rem solid transparent;
+  position: absolute;
+  bottom: -60%;
 }
 
 .arrowAndScrambleContainer .headerArrow:hover, .arrowAndScrambleContainer .headerArrow:focus {
@@ -460,9 +463,9 @@ h1 {
 
 .circle {
   position: absolute;
-  right: 7.5%;
-  width: 85%;
-  top: 35%;
+  right: 5%;
+  width: 90%;
+  top: 40%;
   z-index: -1;
 }
 
@@ -883,6 +886,9 @@ footer p {
   .wrapper {
     width: 90%;
   }
+  header {
+    min-height: 101vh;
+  }
   .imageAndSkillsContainer .skillsContainer {
     padding-top: 5%;
   }
@@ -903,9 +909,6 @@ footer p {
 }
 
 @media (max-width: 800px) {
-  header {
-    min-height: 101vh;
-  }
   h1 {
     font-size: calc(1rem + 10vw);
   }
@@ -923,15 +926,6 @@ footer p {
   .arrowAndScrambleContainer {
     -webkit-animation: fadeIn ease 0.4s 0.3s 1 forwards;
             animation: fadeIn ease 0.4s 0.3s 1 forwards;
-  }
-  .arrowAndScrambleContainer h3, .arrowAndScrambleContainer .headerArrow {
-    position: absolute;
-    bottom: 8%;
-  }
-  .arrowAndScrambleContainer h3 {
-    bottom: 10%;
-    right: 45%;
-    padding: 0;
   }
   .imageAndSkillsContainer .skillsContainer {
     padding-top: 10%;
@@ -1104,12 +1098,11 @@ footer p {
   h1 {
     font-size: calc(1rem + 8.5vw);
   }
-  .arrowAndScrambleContainer .headerArrow {
-    bottom: 10%;
+  .arrowAndScrambleContainer {
+    margin-bottom: 9vw;
   }
-  .arrowAndScrambleContainer h3 {
-    bottom: 11%;
-    right: 5%;
+  .arrowAndScrambleContainer .headerArrow {
+    bottom: -50%;
   }
   .about {
     -webkit-box-orient: vertical;

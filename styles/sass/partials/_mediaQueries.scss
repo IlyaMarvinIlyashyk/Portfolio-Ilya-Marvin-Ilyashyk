@@ -10,6 +10,12 @@
         width: 90%;
     }
 
+    // HEADER 
+
+    header {
+        min-height: 101vh;
+    }
+
     // ABOUT
 
     .imageAndSkillsContainer .skillsContainer {
@@ -43,10 +49,6 @@
 @media (max-width: 800px) {
 
     // HEADER
-    
-    header {
-        min-height: 101vh;
-    }
 
     h1 {
         font-size: calc(1rem + 10vw);
@@ -73,17 +75,6 @@
 
     .arrowAndScrambleContainer {
         animation: fadeIn ease 0.4s 0.3s 1 forwards;
-
-        h3, .headerArrow {
-            position: absolute;
-            bottom: 8%;
-        }
-
-        h3 {
-            bottom: 10%;
-            right: 45%;
-            padding: 0;
-        }
     }
     
     // ABOUT
@@ -293,14 +284,10 @@
     }
 
     .arrowAndScrambleContainer {
+        margin-bottom: 9vw;
 
         .headerArrow {
-            bottom: 10%;
-        }
-    
-        h3 {
-            bottom: 11%;
-            right: 5%;
+            bottom: -50%;
         }
     }
 
