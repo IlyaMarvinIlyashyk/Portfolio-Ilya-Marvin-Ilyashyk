@@ -359,7 +359,7 @@ h1 {
         text-align: right;
         
         h5 {
-            padding: 15% 0;
+            padding: 10% 0;
             font-size: calc(1rem + 2vw);
             text-decoration: underline;
             text-decoration-color: $purple;
@@ -367,6 +367,10 @@ h1 {
 
         p {
             margin: 0;
+        }
+
+        p:last-of-type {
+            padding-top: 10%;
         }
 
         ul {

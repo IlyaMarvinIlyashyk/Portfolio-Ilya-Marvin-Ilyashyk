@@ -753,7 +753,7 @@ h1 {
 }
 
 .contactContainer .contactSocial h5 {
-  padding: 15% 0;
+  padding: 10% 0;
   font-size: calc(1rem + 2vw);
   text-decoration: underline;
   -webkit-text-decoration-color: #4933BC;
@@ -762,6 +762,10 @@ h1 {
 
 .contactContainer .contactSocial p {
   margin: 0;
+}
+
+.contactContainer .contactSocial p:last-of-type {
+  padding-top: 10%;
 }
 
 .contactContainer .contactSocial ul {

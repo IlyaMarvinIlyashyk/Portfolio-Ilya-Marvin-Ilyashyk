@@ -9,10 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Dela+Gothic+One&family=Gentium+Book+Basic:wght@700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>👨‍💻Ilya Marvin Ilyashyk</title>
 </head>
 
 <body>
+
+    <!-- <div id="loader">Ilya Marvin Ilyashyk</div> -->
+
     <header id="home" class="wrapper">
         
         <div class="navContainer wrapper">
@@ -57,7 +61,7 @@
         <section class="about wrapper" id="about">
             <div class="aboutSocial">
                 <h4>About</h4>
-                <ul>
+                <ul data-aos="fade-right">
                     <li>
                         <a href="https://github.com/IlyaMarvinIlyashyk">
                             <i class="fab fa-github fa-fw" alt="GitHub Icon"></i>
@@ -84,7 +88,7 @@
             </div>
             <div class="imageAndSkillsContainer">
                 <img class="headshot" src="./assets/Headshot 2-2.jpg" alt="Ilya's Headshot"> 
-                <div class="skillsContainer">
+                <div class="skillsContainer" data-aos="fade-left">
                     <ul>
                         <li><i class="fab fa-html5 fa-fw"></i>HTML5</li>
                         <li><i class="fab fa-css3-alt fa-fw"></i>CSS3</li>
@@ -238,9 +242,10 @@
     
     <footer class="wrapper">
         <img class="circleContact" src="./assets/circleContact.svg" alt="white background cicle">
-        <p>Developed by Ilya Marvin Ilyashyk</p>
+        <p>Developed by Ilya Marvin Ilyashyk 2021</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="module" src="./script.js"></script>
 </body>
 </html>

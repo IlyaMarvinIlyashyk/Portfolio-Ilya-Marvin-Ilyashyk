@@ -123,3 +123,15 @@ const mobile = () => {
 
 window.addEventListener('resize', mobile);
 window.addEventListener('load', mobile);
+
+// loader
+
+// document.documentElement.addEventListener("load", function () {
+//     document.getElementById("loader").style.display = "block";
+// });
+
+// window.addEventListener("load", function () {
+//     document.getElementById("loader").style.display = "none";
+// });
+
+AOS.init();
