@@ -301,6 +301,8 @@ form button::before,
   width: calc(1rem + 0.8vw);
   height: calc(1rem + 0.8vw);
   margin-right: 1rem;
+  top: 0.25rem;
+  position: relative;
 }
 
 header {
@@ -703,11 +705,6 @@ h1 {
   padding-left: 0;
 }
 
-.projectsContainer .projectsLinks a:first-of-type::before {
-  position: relative;
-  top: 0.25rem;
-}
-
 .projectsContainer .projectsLinks:nth-of-type(2n) {
   margin: 20%;
 }
@@ -836,11 +833,7 @@ h1 {
   border: none;
   background-color: inherit;
   cursor: pointer;
-}
-
-.contactForm button::before {
-  position: relative;
-  top: 0.25vw;
+  font-size: calc(1rem + 1vw);
 }
 
 footer {
