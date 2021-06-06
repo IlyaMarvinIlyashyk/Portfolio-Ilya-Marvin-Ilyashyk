@@ -174,7 +174,6 @@ h1 {
 
 .imageAndSkillsContainer {
     width: 40%;
-    align-self: flex-start;
     @include flex (x, flex-end, column);
 
     img {
@@ -182,16 +181,8 @@ h1 {
     }
 
     .skillsContainer {
-        @include flex (x, x, column);
         width: 80%;
-        padding-top: 2.5%;
-    
-        h5 {
-            font-size: calc(1.5rem + 1vw);
-            font-weight: 400;
-            margin: 0;
-            padding: 4% 0;
-        }
+        padding-top: 7%;
 
         ul {
             @include flex (space-around, x);
@@ -204,7 +195,7 @@ h1 {
                 width: 25%;
 
                 i {
-                    font-size: calc(1.5rem + 1.5vw)
+                    font-size: calc(1.5rem + 2vw)
                 }
             }
         }

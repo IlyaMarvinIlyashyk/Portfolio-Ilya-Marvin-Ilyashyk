@@ -22,10 +22,10 @@
         padding-top: 5%;
 
         ul {
-            justify-content: flex-start;
+            justify-content: center;
 
             li {
-                width: calc(100% / 3)
+                width: calc(100% / 3);
             }
         }
     }
@@ -231,7 +231,7 @@
     // HEADER
 
     header {
-        min-height: 92vh;
+        min-height: 96vh;
     }
 
     .circle {
