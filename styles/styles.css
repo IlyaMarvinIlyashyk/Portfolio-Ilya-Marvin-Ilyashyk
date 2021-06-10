@@ -251,7 +251,6 @@ body {
   font-family: "DM Sans", sans-serif;
   line-height: 140%;
   color: #4933BC;
-  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
@@ -331,7 +330,7 @@ header {
 }
 
 .is-hidden {
-  top: -20rem;
+  top: -25rem;
 }
 
 .navContainer {
