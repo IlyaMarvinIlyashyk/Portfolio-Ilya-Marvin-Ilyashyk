@@ -412,7 +412,6 @@ header {
 }
 
 .mainNav ul li a {
-  text-transform: uppercase;
   font-size: calc(1rem + 0.75vw);
   border: 0.1rem solid transparent;
   font-weight: normal;

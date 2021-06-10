@@ -44,7 +44,6 @@ header {
         position: absolute;
         display: none;
         cursor: pointer;
-        // position: fixed;
         right: 0;
         top: 0;
         margin-top: 2.5vw;
@@ -80,7 +79,7 @@ header {
             border: 0.2rem solid transparent;
 
             a {
-                text-transform: uppercase;
+                // text-transform: uppercase;
                 font-size: calc(1rem + 0.75vw);
                 border: 0.1rem solid transparent;
                 font-weight: normal;
