@@ -929,15 +929,9 @@ footer p {
   .imageAndSkillsContainer .skillsContainer ul li {
     width: 50%;
   }
-  .projectsDescription p:last-of-type {
-    display: none;
-  }
   .projectsContainer {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-  }
-  .projectsContainer > li video {
-    display: none;
   }
   .projectsContainer > li .projectsLinks {
     margin-top: 3%;
@@ -949,7 +943,6 @@ footer p {
     margin: 3% 0;
   }
   .projectsContainer > li img {
-    display: unset;
     padding-top: 6%;
   }
   .projectsContainer > li ul {
