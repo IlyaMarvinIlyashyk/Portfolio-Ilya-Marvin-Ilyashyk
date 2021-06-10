@@ -3,6 +3,7 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 ul {
@@ -24,6 +25,7 @@ body {
     font-family: $generalFont;
     line-height: 140%;
     color: $purple;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
@@ -67,7 +69,6 @@ a {
 
 // arrow
 
-.skillsContainer h5, 
 form button,
 .projectsLinks a:first-of-type {
     
@@ -80,6 +81,8 @@ form button,
             width: calc(1rem + 0.8vw);
             height: calc(1rem + 0.8vw);
             margin-right: 1rem;
+            top: 0.25rem;
+            position: relative;
         }
 
 }

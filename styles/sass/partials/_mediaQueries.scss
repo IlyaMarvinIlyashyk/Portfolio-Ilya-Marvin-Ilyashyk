@@ -10,16 +10,22 @@
         width: 90%;
     }
 
+    // HEADER 
+
+    header {
+        min-height: 101vh;
+    }
+
     // ABOUT
 
     .imageAndSkillsContainer .skillsContainer {
         padding-top: 5%;
 
         ul {
-            justify-content: flex-start;
+            justify-content: center;
 
             li {
-                width: calc(100% / 3)
+                width: calc(100% / 3);
             }
         }
     }
@@ -38,14 +44,33 @@
     }
 }
 
+// MAX WIDTH: 1025PX 
+// TABLET LANDSCAPE FIX
+
+@media (max-width: 1025px) {
+    .projectsContainer > li {
+        video {
+            display: none;
+        }
+
+        img {
+            display: unset;
+        }
+    }
+    
+    .projectsDescription p:last-of-type {
+        display: none;
+    }
+}
+
 // MAX WIDTH: 800PX
 
 @media (max-width: 800px) {
 
     // HEADER
-    
+
     header {
-        min-height: 101vh;
+        min-height: 98vh;
     }
 
     h1 {
@@ -73,16 +98,45 @@
 
     .arrowAndScrambleContainer {
         animation: fadeIn ease 0.4s 0.3s 1 forwards;
+    }
 
-        h3, .headerArrow {
-            position: absolute;
-            bottom: 8%;
+    .mainNav {
+
+        padding: 1rem 0;
+        
+        h2 {
+            padding: 2vw 0;
         }
 
-        h3 {
-            bottom: 10%;
-            right: 45%;
-            padding: 0;
+        .hamburger {
+            display: unset;
+        }
+
+        ul {
+            position: absolute;
+            top: 10.5rem;
+            right: 0;
+            @include flex (x, x, column);
+            border: 0.2rem solid $purple;
+            background-color: $white;
+            padding: 1rem;
+            width: 100%;
+            transform: translateY(-200%);
+            transition: transform 0.3s;
+
+            li {
+                padding: 1rem;
+                align-self: center;
+
+                a {
+                    font-weight: bolder;    
+                    font-size: 1.75rem;
+                }
+            }
+
+            li:last-of-type {
+                padding: 1rem;
+            }
         }
     }
     
@@ -102,18 +156,10 @@
 
     // PROJECTS
 
-    .projectsDescription p:last-of-type {
-        display: none;
-    }
-
     .projectsContainer {
         grid-template-columns: 100%;
 
         > li {
-
-            video {
-                display: none;
-            }
 
             .projectsLinks {
                 margin-top: 3%;
@@ -128,7 +174,6 @@
             }
 
             img {
-                display: unset;
                 padding-top: 6%;
             }
 
@@ -240,7 +285,7 @@
     // HEADER
 
     header {
-        min-height: 92vh;
+        min-height: 88vh;
     }
 
     .circle {
@@ -249,43 +294,8 @@
 
     // NAV
 
-    .mainNav {
-
-        padding: 1rem 0;
-        
-        h2 {
-            padding: 2vw 0;
-        }
-
-        .hamburger {
-            display: unset;
-        }
-
-        ul {
-            position: fixed;
-            top: 9rem;
-            @include flex (x, x, column);
-            border: 0.2rem solid $purple;
-            background-color: $white;
-            padding: 1rem;
-            width: 100%;
-            transform: translateY(-200%);
-            transition: transform 0.3s;
-
-            li {
-                padding: 1rem;
-                align-self: center;
-
-                a {
-                    font-weight: bolder;    
-                    font-size: 1.75rem;
-                }
-            }
-
-            li:last-of-type {
-                padding: 1rem;
-            }
-        }
+    .mainNav ul {
+        top: 9rem;      
     }
 
     h1 {
@@ -293,14 +303,10 @@
     }
 
     .arrowAndScrambleContainer {
+        margin-bottom: 9vw;
 
         .headerArrow {
-            bottom: 10%;
-        }
-    
-        h3 {
-            bottom: 11%;
-            right: 5%;
+            bottom: -50%;
         }
     }
 

@@ -103,12 +103,24 @@ const toggleMenu = () => {
 
 const mobile = () => {
 
-    if (window.innerWidth < 625) {
+    if (window.innerWidth < 800) {
         
         hamburger.addEventListener('click', toggleMenu);
 
         menuLinks.forEach((navLink) => {
             navLink.addEventListener('click', toggleMenu)
+        })
+    }
+
+    else if (window.innerWidth >= 800 && menu.classList.contains('showNav')) {
+        menu.classList.remove('showNav');
+        inactive.style.display = 'none';
+        active.style.display = 'block';
+        
+        hamburger.removeEventListener('click', toggleMenu);
+
+        menuLinks.forEach((navLink) => {
+            navLink.removeEventListener('click', toggleMenu)
         })
     }
 
@@ -123,3 +135,17 @@ const mobile = () => {
 
 window.addEventListener('resize', mobile);
 window.addEventListener('load', mobile);
+
+// loader
+
+// document.documentElement.addEventListener("load", function () {
+//     document.getElementById("loader").style.display = "block";
+// });
+
+// window.addEventListener("load", function () {
+//     document.getElementById("loader").style.display = "none";
+// });
+
+// Animate on Scroll Library by Michal Sajnog
+
+AOS.init();

@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Dela+Gothic+One&family=Gentium+Book+Basic:wght@700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>👨‍💻Ilya Marvin Ilyashyk</title>
 </head>
 
 <body>
+
+    <!-- <div id="loader">Ilya Marvin Ilyashyk</div> -->
+
     <header id="home" class="wrapper">
         
         <div class="navContainer wrapper">
@@ -22,29 +28,26 @@
                     </h2>
                 </a>
 
-                <button class="hamburger">
+                <button class="hamburger" aria-label="Submit">
                     <span class="active"><i class="fas fa-bars"></i></span>
                     <span class="inactive"><i class="fas fa-times"></i></span>
                 </button>
 
                 <ul>
                     <li>
-                        <a class="navLink" href="#about">about</a>
+                        <a class="navLink" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="navLink" href="#projects">projects</a>
+                        <a class="navLink" href="#projects">Projects</a>
                     </li>
                     <li>
-                        <a class="navLink" href="#contact">contact</a>
+                        <a class="navLink" href="#contact">Contact</a>
                     </li>
                 </ul>
             </nav>
             <div class="navUnderline"></div>
         </div>
-        <h1>
-            <span>Web-</span>
-            Developer
-        </h1>
+        <h1>Web-Developer</h1>
         <div class="arrowAndScrambleContainer">
             <a href="#about"><img class="headerArrow" src="./assets/headerArrow.svg" alt="arrow pointing down"></a>
             <h3 id="scrambleText"></h3>
@@ -58,7 +61,7 @@
         <section class="about wrapper" id="about">
             <div class="aboutSocial">
                 <h4>About</h4>
-                <ul>
+                <ul data-aos="fade-right">
                     <li>
                         <a href="https://github.com/IlyaMarvinIlyashyk">
                             <i class="fab fa-github fa-fw" alt="GitHub Icon"></i>
@@ -85,8 +88,7 @@
             </div>
             <div class="imageAndSkillsContainer">
                 <img class="headshot" src="./assets/Headshot 2-2.jpg" alt="Ilya's Headshot"> 
-                <div class="skillsContainer">
-                    <h5>Skills</h5>
+                <div class="skillsContainer" data-aos="fade-left">
                     <ul>
                         <li><i class="fab fa-html5 fa-fw"></i>HTML5</li>
                         <li><i class="fab fa-css3-alt fa-fw"></i>CSS3</li>
@@ -109,7 +111,7 @@
             </div>
             
             <ul class="projectsContainer">
-                <li>
+                <li data-aos="fade-up-right">
                     <video src="./assets/Podcast Prioritizer - Google Chrome 2021-06-01 13-59-42-3.m4v" loop muted="muted"></video>
                     <img src="./assets/podcastApp.PNG" alt="screenshot of the Podcast Prioritizer App">
                 </li>
@@ -140,11 +142,11 @@
                         <a href="https://github.com/IlyaMarvinIlyashyk/Project3NewsApp">Repo</a>
                     </div>
                 </li>
-                <li>
+                <li data-aos="fade-up-left">
                     <video src="./assets/The News App - Google Chrome 2021-06-01 14-50-03-4.m4v" loop muted="muted"></video>
                     <img src="./assets/newsApp.PNG" alt="screenshot of the News App">
                 </li>
-                <li>
+                <li data-aos="fade-up-right">
                     <video src="./assets/Covid, Positive - Google Chrome 2021-06-01 14-51-32-2.m4v" loop muted="muted"></video>
                     <img src="./assets/covidApp.PNG" alt="screenshot of the Covid. Positive App">
                 </li>
@@ -175,11 +177,11 @@
                         <a href="https://github.com/IlyaMarvinIlyashyk/Project1">Repo</a>
                     </div>
                 </li>
-                <li>
+                <li data-aos="fade-up-left">
                     <video src="./assets/🌷Willow  Home - Google Chrome 2021-06-01 14-52-47-5.m4v" loop muted="muted"></video>
                     <img src="./assets/willowApp.PNG" alt="screenshot of Willow's website">
                 </li>
-                <li>
+                <li data-aos="fade-up-right">
                     <video src="./assets/Anti-Boredom-App - Google Chrome 2021-06-01 14-55-07-1(1).m4v" loop
                     muted="muted"></video>
                     <img src="./assets/everythingApp.PNG" alt="screenshot of the Everything App">
@@ -206,7 +208,7 @@
             <h4>Contact</h4>
 
                 <div class="contactContainer">
-                    <form class="contactForm" method="POST" data-netlify="true">
+                    <form class="contactForm" data-aos="zoom-in" method="POST" data-netlify="true">
                         <div class="nameEmail">
                             <label for="text" class="sr-only">Name:</label>
                             <input type="text" name="name" id="name" placeholder="Name" required>
@@ -240,9 +242,10 @@
     
     <footer class="wrapper">
         <img class="circleContact" src="./assets/circleContact.svg" alt="white background cicle">
-        <p>Developed by Ilya Marvin Ilyashyk</p>
+        <p>Developed by Ilya Marvin Ilyashyk 2021</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="module" src="./script.js"></script>
 </body>
 </html>
