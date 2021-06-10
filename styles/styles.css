@@ -340,6 +340,9 @@ header {
   background-color: #C4D5D9;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.navContainer .navUnderline {
   border-bottom: 0.2rem solid transparent;
   -webkit-animation: navUnderline 0.4s linear forwards;
           animation: navUnderline 0.4s linear forwards;
@@ -1177,8 +1180,8 @@ footer p {
     width: 0%;
   }
   100% {
-    width: 90%;
-    border-bottom: 0.2rem solid #4933BC;
+    width: 100%;
+    border-bottom: 2px solid #4933BC;
   }
 }
 
@@ -1187,8 +1190,8 @@ footer p {
     width: 0%;
   }
   100% {
-    width: 90%;
-    border-bottom: 0.2rem solid #4933BC;
+    width: 100%;
+    border-bottom: 2px solid #4933BC;
   }
 }
 
