@@ -116,6 +116,12 @@ const mobile = () => {
         menu.classList.remove('showNav');
         inactive.style.display = 'none';
         active.style.display = 'block';
+        
+        hamburger.removeEventListener('click', toggleMenu);
+
+        menuLinks.forEach((navLink) => {
+            navLink.removeEventListener('click', toggleMenu)
+        })
     }
 
     else {
