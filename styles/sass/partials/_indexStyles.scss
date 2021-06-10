@@ -23,11 +23,13 @@ header {
     z-index: 2;
     background-color: $white;
     transition: all 0.3s;
+    border-bottom: 0.2rem solid transparent;
+    animation: navUnderline 0.4s linear forwards;
 
-    .navUnderline {
-        border-bottom: 0.2rem solid transparent;
-        animation: navUnderline 0.4s linear forwards;
-    }
+    // .navUnderline {
+    //     border-bottom: 0.2rem solid transparent;
+    //     animation: navUnderline 0.4s linear forwards;
+    // }
 }
 
 .mainNav {
