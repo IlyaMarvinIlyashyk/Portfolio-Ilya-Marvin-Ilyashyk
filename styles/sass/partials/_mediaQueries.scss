@@ -67,6 +67,8 @@
 
 @media (max-width: 800px) {
 
+    
+
     // HEADER
 
     header {
@@ -98,6 +100,45 @@
 
     .arrowAndScrambleContainer {
         animation: fadeIn ease 0.4s 0.3s 1 forwards;
+    }
+
+    .mainNav {
+
+        padding: 1rem 0;
+        
+        h2 {
+            padding: 2vw 0;
+        }
+
+        .hamburger {
+            display: unset;
+        }
+
+        ul {
+            position: fixed;
+            top: 10.5rem;
+            @include flex (x, x, column);
+            border: 0.2rem solid $purple;
+            background-color: $white;
+            padding: 1rem;
+            width: 100%;
+            transform: translateY(-200%);
+            transition: transform 0.3s;
+
+            li {
+                padding: 1rem;
+                align-self: center;
+
+                a {
+                    font-weight: bolder;    
+                    font-size: 1.75rem;
+                }
+            }
+
+            li:last-of-type {
+                padding: 1rem;
+            }
+        }
     }
     
     // ABOUT
@@ -254,43 +295,8 @@
 
     // NAV
 
-    .mainNav {
-
-        padding: 1rem 0;
-        
-        h2 {
-            padding: 2vw 0;
-        }
-
-        .hamburger {
-            display: unset;
-        }
-
-        ul {
-            position: fixed;
-            top: 9rem;
-            @include flex (x, x, column);
-            border: 0.2rem solid $purple;
-            background-color: $white;
-            padding: 1rem;
-            width: 100%;
-            transform: translateY(-200%);
-            transition: transform 0.3s;
-
-            li {
-                padding: 1rem;
-                align-self: center;
-
-                a {
-                    font-weight: bolder;    
-                    font-size: 1.75rem;
-                }
-            }
-
-            li:last-of-type {
-                padding: 1rem;
-            }
-        }
+    .mainNav ul {
+        top: 9rem;      
     }
 
     h1 {

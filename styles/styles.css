@@ -919,6 +919,55 @@ footer p {
     -webkit-animation: fadeIn ease 0.4s 0.3s 1 forwards;
             animation: fadeIn ease 0.4s 0.3s 1 forwards;
   }
+  .mainNav {
+    padding: 1rem 0;
+  }
+  .mainNav h2 {
+    padding: 2vw 0;
+  }
+  .mainNav .hamburger {
+    display: unset;
+  }
+  .mainNav ul {
+    position: fixed;
+    top: 10.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: x;
+        -ms-flex-pack: x;
+            justify-content: x;
+    -webkit-box-align: x;
+        -ms-flex-align: x;
+            align-items: x;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 0.2rem solid #4933BC;
+    background-color: #C4D5D9;
+    padding: 1rem;
+    width: 100%;
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
+  .mainNav ul li {
+    padding: 1rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .mainNav ul li a {
+    font-weight: bolder;
+    font-size: 1.75rem;
+  }
+  .mainNav ul li:last-of-type {
+    padding: 1rem;
+  }
   .imageAndSkillsContainer .skillsContainer {
     padding-top: 10%;
   }
@@ -1031,54 +1080,8 @@ footer p {
   .circle {
     top: 77.5%;
   }
-  .mainNav {
-    padding: 1rem 0;
-  }
-  .mainNav h2 {
-    padding: 2vw 0;
-  }
-  .mainNav .hamburger {
-    display: unset;
-  }
   .mainNav ul {
-    position: fixed;
     top: 9rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: x;
-        -ms-flex-pack: x;
-            justify-content: x;
-    -webkit-box-align: x;
-        -ms-flex-align: x;
-            align-items: x;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    border: 0.2rem solid #4933BC;
-    background-color: #C4D5D9;
-    padding: 1rem;
-    width: 100%;
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-    transition: transform 0.3s, -webkit-transform 0.3s;
-  }
-  .mainNav ul li {
-    padding: 1rem;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
-  .mainNav ul li a {
-    font-weight: bolder;
-    font-size: 1.75rem;
-  }
-  .mainNav ul li:last-of-type {
-    padding: 1rem;
   }
   h1 {
     font-size: calc(1rem + 8.5vw);

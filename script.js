@@ -103,13 +103,19 @@ const toggleMenu = () => {
 
 const mobile = () => {
 
-    if (window.innerWidth < 625) {
+    if (window.innerWidth < 800) {
         
         hamburger.addEventListener('click', toggleMenu);
 
         menuLinks.forEach((navLink) => {
             navLink.addEventListener('click', toggleMenu)
         })
+    }
+
+    else if (window.innerWidth >= 800 && menu.classList.contains('showNav')) {
+        menu.classList.remove('showNav');
+        inactive.style.display = 'none';
+        active.style.display = 'block';
     }
 
     else {
