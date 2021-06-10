@@ -930,7 +930,8 @@ footer p {
   }
   .mainNav ul {
     position: fixed;
-    top: 8rem;
+    top: 10.5rem;
+    right: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -948,16 +949,12 @@ footer p {
     background-color: #C4D5D9;
     padding: 1rem;
     width: 100%;
-    -webkit-transform: translateY(-250%);
-            transform: translateY(-250%);
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
     -webkit-transition: -webkit-transform 0.3s;
     transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
     transition: transform 0.3s, -webkit-transform 0.3s;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
   }
   .mainNav ul li {
     padding: 1rem;
@@ -1085,11 +1082,7 @@ footer p {
     top: 77.5%;
   }
   .mainNav ul {
-    top: 9.5rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    top: 9rem;
   }
   h1 {
     font-size: calc(1rem + 8.5vw);

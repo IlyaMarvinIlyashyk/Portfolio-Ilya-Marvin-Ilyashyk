@@ -114,16 +114,15 @@
 
         ul {
             position: fixed;
-            top: 8rem;
+            top: 10.5rem;
+            right: 0;
             @include flex (x, x, column);
             border: 0.2rem solid $purple;
             background-color: $white;
             padding: 1rem;
             width: 100%;
-            transform: translateY(-250%);
+            transform: translateY(-200%);
             transition: transform 0.3s;
-            flex-direction: row;
-            justify-content: space-around;
 
             li {
                 padding: 1rem;
@@ -296,8 +295,7 @@
     // NAV
 
     .mainNav ul {
-        top: 9.5rem;
-        flex-direction: column;    
+        top: 9rem;      
     }
 
     h1 {
