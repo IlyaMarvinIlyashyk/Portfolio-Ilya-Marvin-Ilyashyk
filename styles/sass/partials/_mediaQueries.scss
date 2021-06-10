@@ -44,6 +44,37 @@
     }
 }
 
+// iPad Fix for video
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+  .ipad-portrait {
+      .projectsContainer > li {
+          video {
+              display: none;
+          }
+
+          img {
+              display: unset;
+          }
+      }
+   } 
+}
+
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+  .ipad-landscape {
+      .projectsContainer > li {
+          video {
+              display: none;
+          }
+
+          img {
+              display: unset;
+          }
+      }
+   } 
+}
+
+
 // MAX WIDTH: 800PX
 
 @media (max-width: 800px) {

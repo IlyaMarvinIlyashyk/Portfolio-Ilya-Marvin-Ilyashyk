@@ -884,6 +884,24 @@ footer p {
   }
 }
 
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  .ipad-portrait .projectsContainer > li video {
+    display: none;
+  }
+  .ipad-portrait .projectsContainer > li img {
+    display: unset;
+  }
+}
+
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+  .ipad-landscape .projectsContainer > li video {
+    display: none;
+  }
+  .ipad-landscape .projectsContainer > li img {
+    display: unset;
+  }
+}
+
 @media (max-width: 800px) {
   header {
     min-height: 98vh;
