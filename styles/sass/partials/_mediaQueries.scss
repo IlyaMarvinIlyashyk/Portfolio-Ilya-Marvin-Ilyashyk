@@ -67,8 +67,6 @@
 
 @media (max-width: 800px) {
 
-    
-
     // HEADER
 
     header {
@@ -117,6 +115,7 @@
         ul {
             position: fixed;
             top: 10.5rem;
+            right: 0;
             @include flex (x, x, column);
             border: 0.2rem solid $purple;
             background-color: $white;
