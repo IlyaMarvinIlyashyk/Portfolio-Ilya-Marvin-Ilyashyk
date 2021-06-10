@@ -929,7 +929,7 @@ footer p {
     display: unset;
   }
   .mainNav ul {
-    position: fixed;
+    position: absolute;
     top: 10.5rem;
     right: 0;
     display: -webkit-box;
