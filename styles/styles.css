@@ -1066,6 +1066,9 @@ footer p {
 }
 
 @media (max-width: 625px) {
+  h4 {
+    text-align: center;
+  }
   .about,
   .projects,
   .contact {
@@ -1109,33 +1112,17 @@ footer p {
   .about .aboutText p {
     padding: 0;
   }
-  .about .aboutSocial {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: x;
-        -ms-flex-align: x;
-            align-items: x;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
   .about .aboutSocial ul {
-    padding: 0;
+    padding: 1.5rem 0 0 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .about .aboutSocial ul li {
     padding: 0;
-  }
-  .about .aboutSocial ul li > * {
-    padding-left: 2rem;
   }
   .imageAndSkillsContainer {
     width: 100%;
@@ -1155,6 +1142,9 @@ footer p {
         flex-wrap: wrap;
     width: 25%;
     font-size: calc(1rem + 1.5vw);
+  }
+  .projectsDescription p {
+    text-align: center;
   }
   .projectsContainer > li:first-of-type img {
     padding: 7% 0 2%;

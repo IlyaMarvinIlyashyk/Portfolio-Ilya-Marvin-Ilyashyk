@@ -270,11 +270,16 @@
 @media (max-width: 625px) {
 
     // GENERAL
+
+    h4 {
+        text-align: center;
+    }
     
     .about,
     .projects,
     .contact {
         padding: 9vw 0;
+
     }
 
     p {
@@ -329,17 +334,18 @@
         }        
         
         .aboutSocial {
-            @include flex (space-between, x);
+            // @include flex (space-between, x);
 
             ul {
-                padding: 0;
+                padding: 1.5rem 0 0 0;
                 flex-direction: row;
+                justify-content: space-around;
 
                 li {
                     padding: 0;
 
                     > * {
-                        padding-left: 2rem;
+                        // padding-left: 2rem;
                     };
                 }
             }
@@ -372,6 +378,10 @@
     }
 
     // PROJECTS
+
+    .projectsDescription p {
+        text-align: center;
+    }
 
     .projectsContainer {
 
