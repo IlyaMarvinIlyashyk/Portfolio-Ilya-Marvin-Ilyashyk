@@ -271,9 +271,9 @@
 
     // GENERAL
 
-    h4 {
-        text-align: center;
-    }
+    // h4 {
+    //     text-align: center;
+    // }
     
     .about,
     .projects,
@@ -334,10 +334,10 @@
         }        
         
         .aboutSocial {
-            // @include flex (space-between, x);
+            @include flex (space-between, x);
 
             ul {
-                padding: 1.5rem 0 0 0;
+                padding: 0;
                 flex-direction: row;
                 justify-content: space-around;
 
@@ -345,7 +345,7 @@
                     padding: 0;
 
                     > * {
-                        // padding-left: 2rem;
+                        padding-left: 2rem;
                     };
                 }
             }
@@ -379,9 +379,9 @@
 
     // PROJECTS
 
-    .projectsDescription p {
-        text-align: center;
-    }
+    // .projectsDescription p {
+    //     text-align: center;
+    // }
 
     .projectsContainer {
 
